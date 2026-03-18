@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProxySafe - Cybersécurité & Conformité pour PME</title>
+    <meta
+      name="description"
+      content="Spécialiste en cybersécurité situé dans l'Entre-Sambre-et-Meuse. Protégez votre PME et votre activité avec sérénité."
+    />
+
+    <style>
+      /* Charte Graphique "Bleu Navy & Sérénité" */
+      :root {
+        --navy-blue: #0a192f;
+        --navy-light: #112240;
+        --cyan-tech: #00b4d8;
+        --cyan-hover: #0077b6;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --text-main: #333333;
+        --text-muted: #666666;
+        --border-color: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-main);
+        background-color: var(--bg-light);
+        position: relative;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      /* HEADER */
+      header {
+        background-color: var(--bg-white);
+        padding: 15px 0;
+        border-bottom: 2px solid var(--cyan-tech);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header img {
+        height: 100px;
+        width: auto;
+      }
+      nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      nav a {
+        color: var(--navy-blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: var(--cyan-tech);
+      }
+      #top {
+        position: absolute;
+        top: 0;
+      }
+
+      /* IMAGE DE FOND RÉSEAU (Pleine largeur) */
+      .with-pattern {
+        position: relative;
+        width: 100%;
+      }
+      .with-pattern::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("pattern_safe.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .with-pattern > .container {
+        position: relative;
+        z-index: 10;
+      } /* Place le contenu au-dessus du motif */
+
+      /* HERO SECTION */
+      .hero {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      .hero h1 {
+        color: var(--navy-blue);
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      .hero p.lead {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        max-width: 800px;
+        margin: 0 auto 40px;
+      }
+
+      /* STATS */
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+      .stat-item {
+        background: var(--bg-white);
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        flex: 1;
+        min-width: 250px;
+        max-width: 320px;
+        border-top: 4px solid var(--navy-light);
+      }
+      .stat-item .number {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: var(--cyan-tech);
+        margin-bottom: 5px;
+      }
+      .stat-item p {
+        font-size: 1rem;
+        color: var(--text-main);
+        font-weight: 500;
+      }
+      .sources {
+        font-size: 0.8rem;
+        color: #999;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* BOUTONS (Correction du bug de transparence) */
+      .btn {
+        display: inline-block;
+        background-color: var(--cyan-tech) !important;
+        color: var(--bg-white) !important;
+        padding: 15px 35px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background 0.3s ease, transform 0.2s;
+        box-shadow: 0 4px 10px rgba(0, 180, 216, 0.3);
+        position: relative;
+        z-index: 20;
+      }
+      .btn:hover {
+        background-color: var(--cyan-hover) !important;
+        color: var(--bg-white) !important;
+        transform: translateY(-2px);
+      }
+
+      /* METHODOLOGIE (Avec Légendes sous les logos) */
+      .methodology {
+        padding: 40px 0;
+        text-align: center;
+        background-color: var(--bg-light);
+        border-bottom: 1px solid var(--border-color);
+      }
+      .methodology h4 {
+        color: var(--navy-blue);
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .framework-logos {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+      .logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .logo-item img {
+        height: 65px;
+        width: auto;
+        transition: transform 0.3s;
+      }
+      .logo-item img:hover {
+        transform: scale(1.05);
+      }
+      .logo-item span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--navy-light);
+      }
+
+      /* SERVICES */
+      .services-section {
+        background-color: var(--bg-white);
+        padding: 80px 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .section-title {
+        text-align: center;
+        color: var(--navy-blue);
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 30px;
+        text-align: left;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        border-color: var(--cyan-tech);
+      }
+      .card h3 {
+        color: var(--navy-light);
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+      .card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        flex-grow: 1;
+        margin-bottom: 25px;
+      }
+
+      .btn-outline {
+        display: inline-block;
+        padding: 10px 20px;
+        color: var(--cyan-tech);
+        border: 2px solid var(--cyan-tech);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .btn-outline:hover {
+        background-color: var(--cyan-tech);
+        color: var(--bg-white);
+      }
+
+      /* LOCALE */
+      .local-approach {
+        padding: 80px 0;
+        background-color: var(--navy-light);
+        color: var(--bg-white);
+        text-align: center;
+      }
+      .local-approach h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: var(--bg-white);
+      }
+      .local-approach p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: #d1d5db;
+      }
+      .urgency-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+        border-left: 4px solid var(--cyan-tech);
+      }
+      .urgency-box h4 {
+        color: var(--cyan-tech);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: var(--navy-blue);
+        color: #a0aec0;
+        text-align: center;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      footer a {
+        color: var(--cyan-tech);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-info {
+        margin-top: 20px;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"></div>
+
+    <header>
+      <div class="header-content">
+        <img
+          src="logo_proxysafe.png"
+          alt="ProxySafe Logo"
+          onerror="this.style.display='none'"
+        />
+        <nav>
+          <a href="#top">Accueil</a>
+          <a href="#services">Services</a>
+          <a href="#assistance">Assistance</a>
+          <a
+            href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change&body=Bonjour%20Allan%2C%0A%0AJe%20souhaite%20vous%20contacter%20pour%20un%20premier%20%C3%A9change%20ou%20b%C3%A9n%C3%A9ficier%20du%20Diagnostic%20Flash%20pour%20mon%20entreprise.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20Entreprise%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci."
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero with-pattern">
+        <div class="container">
+          <h1>
+            Votre entreprise pourrait-elle fonctionner plusieurs jours sans ses
+            outils numériques ?
+          </h1>
+          <p class="lead">
+            Une simple erreur d'inattention suffit à paralyser une activité.
+            ProxySafe sécurise votre PME avec conformité (NIS2, RGPD), pour que
+            vous puissiez vous concentrer sur votre métier en toute sérénité.
+          </p>
+
+          <div class="stats">
+            <div class="stat-item">
+              <span class="number">21 jours</span>
+              <p>
+                C'est le temps d'arrêt moyen d'une PME suite à un blocage de ses
+                données (Ransomware).
+              </p>
+            </div>
+            <div class="stat-item">
+              <span class="number">80%</span>
+              <p>
+                Des failles proviennent d'une simple erreur de manipulation
+                humaine ou d'un clic au mauvais endroit.
+              </p>
+            </div>
+          </div>
+          <div class="sources">
+            *Sources : Agence de l'Union européenne pour la cybersécurité
+            (ENISA) / Rapport IBM Security.
+          </div>
+
+          <br /><br />
+          <a
+            href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change"
+            class="btn"
+            >🛡️ Sécuriser mon activité</a
+          >
+        </div>
+      </section>
+
+      <section class="methodology with-pattern">
+        <div class="container">
+          <h4>Une approche basée sur des standards reconnus</h4>
+
+          <div class="framework-logos">
+            <div class="logo-item">
+              <img
+                src="logo_cyfun.png"
+                alt="CyberFundamentals CCB"
+                title="CyberFundamentals (CCB)"
+              />
+              <span>CyberFundamentals CCB</span>
+            </div>
+
+            <div class="logo-item">
+              <img
+                src="icon_nis2.png"
+                alt="Directive NIS2"
+                title="Directive NIS2"
+              />
+              <span>Directive NIS2</span>
+            </div>
+
+            <div class="logo-item">
+              <img
+                src="icon_rgpd.png"
+                alt="RGPD Compliant"
+                title="Conformité RGPD"
+              />
+              <span>Conformité RGPD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services-section with-pattern">
+        <div class="container">
+          <h2 class="section-title">Des solutions sur mesure pour votre PME</h2>
+
+          <div class="grid">
+            <div class="card">
+              <h3>État des lieux</h3>
+              <p>
+                <em>Évaluation de votre sécurité actuelle.</em> Une analyse
+                claire de votre infrastructure pour identifier les failles
+                critiques avant qu'elles ne soient exploitées.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Audit&body=Bonjour%20Allan%2C%0A%0AJe%20souhaite%20avoir%20plus%20d'informations%20sur%20votre%20service%20d'Audit%20%2F%20État%20des%20lieux.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20"
+                class="btn-outline"
+                >Infos sur l'audit</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Conformité & Continuité</h3>
+              <p>
+                <em>Être en règle et limiter la casse.</em> Mise en conformité
+                (NIS2, RGPD), configuration de vos protections et création d'un
+                plan de relance pour minimiser l'impact d'un incident.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Continuit%C3%A9&body=Bonjour%20Allan%2C%0A%0AJ'aimerais%20discuter%20de%20la%20mise%20en%20place%20d'un%20plan%20de%20continuité%20pour%20mon%20entreprise.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20"
+                class="btn-outline"
+                >Infos continuité</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Sensibilisation des équipes</h3>
+              <p>
+                <em>Le meilleur antivirus, c'est votre équipe.</em> Des
+                formations adaptées à votre activité pour transformer vos
+                collaborateurs en première ligne de défense, sans jargon.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Sensibilisation&body=Bonjour%20Allan%2C%0A%0AJe%20suis%20intéressé(e)%20par%20les%20sessions%20de%20sensibilisation%20pour%20mon%20équipe.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20"
+                class="btn-outline"
+                >Infos sensibilisation</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Suivi Proactif</h3>
+              <p>
+                <em>Votre bouclier au quotidien.</em> Je surveille les nouvelles
+                menaces mondiales et vous préviens proactivement si vos outils
+                nécessitent une intervention urgente ou une mise à jour.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Suivi&body=Bonjour%20Allan%2C%0A%0AJ'aimerais%20en%20savoir%20plus%20sur%20votre%20service%20de%20Suivi%20Proactif.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20"
+                class="btn-outline"
+                >Infos sur le suivi</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="assistance" class="local-approach">
+        <div class="container">
+          <h2>
+            Un spécialiste proche de chez vous, prêt à intervenir rapidement.
+          </h2>
+          <p>
+            Situé dans l'Entre-Sambre-et-Meuse, j'accompagne les entreprises de
+            la région, y compris en zone frontalière. Une démarche pragmatique,
+            ancrée dans votre réalité de terrain.
+          </p>
+
+          <div class="urgency-box">
+            <h4>🚨 Assistance Incident (Service Client)</h4>
+            <p>
+              En cas de suspicion de piratage, contactez-moi. Les premiers
+              gestes comptent pour limiter les dégâts. Je vous guide
+              immédiatement par téléphone le temps d'intervenir pour évaluer la
+              situation au mieux.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez-moi pour un premier échange, sans engagement.
+        </p>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <div class="footer-info">
+          <p>&copy; 2026 ProxySafe - Allan Colinet.</p>
+          <p>TVA : BE XXX.XXX.XXX (En attente d'activation)</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
