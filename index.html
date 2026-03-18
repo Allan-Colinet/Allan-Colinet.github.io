@@ -361,6 +361,50 @@
         margin-top: 20px;
         font-size: 0.85rem;
       }
+      /* === MENU BURGER RESPONSIVE === */
+      .burger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .burger span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--navy-blue);
+        border-radius: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .burger {
+          display: flex; /* Affiche le bouton sur mobile */
+        }
+        nav {
+          display: none; /* Cache le menu normal par défaut */
+          position: absolute;
+          top: 100%; /* S'ouvre juste en dessous du header */
+          left: 0;
+          width: 100%;
+          background-color: var(--bg-white);
+          flex-direction: column;
+          padding: 10px 0;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+          border-top: 1px solid var(--border-color);
+        }
+        nav.active {
+          display: flex; /* Affiche le menu quand on clique */
+        }
+        nav a {
+          padding: 15px;
+          width: 100%;
+          text-align: center;
+          font-size: 1.1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -373,12 +417,18 @@
           alt="ProxySafe Logo"
           onerror="this.style.display='none'"
         />
-        <nav>
-          <a href="#top">Accueil</a>
-          <a href="#services">Services</a>
-          <a href="#assistance">Assistance</a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="#top" onclick="toggleMenu()">Accueil</a>
+          <a href="#services" onclick="toggleMenu()">Services</a>
+          <a href="#assistance" onclick="toggleMenu()">Assistance</a>
           <a
             href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change&body=Bonjour%20Allan%2C%0A%0AJe%20souhaite%20vous%20contacter%20pour%20un%20premier%20%C3%A9change%20ou%20b%C3%A9n%C3%A9ficier%20du%20Diagnostic%20Flash%20pour%20mon%20entreprise.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A-%20Nom%20%3A%20%0A-%20Entreprise%20%3A%20%0A-%20T%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci."
+            onclick="toggleMenu()"
             >Contact</a
           >
         </nav>
@@ -565,5 +615,11 @@
         </div>
       </div>
     </footer>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById('nav-menu');
+        nav.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>
