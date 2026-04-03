@@ -1,10 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Allan Colinet
+N:Colinet;Allan;;;
+FN:Allan Colinet | ProxySafe
 ORG:ProxySafe
-TITLE:Consultant GRC & Cybersécurité
+TITLE:Expert GRC & Cybersécurité
 TEL;TYPE=CELL,VOICE:+3260860256
 EMAIL;TYPE=PREF,INTERNET:allan@proxysafe.be
-URL:https://www.proxysafe.be/
-REV:2026-04-03T10:00:00Z
+URL:https://proxysafe.be
+REV:2026-04-03T10:45:00Z
 END:VCARD
