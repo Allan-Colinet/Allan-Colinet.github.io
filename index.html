@@ -309,6 +309,108 @@
         color: var(--bg-white);
       }
 
+      /* ABONNEMENT SENTINELLE (NOUVEAU CSS) */
+      .sentinelle-section {
+        padding: 80px 0;
+        background-color: var(--bg-white);
+        border-bottom: 1px solid var(--border-color);
+      }
+      .sentinelle-box {
+        display: flex;
+        background: var(--navy-light);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--cyan-tech);
+      }
+      .sentinelle-content {
+        flex: 2;
+        padding: 40px;
+        color: var(--bg-white);
+      }
+      .sentinelle-content h2 {
+        font-size: 2.2rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: var(--bg-white);
+      }
+      .sentinelle-content .subtitle {
+        color: #a0aec0;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+      }
+      .badge {
+        background-color: var(--cyan-tech);
+        color: var(--navy-blue);
+        padding: 5px 12px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 20px;
+        letter-spacing: 1px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+      }
+      .features-list li {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #d1d5db;
+        padding-left: 25px;
+        position: relative;
+      }
+      .features-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--cyan-tech);
+        font-weight: bold;
+      }
+      .sentinelle-pricing {
+        flex: 1;
+        background: var(--bg-light);
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-left: 1px solid var(--border-color);
+      }
+      .sentinelle-pricing .price {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--navy-blue);
+        line-height: 1;
+      }
+      .sentinelle-pricing .price span {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        font-weight: normal;
+      }
+      .htva {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+      .commitment {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--cyan-hover);
+        margin-bottom: 25px;
+      }
+      
+      @media (max-width: 900px) {
+        .sentinelle-box {
+          flex-direction: column;
+        }
+        .sentinelle-pricing {
+          border-left: none;
+          border-top: 1px solid var(--border-color);
+        }
+      }
+
       /* LOCALE */
       .local-approach {
         padding: 80px 0;
@@ -369,8 +471,9 @@
         text-decoration: underline;
       }
       .footer-info {
-        margin-top: 20px;
+        margin-top: 30px;
         font-size: 0.85rem;
+        line-height: 1.8;
       }
       .burger {
         display: none;
@@ -549,12 +652,38 @@
             </div>
 
             <div class="card">
-              <h3>Sécurité Active (Veille CVE)</h3>
+              <h3>Sécurité Active (Veille)</h3>
               <p>
                 <em>Anticiper les menaces de demain.</em> Je réalise une veille personnalisée sur vos outils 
-                critiques et vous alerte proactivement en cas de vulnérabilité nécessitant une action urgente.
+                critiques et vous alerte proactivement en cas de vulnérabilité nécessitant une action.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20Suivi" class="btn-outline">Infos sur la veille</a>
+              <a href="#sentinelle" class="btn-outline">Découvrir Sentinelle</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sentinelle" class="sentinelle-section">
+        <div class="container">
+          <div class="sentinelle-box">
+            <div class="sentinelle-content">
+              <span class="badge">PRODUIT PHARE</span>
+              <h2>Abonnement <span style="color: var(--cyan-tech);">Sentinelle</span></h2>
+              <p class="subtitle">La surveillance proactive de vos actifs critiques.</p>
+              
+              <ul class="features-list">
+                <li><strong>🎯 Encodage sur mesure :</strong> Nous identifions ensemble vos logiciels et matériels critiques (Serveurs, ERP, Pare-feux).</li>
+                <li><strong>🔍 Veille croisée en temps réel :</strong> Mon système croise vos actifs avec les flux mondiaux de nouvelles menaces (CVE).</li>
+                <li><strong>📊 Récapitulatif régulier :</strong> Un rapport hebdomadaire ou mensuel clair pour suivre la santé de votre parc.</li>
+                <li><strong>🚨 Alerte prioritaire (J+1) :</strong> Si une menace critique touche VOTRE matériel, vous êtes prévenu le lendemain matin avec la marche à suivre exacte pour bloquer l'attaque.</li>
+              </ul>
+            </div>
+            
+            <div class="sentinelle-pricing">
+              <div class="price">95€<span>/ mois</span></div>
+              <p class="htva">HTVA (Régime de la franchise)</p>
+              <p class="commitment">Sans engagement de durée</p>
+              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Abonnement%20Sentinelle" class="btn">Activer Sentinelle</a>
             </div>
           </div>
         </div>
@@ -566,7 +695,7 @@
             Un partenaire de proximité, ancré dans votre réalité de terrain.
           </h2>
           <p>
-            Basé dans l'Entre-Sambre-et-Meuse (Couvin), j'accompagne les PME locales et transfrontalières 
+            Basé dans l'Entre-Sambre-et-Meuse, j'accompagne les PME locales et transfrontalières 
             avec une approche humaine et des solutions adaptées à la taille de votre structure.
           </p>
 
@@ -593,9 +722,12 @@
         </p>
         <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
         <p style="margin-top: 10px;">📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a></p>
+        
         <div class="footer-info">
-          <p>&copy; 2026 ProxySafe - Allan Colinet.</p>
-          <p>TVA : BE XXX.XXX.XXX (En attente d'activation)</p>
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>Siège administratif : Rue Basse-Cornet, 21 - 5660 Frasnes, Belgique</p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 15px;">Petite entreprise soumise au régime de la franchise de la taxe.</p>
           <p style="margin-top: 15px; font-style: italic; opacity: 0.7;">Spécialiste en Gouvernance (GRC) issu de l'analyse SOC et du Pentest, au service des PME.</p>
         </div>
       </div>
