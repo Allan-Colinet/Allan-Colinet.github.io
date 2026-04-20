@@ -206,7 +206,7 @@
       }
       .pricing-header {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
       .pricing-header h2 {
         font-size: 2.4rem;
@@ -219,6 +219,38 @@
         max-width: 700px;
         margin: 0 auto;
       }
+      
+      /* CONTENEUR DE LA CARTE IFRAME */
+      .threat-map-container {
+        width: 100%;
+        height: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid var(--navy-light);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        margin-bottom: 60px;
+        position: relative;
+        background-color: #000; /* Fond noir en attendant le chargement */
+      }
+      .threat-map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .threat-map-label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(0, 180, 216, 0.8);
+        color: var(--bg-white);
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        z-index: 10;
+        pointer-events: none;
+      }
+
       .pricing-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -357,6 +389,10 @@
         .pricing-card.popular:hover {
           transform: translateY(-5px);
         }
+        /* Ajustement de la carte sur mobile pour laisser l'utilisateur scroller la page */
+        .threat-map-container {
+          height: 300px;
+        }
       }
 
       /* SERVICES (AVEC TRANSPARENCE RGBA) */
@@ -427,7 +463,7 @@
         color: var(--bg-white);
       }
 
-      /* METHODOLOGIE (DÉSORMAIS EN DESSOUS DES SERVICES, AVEC TRANSPARENCE RGBA) */
+      /* METHODOLOGIE */
       .methodology {
         padding: 50px 0;
         text-align: center;
@@ -468,7 +504,7 @@
         color: var(--navy-light);
       }
 
-      /* LOCALE (AVEC TRANSPARENCE RGBA) */
+      /* LOCALE */
       .local-approach {
         padding: 80px 0;
         background-color: rgba(17, 34, 64, 0.90);
@@ -661,6 +697,11 @@
             <p>La surveillance proactive de vos actifs critiques face aux nouvelles menaces mondiales (CVE). Sans engagement de durée.</p>
           </div>
 
+          <div class="threat-map-container">
+            <div class="threat-map-label">📡 Menaces cyber en temps réel</div>
+            <iframe src="https://threatmap.fortiguard.com/" frameborder="0" style="transform: scale(0.8); transform-origin: top left; width: 125%; height: 125%;"></iframe>
+          </div>
+
           <div class="pricing-grid">
             
             <div class="pricing-card">
@@ -753,7 +794,7 @@
               <p>
                 <em>Votre allié sur le long terme.</em> Concentrez-vous sur votre métier, je reste à vos côtés chaque mois pour vous conseiller, valider vos choix techniques et m'assurer que vos protections restent efficaces.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20vCISO" class="btn-outline">Infos vCISO</a>
+              <a href="mailto:allan@proxysafe.be?subject=Infos%20Accompagnement" class="btn-outline">Infos accompagnement</a>
             </div>
           </div>
         </div>
