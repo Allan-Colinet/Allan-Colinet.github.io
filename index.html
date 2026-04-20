@@ -200,153 +200,170 @@
         transform: translateY(-2px);
       }
 
-      /* ABONNEMENT SENTINELLE (SANS FOND BLANC POUR EFFET FLOTTANT) */
+      /* PRICING SENTINELLE */
       .sentinelle-section {
         padding: 60px 0 80px;
-        /* Le fond blanc a été retiré pour laisser respirer le bloc sur le gris clair et le motif */
       }
-      .sentinelle-box {
-        display: flex;
-        background: var(--navy-light);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Ombre accentuée pour détacher la carte du fond */
-        border: 1px solid var(--cyan-tech);
+      .pricing-header {
+        text-align: center;
+        margin-bottom: 50px;
       }
-      .sentinelle-content {
-        flex: 2;
-        padding: 40px;
-        color: var(--bg-white);
-      }
-      .sentinelle-content h2 {
-        font-size: 2.2rem;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        color: var(--bg-white);
-      }
-      .sentinelle-content .subtitle {
-        color: #a0aec0;
-        font-size: 1.1rem;
-        margin-bottom: 25px;
-      }
-      .badge {
-        background-color: var(--cyan-tech);
+      .pricing-header h2 {
+        font-size: 2.4rem;
         color: var(--navy-blue);
-        padding: 5px 12px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        border-radius: 20px;
-        letter-spacing: 1px;
+        margin-bottom: 10px;
       }
-      .features-list {
-        list-style: none;
-        padding: 0;
+      .pricing-header p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto;
       }
-      .features-list li {
-        margin-bottom: 15px;
-        font-size: 1rem;
-        color: #d1d5db;
-        padding-left: 25px;
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        align-items: center;
+      }
+      .pricing-card {
+        background: var(--bg-white);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 40px 30px;
+        text-align: center;
         position: relative;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
       }
-      .features-list li::before {
+      .pricing-card:hover {
+        transform: translateY(-5px);
+      }
+      .pricing-card.popular {
+        background: var(--navy-light);
+        color: var(--bg-white);
+        border: 2px solid var(--cyan-tech);
+        transform: scale(1.05);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      }
+      .pricing-card.popular:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+      .badge-launch {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--cyan-tech);
+        color: var(--navy-blue);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      .plan-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .plan-target {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        height: 40px;
+      }
+      .pricing-card.popular .plan-target {
+        color: #a0aec0;
+      }
+      .plan-price {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .plan-price span {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+      .price-strike {
+        text-decoration: line-through;
+        color: #a0aec0;
+        font-size: 1.2rem;
+        margin-right: 10px;
+      }
+      .plan-htva {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+      }
+      .pricing-card.popular .plan-htva {
+        color: #a0aec0;
+      }
+      .plan-features {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .plan-features li {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        position: relative;
+        padding-left: 25px;
+      }
+      .plan-features li::before {
         content: '✓';
         position: absolute;
         left: 0;
         color: var(--cyan-tech);
         font-weight: bold;
       }
-      .sentinelle-pricing {
-        flex: 1;
-        background: var(--bg-white);
-        padding: 40px 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-left: 1px solid var(--border-color);
-      }
-      .sentinelle-pricing .price {
-        font-size: 3.5rem;
+      .btn-pricing {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
         font-weight: bold;
+        transition: all 0.3s;
+      }
+      .btn-outline-pricing {
+        border: 2px solid var(--cyan-tech);
+        color: var(--cyan-tech);
+      }
+      .btn-outline-pricing:hover {
+        background: var(--cyan-tech);
+        color: var(--bg-white);
+      }
+      .btn-solid-pricing {
+        background: var(--cyan-tech);
         color: var(--navy-blue);
-        line-height: 1;
+        border: 2px solid var(--cyan-tech);
       }
-      .sentinelle-pricing .price span {
-        font-size: 1.2rem;
-        color: var(--text-muted);
-        font-weight: normal;
+      .btn-solid-pricing:hover {
+        background: var(--cyan-hover);
+        border-color: var(--cyan-hover);
+        color: var(--bg-white);
       }
-      .htva {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        margin-top: 5px;
-        margin-bottom: 15px;
-      }
-      .commitment {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--cyan-hover);
-        margin-bottom: 25px;
-      }
-      
+
       @media (max-width: 900px) {
-        .sentinelle-box {
-          flex-direction: column;
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
         }
-        .sentinelle-pricing {
-          border-left: none;
-          border-top: 1px solid var(--border-color);
+        .pricing-card.popular {
+          transform: scale(1);
+        }
+        .pricing-card.popular:hover {
+          transform: translateY(-5px);
         }
       }
 
-      /* METHODOLOGIE */
-      .methodology {
-        padding: 40px 0;
-        text-align: center;
-        background-color: var(--bg-white);
-        border-bottom: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
-      }
-      .methodology h4 {
-        color: var(--navy-blue);
-        margin-bottom: 30px;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-      .framework-logos {
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        align-items: flex-end;
-        flex-wrap: wrap;
-      }
-      .logo-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-      .logo-item img {
-        height: 65px;
-        width: auto;
-        transition: transform 0.3s;
-      }
-      .logo-item img:hover {
-        transform: scale(1.05);
-      }
-      .logo-item span {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--navy-light);
-      }
-
-      /* SERVICES */
+      /* SERVICES (AVEC TRANSPARENCE RGBA) */
       .services-section {
-        background-color: var(--bg-light);
+        background-color: rgba(249, 250, 251, 0.90);
         padding: 80px 0;
+        border-top: 1px solid var(--border-color);
       }
       .section-title {
         text-align: center;
@@ -367,7 +384,7 @@
       }
 
       .card {
-        background: var(--bg-white);
+        background: rgba(255, 255, 255, 0.95);
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 30px;
@@ -410,10 +427,50 @@
         color: var(--bg-white);
       }
 
-      /* LOCALE (AVEC TRANSPARENCE RGBA POUR LAISSER APPARAITRE LE MOTIF) */
+      /* METHODOLOGIE (DÉSORMAIS EN DESSOUS DES SERVICES, AVEC TRANSPARENCE RGBA) */
+      .methodology {
+        padding: 50px 0;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.92);
+        border-bottom: 1px solid var(--border-color);
+      }
+      .methodology h4 {
+        color: var(--navy-blue);
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .framework-logos {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+      .logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .logo-item img {
+        height: 65px;
+        width: auto;
+        transition: transform 0.3s;
+      }
+      .logo-item img:hover {
+        transform: scale(1.05);
+      }
+      .logo-item span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--navy-light);
+      }
+
+      /* LOCALE (AVEC TRANSPARENCE RGBA) */
       .local-approach {
         padding: 80px 0;
-        /* Utilisation d'un fond RGBA : 17,34,64 correspond au var(--navy-light) avec 90% d'opacité */
         background-color: rgba(17, 34, 64, 0.90);
         color: var(--bg-white);
         text-align: center;
@@ -599,54 +656,67 @@
 
       <section id="sentinelle" class="sentinelle-section with-pattern">
         <div class="container">
-          <div class="sentinelle-box">
-            <div class="sentinelle-content">
-              <span class="badge">PRODUIT PHARE</span>
-              <h2>Abonnement <span style="color: var(--cyan-tech);">Sentinelle</span></h2>
-              <p class="subtitle">La surveillance proactive de vos actifs critiques.</p>
-              
-              <ul class="features-list">
-                <li><strong>🎯 Cartographie guidée :</strong> Vous recevez un guide clair et pratique pour recenser facilement les logiciels et matériels indispensables à votre activité.</li>
-                <li><strong>🔍 Surveillance en temps réel :</strong> Je surveille activement l'émergence des nouvelles menaces mondiales pesant spécifiquement sur vos technologies.</li>
-                <li><strong>📊 Rapport de santé :</strong> Un reporting régulier, clair et sans jargon technique, pour suivre l'état de santé sécuritaire de votre entreprise.</li>
-                <li><strong>🚨 Alerte prioritaire :</strong> Si une faille touche votre infrastructure, vous êtes prévenu rapidement (souvent dans l'heure pour les cas critiques) avec la marche à suivre exacte pour atténuer le risque.</li>
-              </ul>
-            </div>
+          <div class="pricing-header">
+            <h2>Abonnement <span style="color: var(--cyan-tech);">Sentinelle</span></h2>
+            <p>La surveillance proactive de vos actifs critiques face aux nouvelles menaces mondiales (CVE). Sans engagement de durée.</p>
+          </div>
+
+          <div class="pricing-grid">
             
-            <div class="sentinelle-pricing">
-              <div class="price">95€<span>/ mois</span></div>
-              <p class="htva">HTVA (Régime de la franchise)</p>
-              <p class="commitment">Sans engagement de durée</p>
-              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Abonnement%20Sentinelle" class="btn">Activer Sentinelle</a>
+            <div class="pricing-card">
+              <div class="plan-name">Starter</div>
+              <div class="plan-target">Idéal pour freelances et TPE</div>
+              <div class="plan-price">79€<span>/mois</span></div>
+              <div class="plan-htva">HTVA (Régime franchise)</div>
+              
+              <ul class="plan-features">
+                <li>Jusqu'à <strong>3 actifs</strong> surveillés (ex: Box, Site Web, NAS)</li>
+                <li>Cartographie autonome via guide</li>
+                <li>Alerte critique rapide</li>
+                <li>Rapport de santé mensuel</li>
+              </ul>
+              
+              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Sentinelle%20Starter" class="btn-pricing btn-outline-pricing">Choisir Starter</a>
             </div>
+
+            <div class="pricing-card popular">
+              <div class="badge-launch">LANCEMENT : 20 PLACES</div>
+              <div class="plan-name">Essentiel</div>
+              <div class="plan-target">La couverture parfaite pour les PME</div>
+              <div class="plan-price"><span class="price-strike">149€</span>99€<span>/mois</span></div>
+              <div class="plan-htva">HTVA (Tarif bloqué à vie)</div>
+              
+              <ul class="plan-features">
+                <li>Jusqu'à <strong>15 actifs</strong> surveillés (Pare-feu, Serveurs, ERP)</li>
+                <li>Cartographie autonome via guide</li>
+                <li>Alerte prioritaire avec marche à suivre</li>
+                <li>Rapport de santé mensuel</li>
+              </ul>
+              
+              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Sentinelle%20Essentiel" class="btn-pricing btn-solid-pricing">Bloquer mon tarif</a>
+            </div>
+
+            <div class="pricing-card">
+              <div class="plan-name">Intégral</div>
+              <div class="plan-target">Pour les structures matures (Cliniques, Industrie)</div>
+              <div class="plan-price">290€<span>/mois</span></div>
+              <div class="plan-htva">HTVA (Régime franchise)</div>
+              
+              <ul class="plan-features">
+                <li>Jusqu'à <strong>40 actifs</strong> surveillés</li>
+                <li><strong>Encodage initial fait par nos soins</strong> (1h avec votre IT)</li>
+                <li>Alerte prioritaire avec marche à suivre</li>
+                <li><strong>Point téléphonique trimestriel</strong> (15 min)</li>
+              </ul>
+              
+              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Sentinelle%20Int%C3%A9gral" class="btn-pricing btn-outline-pricing">Déléguer ma veille</a>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section class="methodology">
-        <div class="container">
-          <h4>Une méthodologie rigoureuse basée sur les standards officiels</h4>
-
-          <div class="framework-logos">
-            <div class="logo-item">
-              <img src="logo_cyfun.png" alt="CyberFundamentals CCB" title="CyberFundamentals (CCB)" />
-              <span>CyberFundamentals CCB</span>
-            </div>
-
-            <div class="logo-item">
-              <img src="icon_nis2.png" alt="Directive NIS2" title="Directive NIS2" />
-              <span>Directive NIS2</span>
-            </div>
-
-            <div class="logo-item">
-              <img src="icon_rgpd.png" alt="RGPD Compliant" title="Conformité RGPD" />
-              <span>Conformité RGPD</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="services-section">
+      <section id="services" class="services-section with-pattern">
         <div class="container">
           <h2 class="section-title">Accompagnement Cyber & GRC sur mesure</h2>
 
@@ -679,12 +749,34 @@
             </div>
 
             <div class="card">
-              <h3>Sécurité Active (Veille)</h3>
+              <h3>Partenaire Sécurité au Quotidien</h3>
               <p>
-                <em>Anticiper les menaces de demain.</em> Je réalise une veille personnalisée sur vos outils 
-                critiques et vous alerte proactivement en cas de vulnérabilité nécessitant une action.
+                <em>Votre allié sur le long terme.</em> Concentrez-vous sur votre métier, je reste à vos côtés chaque mois pour vous conseiller, valider vos choix techniques et m'assurer que vos protections restent efficaces.
               </p>
-              <a href="#sentinelle" class="btn-outline">Découvrir Sentinelle</a>
+              <a href="mailto:allan@proxysafe.be?subject=Infos%20vCISO" class="btn-outline">Infos vCISO</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="methodology with-pattern">
+        <div class="container">
+          <h4>Une méthodologie rigoureuse basée sur les standards officiels</h4>
+
+          <div class="framework-logos">
+            <div class="logo-item">
+              <img src="logo_cyfun.png" alt="CyberFundamentals CCB" title="CyberFundamentals (CCB)" />
+              <span>CyberFundamentals CCB</span>
+            </div>
+
+            <div class="logo-item">
+              <img src="icon_nis2.png" alt="Directive NIS2" title="Directive NIS2" />
+              <span>Directive NIS2</span>
+            </div>
+
+            <div class="logo-item">
+              <img src="icon_rgpd.png" alt="RGPD Compliant" title="Conformité RGPD" />
+              <span>Conformité RGPD</span>
             </div>
           </div>
         </div>
