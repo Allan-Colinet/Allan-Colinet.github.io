@@ -96,7 +96,7 @@
         top: 0;
       }
 
-      /* IMAGE DE FOND RÉSEAU */
+      /* IMAGE DE FOND RÉSEAU (AVEC EFFET PARALLAXE FIXE) */
       .with-pattern {
         position: relative;
         width: 100%;
@@ -200,19 +200,17 @@
         transform: translateY(-2px);
       }
 
-      /* ABONNEMENT SENTINELLE (REMONTE EN HAUT) */
+      /* ABONNEMENT SENTINELLE (SANS FOND BLANC POUR EFFET FLOTTANT) */
       .sentinelle-section {
-        padding: 80px 0;
-        background-color: var(--bg-white);
-        border-bottom: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
+        padding: 60px 0 80px;
+        /* Le fond blanc a été retiré pour laisser respirer le bloc sur le gris clair et le motif */
       }
       .sentinelle-box {
         display: flex;
         background: var(--navy-light);
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Ombre accentuée pour détacher la carte du fond */
         border: 1px solid var(--cyan-tech);
       }
       .sentinelle-content {
@@ -260,7 +258,7 @@
       }
       .sentinelle-pricing {
         flex: 1;
-        background: var(--bg-light);
+        background: var(--bg-white);
         padding: 40px 30px;
         display: flex;
         flex-direction: column;
@@ -307,8 +305,9 @@
       .methodology {
         padding: 40px 0;
         text-align: center;
-        background-color: var(--bg-light);
+        background-color: var(--bg-white);
         border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
       }
       .methodology h4 {
         color: var(--navy-blue);
@@ -346,9 +345,8 @@
 
       /* SERVICES */
       .services-section {
-        background-color: var(--bg-white);
+        background-color: var(--bg-light);
         padding: 80px 0;
-        border-bottom: 1px solid var(--border-color);
       }
       .section-title {
         text-align: center;
@@ -369,7 +367,7 @@
       }
 
       .card {
-        background: var(--bg-light);
+        background: var(--bg-white);
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 30px;
@@ -412,10 +410,11 @@
         color: var(--bg-white);
       }
 
-      /* LOCALE */
+      /* LOCALE (AVEC TRANSPARENCE RGBA POUR LAISSER APPARAITRE LE MOTIF) */
       .local-approach {
         padding: 80px 0;
-        background-color: var(--navy-light);
+        /* Utilisation d'un fond RGBA : 17,34,64 correspond au var(--navy-light) avec 90% d'opacité */
+        background-color: rgba(17, 34, 64, 0.90);
         color: var(--bg-white);
         text-align: center;
       }
@@ -598,7 +597,7 @@
         </div>
       </section>
 
-      <section id="sentinelle" class="sentinelle-section">
+      <section id="sentinelle" class="sentinelle-section with-pattern">
         <div class="container">
           <div class="sentinelle-box">
             <div class="sentinelle-content">
@@ -624,7 +623,7 @@
         </div>
       </section>
 
-      <section class="methodology with-pattern">
+      <section class="methodology">
         <div class="container">
           <h4>Une méthodologie rigoureuse basée sur les standards officiels</h4>
 
@@ -647,7 +646,7 @@
         </div>
       </section>
 
-      <section id="services" class="services-section with-pattern">
+      <section id="services" class="services-section">
         <div class="container">
           <h2 class="section-title">Accompagnement Cyber & GRC sur mesure</h2>
 
@@ -691,7 +690,7 @@
         </div>
       </section>
 
-      <section id="assistance" class="local-approach">
+      <section id="assistance" class="local-approach with-pattern">
         <div class="container">
           <h2>
             Un partenaire de proximité, ancré dans votre réalité de terrain.
