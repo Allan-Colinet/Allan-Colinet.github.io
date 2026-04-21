@@ -324,7 +324,7 @@
         text-align: center;
         color: var(--navy-blue);
         font-size: clamp(1.8rem, 4vw, 2.2rem);
-        margin-bottom: 5px;
+        margin-bottom: 50px; /* Corrigé : Marge rétablie pour séparer le titre des cartes */
       }
       
       .swipe-indicator {
@@ -346,7 +346,8 @@
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 30px;
-        text-align: left;
+        text-align: center; /* Corrigé : Alignement centré du texte */
+        align-items: center; /* Centrage des éléments (bouton) */
         transition: transform 0.3s, box-shadow 0.3s;
         display: flex;
         flex-direction: column;
@@ -359,10 +360,11 @@
       }
       .card h3 { color: var(--navy-light); font-size: 1.4rem; margin-bottom: 15px; }
       .card p { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 25px; }
+      
       .btn-outline {
         display: inline-block; padding: 10px 20px; color: var(--cyan-tech);
         border: 2px solid var(--cyan-tech); text-decoration: none; border-radius: 4px;
-        font-weight: bold; text-align: center; transition: all 0.3s; margin-top: auto; align-self: flex-start;
+        font-weight: bold; text-align: center; transition: all 0.3s; margin-top: auto;
       }
       .btn-outline:hover { background-color: var(--cyan-tech); color: var(--bg-white); }
 
@@ -438,6 +440,7 @@
         margin-bottom: 10px;
         font-size: 1.2rem;
       }
+      
       .btn-call {
         display: inline-block;
         margin-top: 15px;
@@ -447,7 +450,10 @@
         padding: 10px 20px;
         border-radius: 5px;
         font-weight: bold;
+        text-align: center;
       }
+      /* Balise spécifique pour forcer ou empêcher le retour à la ligne du numéro */
+      .mobile-break { display: inline; }
 
       /* FOOTER */
       footer {
@@ -529,9 +535,28 @@
         .grid::-webkit-scrollbar { display: none; }
         .card { flex: 0 0 85%; scroll-snap-align: center; }
 
-        .framework-logos { gap: 20px; justify-content: center; }
-        .logo-item img { height: 48px; }
-        .logo-item span { font-size: 0.8rem; text-align: center;}
+        /* Corrigé : Logos sur une seule ligne (swipe-like ou rétrécis) */
+        .framework-logos { 
+          flex-wrap: nowrap; 
+          gap: 10px; 
+          justify-content: space-between;
+        }
+        .logo-item { flex: 1; text-align: center; }
+        .logo-item img { height: 40px; }
+        .logo-item span { font-size: 0.7rem; }
+
+        /* Corrigé : Titre Urgence dynamique pour tenir sur 1 ligne */
+        .urgency-box h4 {
+          font-size: clamp(0.85rem, 3.8vw, 1.2rem);
+          white-space: nowrap;
+        }
+        
+        /* Corrigé : Numéro de téléphone à la ligne sur mobile */
+        .mobile-break {
+          display: block;
+          margin-top: 5px;
+          font-size: 1.1rem;
+        }
       }
     </style>
   </head>
@@ -730,7 +755,10 @@
             <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 10px;">
               * Service d'assistance prioritaire réservé aux professionnels. Premier diagnostic facturé à l'acte ou inclus dans les forfaits de suivi.
             </p>
-            <a href="tel:+3260860256" class="btn-call">📞 Diagnostic d'urgence : +32 (0) 60 86 02 56</a>
+            <a href="tel:+3260860256" class="btn-call">
+              📞 Diagnostic d'urgence : 
+              <span class="mobile-break">+32 (0) 60 86 02 56</span>
+            </a>
           </div>
         </div>
       </section>
