@@ -74,6 +74,7 @@
       header img {
         height: 100px;
         width: auto;
+        transition: height 0.3s;
       }
       nav {
         display: flex;
@@ -96,7 +97,7 @@
         top: 0;
       }
 
-      /* IMAGE DE FOND RÉSEAU (AVEC EFFET PARALLAXE FIXE) */
+      /* IMAGE DE FOND RÉSEAU */
       .with-pattern {
         position: relative;
         width: 100%;
@@ -129,12 +130,12 @@
       }
       .hero h1 {
         color: var(--navy-blue);
-        font-size: 2.8rem;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
         margin-bottom: 20px;
         line-height: 1.2;
       }
       .hero p.lead {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, 2vw, 1.25rem);
         color: var(--text-muted);
         max-width: 850px;
         margin: 0 auto 40px;
@@ -201,7 +202,7 @@
       }
 
       /* =========================================
-         SECTION SENTINELLE (AVEC VIDEO EN FOND)
+         SECTION SENTINELLE (VIDEO BACKGROUND)
          ========================================= */
       .sentinelle-section {
         position: relative;
@@ -239,7 +240,7 @@
         margin-bottom: 25vh;
       }
       .pricing-header h2 {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 5vw, 2.8rem);
         color: var(--bg-white);
         text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         margin-bottom: 15px;
@@ -296,127 +297,22 @@
         letter-spacing: 1px;
         white-space: nowrap;
       }
-      .plan-name {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      .plan-target {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        margin-bottom: 20px;
-        height: 40px;
-      }
-      .pricing-card.popular .plan-target {
-        color: #a0aec0;
-      }
-      .plan-price {
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 1;
-        margin-bottom: 5px;
-      }
-      .plan-price span {
-        font-size: 1rem;
-        font-weight: normal;
-      }
-      .price-strike {
-        text-decoration: line-through;
-        color: #a0aec0;
-        font-size: 1.2rem;
-        margin-right: 10px;
-      }
-      .plan-htva {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin-bottom: 30px;
-      }
-      .pricing-card.popular .plan-htva {
-        color: #a0aec0;
-      }
-      .plan-features {
-        list-style: none;
-        text-align: left;
-        margin-bottom: 30px;
-      }
-      .plan-features li {
-        margin-bottom: 15px;
-        font-size: 0.95rem;
-        position: relative;
-        padding-left: 25px;
-      }
-      .plan-features li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--cyan-tech);
-        font-weight: bold;
-      }
-      .btn-pricing {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: all 0.3s;
-      }
-      .btn-outline-pricing {
-        border: 2px solid var(--cyan-tech);
-        color: var(--cyan-tech);
-      }
-      .btn-outline-pricing:hover {
-        background: var(--cyan-tech);
-        color: var(--bg-white);
-      }
-      .btn-solid-pricing {
-        background: var(--cyan-tech);
-        color: var(--navy-blue);
-        border: 2px solid var(--cyan-tech);
-      }
-      .btn-solid-pricing:hover {
-        background: var(--cyan-hover);
-        border-color: var(--cyan-hover);
-        color: var(--bg-white);
-      }
-
-      /* MEDIA QUERY POUR LE MODE MOBILE (RESPONSIVE) */
-      @media (max-width: 900px) {
-        .sentinelle-section {
-          padding: 10vh 0 80px;
-        }
-        .pricing-header {
-          margin-bottom: 10vh; 
-        }
-        
-        /* TRANSFORMATION DE LA GRILLE EN CARROUSEL HORIZONTAL "SWIPE" */
-        .pricing-grid {
-          display: flex;
-          overflow-x: auto; /* Active le défilement horizontal */
-          scroll-snap-type: x mandatory; /* Force l'aimantation des cartes */
-          gap: 15px;
-          padding: 20px 20px 40px 20px; /* Espace pour les ombres portées */
-          margin-left: -20px; /* Débordement pour toucher les bords de l'écran */
-          margin-right: -20px;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none; /* Cache la barre de défilement (Firefox) */
-        }
-        /* Cache la barre de défilement (Chrome/Safari/Edge) */
-        .pricing-grid::-webkit-scrollbar {
-          display: none;
-        }
-        
-        .pricing-card {
-          flex: 0 0 80%; /* Chaque carte prend 80% de l'écran, dévoilant la suivante */
-          scroll-snap-align: center; /* S'aimante au centre de l'écran */
-        }
-        .pricing-card.popular {
-          transform: scale(1); /* On retire l'effet grossissant sur mobile pour garder l'alignement */
-        }
-        .pricing-card.popular:hover {
-          transform: none; /* Désactivation du saut au hover sur mobile */
-        }
-      }
+      .plan-name { font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; }
+      .plan-target { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; height: 40px; }
+      .pricing-card.popular .plan-target { color: #a0aec0; }
+      .plan-price { font-size: 3rem; font-weight: bold; line-height: 1; margin-bottom: 5px; }
+      .plan-price span { font-size: 1rem; font-weight: normal; }
+      .price-strike { text-decoration: line-through; color: #a0aec0; font-size: 1.2rem; margin-right: 10px; }
+      .plan-htva { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 30px; }
+      .pricing-card.popular .plan-htva { color: #a0aec0; }
+      .plan-features { list-style: none; text-align: left; margin-bottom: 30px; }
+      .plan-features li { margin-bottom: 15px; font-size: 0.95rem; position: relative; padding-left: 25px; }
+      .plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--cyan-tech); font-weight: bold; }
+      .btn-pricing { display: block; width: 100%; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+      .btn-outline-pricing { border: 2px solid var(--cyan-tech); color: var(--cyan-tech); }
+      .btn-outline-pricing:hover { background: var(--cyan-tech); color: var(--bg-white); }
+      .btn-solid-pricing { background: var(--cyan-tech); color: var(--navy-blue); border: 2px solid var(--cyan-tech); }
+      .btn-solid-pricing:hover { background: var(--cyan-hover); border-color: var(--cyan-hover); color: var(--bg-white); }
 
       /* SERVICES */
       .services-section {
@@ -427,8 +323,17 @@
       .section-title {
         text-align: center;
         color: var(--navy-blue);
-        font-size: 2.2rem;
-        margin-bottom: 50px;
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+        margin-bottom: 5px;
+      }
+      
+      .swipe-indicator {
+        display: none;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        font-style: italic;
       }
 
       .grid {
@@ -436,12 +341,6 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
       }
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
       .card {
         background: rgba(255, 255, 255, 0.95);
         border: 1px solid var(--border-color);
@@ -458,33 +357,14 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         border-color: var(--cyan-tech);
       }
-      .card h3 {
-        color: var(--navy-light);
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-      }
-      .card p {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        flex-grow: 1;
-        margin-bottom: 25px;
-      }
-
+      .card h3 { color: var(--navy-light); font-size: 1.4rem; margin-bottom: 15px; }
+      .card p { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 25px; }
       .btn-outline {
-        display: inline-block;
-        padding: 10px 20px;
-        color: var(--cyan-tech);
-        border: 2px solid var(--cyan-tech);
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        text-align: center;
-        transition: all 0.3s;
+        display: inline-block; padding: 10px 20px; color: var(--cyan-tech);
+        border: 2px solid var(--cyan-tech); text-decoration: none; border-radius: 4px;
+        font-weight: bold; text-align: center; transition: all 0.3s; margin-top: auto; align-self: flex-start;
       }
-      .btn-outline:hover {
-        background-color: var(--cyan-tech);
-        color: var(--bg-white);
-      }
+      .btn-outline:hover { background-color: var(--cyan-tech); color: var(--bg-white); }
 
       /* METHODOLOGIE */
       .methodology {
@@ -496,7 +376,7 @@
       .methodology h4 {
         color: var(--navy-blue);
         margin-bottom: 30px;
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
         text-transform: uppercase;
         letter-spacing: 1px;
       }
@@ -518,16 +398,13 @@
         width: auto;
         transition: transform 0.3s;
       }
-      .logo-item img:hover {
-        transform: scale(1.05);
-      }
       .logo-item span {
         font-size: 0.9rem;
         font-weight: 600;
         color: var(--navy-light);
       }
 
-      /* LOCALE */
+      /* ASSISTANCE & DIAGNOSTIC */
       .local-approach {
         padding: 80px 0;
         background-color: rgba(17, 34, 64, 0.90);
@@ -535,7 +412,7 @@
         text-align: center;
       }
       .local-approach h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
         margin-bottom: 20px;
         color: var(--bg-white);
       }
@@ -546,14 +423,15 @@
         color: #d1d5db;
       }
       .urgency-box {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--navy-blue);
+        border: 1px solid var(--cyan-tech);
         padding: 30px;
         border-radius: 8px;
         max-width: 700px;
         margin: 0 auto;
         text-align: left;
-        border-left: 4px solid var(--cyan-tech);
+        border-left: 5px solid var(--cyan-tech);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       }
       .urgency-box h4 {
         color: var(--cyan-tech);
@@ -579,18 +457,10 @@
         padding: 40px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
-      footer a {
-        color: var(--cyan-tech);
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-      .footer-info {
-        margin-top: 30px;
-        font-size: 0.85rem;
-        line-height: 1.8;
-      }
+      footer a { color: var(--cyan-tech); text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
+      .footer-info { margin-top: 30px; font-size: 0.85rem; line-height: 1.8; }
+      
       .burger {
         display: none;
         flex-direction: column;
@@ -601,38 +471,67 @@
         border: none;
         cursor: pointer;
       }
-      .burger span {
-        width: 100%;
-        height: 3px;
-        background-color: var(--navy-blue);
-        border-radius: 5px;
-      }
+      .burger span { width: 100%; height: 3px; background-color: var(--navy-blue); border-radius: 5px; }
 
-      @media (max-width: 768px) {
-        .burger {
-          display: flex;
-        }
+      /* =========================================
+         MEDIA QUERIES (OPTIMISATION SMARTPHONE)
+         ========================================= */
+      @media (max-width: 900px) {
+        header { padding: 10px 0; }
+        header img { height: 45px; }
+        
+        .burger { display: flex; }
         nav {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          background-color: var(--bg-white);
-          flex-direction: column;
-          padding: 10px 0;
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-          border-top: 1px solid var(--border-color);
+          display: none; position: absolute; top: 100%; left: 0; width: 100%;
+          background-color: var(--bg-white); flex-direction: column; padding: 10px 0;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); border-top: 1px solid var(--border-color);
         }
-        nav.active {
+        nav.active { display: flex; }
+        nav a { padding: 15px; width: 100%; text-align: center; font-size: 1.1rem; }
+
+        .stats { flex-direction: row; flex-wrap: nowrap; gap: 15px; }
+        .stat-item { min-width: unset; padding: 15px 10px; width: 50%; }
+        .stat-item .number { font-size: 2rem; }
+        .stat-item p { font-size: 0.85rem; }
+
+        .sentinelle-section { padding: 10vh 0 60px; }
+        .pricing-header { margin-bottom: 8vh; }
+        .pricing-grid {
           display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 15px;
+          padding: 20px;
+          margin-left: -20px;
+          margin-right: -20px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
         }
-        nav a {
-          padding: 15px;
-          width: 100%;
-          text-align: center;
-          font-size: 1.1rem;
+        .pricing-grid::-webkit-scrollbar { display: none; }
+        .pricing-card { flex: 0 0 85%; scroll-snap-align: center; }
+        .pricing-card.popular { transform: scale(1); }
+
+        .swipe-indicator { display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+        
+        .grid {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 15px;
+          padding-bottom: 20px;
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          scrollbar-width: none;
         }
+        .grid::-webkit-scrollbar { display: none; }
+        .card { flex: 0 0 85%; scroll-snap-align: center; }
+
+        .framework-logos { gap: 20px; justify-content: center; }
+        .logo-item img { height: 48px; }
+        .logo-item span { font-size: 0.8rem; text-align: center;}
       }
     </style>
   </head>
@@ -648,26 +547,16 @@
 
     <header>
       <div class="header-content">
-        <img
-          src="logo_proxysafe.png"
-          alt="ProxySafe Logo"
-          onerror="this.style.display='none'"
-        />
+        <img src="logo_proxysafe.png" alt="ProxySafe Logo" onerror="this.style.display='none'" />
         <button class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
           <a href="#top" onclick="toggleMenu()">Accueil</a>
           <a href="#sentinelle" onclick="toggleMenu()">Abonnement</a>
           <a href="#services" onclick="toggleMenu()">Services</a>
           <a href="#assistance" onclick="toggleMenu()">Assistance</a>
-          <a
-            href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change"
-            onclick="toggleMenu()"
-            >Contact</a
-          >
+          <a href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact" onclick="toggleMenu()">Contact</a>
         </nav>
       </div>
     </header>
@@ -675,9 +564,7 @@
     <main>
       <section class="hero with-pattern">
         <div class="container">
-          <h1>
-            Votre entreprise pourrait-elle survivre à plusieurs jours d'arrêt total ?
-          </h1>
+          <h1>Votre entreprise pourrait-elle survivre à plusieurs jours d'arrêt total ?</h1>
           <p class="lead">
             Une simple erreur humaine peut paralyser votre activité. 
             <strong>ProxySafe</strong> accompagne les PME dans leur <strong>Gouvernance, Risques et Conformité (GRC)</strong> 
@@ -687,32 +574,21 @@
           <div class="stats">
             <div class="stat-item">
               <span class="number">21 jours</span>
-              <p>
-                C'est le temps d'arrêt moyen d'une PME après une cyberattaque. 
-              </p>
+              <p>C'est le temps d'arrêt moyen d'une PME après une cyberattaque.</p>
             </div>
             <div class="stat-item">
               <span class="number">80%</span>
-              <p>
-                Des failles exploitées proviennent d'une simple manipulation humaine.
-              </p>
+              <p>Des failles exploitées proviennent d'une simple manipulation humaine.</p>
             </div>
           </div>
-          <div class="sources">
-            *Sources : ENISA / Rapport IBM Security.
-          </div>
+          <div class="sources">*Sources : ENISA / Rapport IBM Security.</div>
 
           <br /><br />
-          <a
-            href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change"
-            class="btn"
-            >🛡️ Sécuriser mon activité</a
-          >
+          <a href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change" class="btn">🛡️ Sécuriser mon activité</a>
         </div>
       </section>
 
       <section id="sentinelle" class="sentinelle-section">
-        
         <video autoplay loop muted playsinline class="bg-video">
           <source src="threatmap.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la vidéo.
@@ -726,7 +602,6 @@
           </div>
 
           <div class="pricing-grid">
-            
             <div class="pricing-card">
               <div class="plan-name">Starter</div>
               <div class="plan-target">Idéal pour freelances et TPE</div>
@@ -741,7 +616,7 @@
               <a href="mailto:allan@proxysafe.be?subject=Souscription%20Starter" class="btn-pricing btn-outline-pricing">Choisir Starter</a>
             </div>
 
-            <div class="pricing-card popular">
+            <div class="pricing-card popular" id="card-essentiel">
               <div class="badge-launch">LANCEMENT : 20 PLACES</div>
               <div class="plan-name">Essentiel</div>
               <div class="plan-target">La couverture parfaite pour les PME</div>
@@ -769,7 +644,6 @@
               </ul>
               <a href="mailto:allan@proxysafe.be?subject=Souscription%20Int%C3%A9gral" class="btn-pricing btn-outline-pricing">Déléguer ma veille</a>
             </div>
-
           </div>
         </div>
       </section>
@@ -777,29 +651,41 @@
       <section id="services" class="services-section with-pattern">
         <div class="container">
           <h2 class="section-title">Accompagnement Cyber & GRC sur mesure</h2>
+          <div class="swipe-indicator">← Glissez pour découvrir nos services →</div>
 
           <div class="grid">
             <div class="card">
               <h3>État des lieux</h3>
-              <p>Évaluation de votre santé numérique. Un audit clair pour identifier vos risques critiques.</p>
+              <p>
+                <em>Évaluation de votre santé numérique.</em> Un audit clair et pragmatique de votre organisation 
+                pour identifier les risques critiques et définir votre feuille de route priorisée.
+              </p>
               <a href="mailto:allan@proxysafe.be?subject=Infos%20Audit" class="btn-outline">Infos sur l'audit</a>
             </div>
 
             <div class="card">
               <h3>Conformité & Continuité</h3>
-              <p>Être en règle et limiter la casse. Mise en conformité stratégique (NIS2, RGPD).</p>
+              <p>
+                <em>Être en règle et limiter la casse.</em> Mise en conformité stratégique (NIS2, RGPD) 
+                et création de plans de relance pour minimiser l'impact financier d'un incident.
+              </p>
               <a href="mailto:allan@proxysafe.be?subject=Infos%20Continuit%C3%A9" class="btn-outline">Infos continuité</a>
             </div>
 
             <div class="card">
               <h3>Sensibilisation Active</h3>
-              <p>Le meilleur bouclier, c'est votre équipe. Ateliers pratiques et simulations.</p>
+              <p>
+                <em>Le meilleur bouclier, c'est votre équipe.</em> Des ateliers pratiques et simulations 
+                pour transformer vos collaborateurs en première ligne de défense, sans jargon technique.
+              </p>
               <a href="mailto:allan@proxysafe.be?subject=Infos%20Sensibilisation" class="btn-outline">Infos sensibilisation</a>
             </div>
 
             <div class="card">
               <h3>Partenaire Sécurité au Quotidien</h3>
-              <p>Votre allié sur le long terme. Je reste à vos côtés chaque mois pour conseiller vos choix.</p>
+              <p>
+                <em>Votre allié sur le long terme.</em> Concentrez-vous sur votre métier, je reste à vos côtés chaque mois pour vous conseiller, valider vos choix techniques et m'assurer que vos protections restent efficaces.
+              </p>
               <a href="mailto:allan@proxysafe.be?subject=Infos%20Accompagnement" class="btn-outline">Infos accompagnement</a>
             </div>
           </div>
@@ -867,11 +753,23 @@
         </div>
       </div>
     </footer>
+
     <script>
       function toggleMenu() {
         const nav = document.getElementById('nav-menu');
         nav.classList.toggle('active');
       }
+
+      window.addEventListener('DOMContentLoaded', (event) => {
+        if (window.innerWidth <= 900) {
+          const grid = document.querySelector('.pricing-grid');
+          const popularCard = document.getElementById('card-essentiel');
+          if (grid && popularCard) {
+            const scrollPos = popularCard.offsetLeft - (window.innerWidth / 2) + (popularCard.offsetWidth / 2);
+            grid.scrollLeft = scrollPos;
+          }
+        }
+      });
     </script>
   </body>
 </html>
