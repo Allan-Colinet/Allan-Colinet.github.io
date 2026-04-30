@@ -313,6 +313,17 @@
       .btn-outline-pricing:hover { background: var(--cyan-tech); color: var(--bg-white); }
       .btn-solid-pricing { background: var(--cyan-tech); color: var(--navy-blue); border: 2px solid var(--cyan-tech); }
       .btn-solid-pricing:hover { background: var(--cyan-hover); border-color: var(--cyan-hover); color: var(--bg-white); }
+      
+      /* Note d'information sous les prix */
+      .pricing-disclaimer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #d1d5db;
+        opacity: 0.9;
+        font-style: italic;
+        padding: 0 20px;
+      }
 
       /* SERVICES */
       .services-section {
@@ -324,7 +335,7 @@
         text-align: center;
         color: var(--navy-blue);
         font-size: clamp(1.8rem, 4vw, 2.2rem);
-        margin-bottom: 50px; /* Corrigé : Marge rétablie pour séparer le titre des cartes */
+        margin-bottom: 50px; 
       }
       
       .swipe-indicator {
@@ -346,8 +357,8 @@
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 30px;
-        text-align: center; /* Corrigé : Alignement centré du texte */
-        align-items: center; /* Centrage des éléments (bouton) */
+        text-align: center; 
+        align-items: center; 
         transition: transform 0.3s, box-shadow 0.3s;
         display: flex;
         flex-direction: column;
@@ -535,7 +546,6 @@
         .grid::-webkit-scrollbar { display: none; }
         .card { flex: 0 0 85%; scroll-snap-align: center; }
 
-        /* Corrigé : Logos sur une seule ligne (swipe-like ou rétrécis) */
         .framework-logos { 
           flex-wrap: nowrap; 
           gap: 10px; 
@@ -545,13 +555,11 @@
         .logo-item img { height: 40px; }
         .logo-item span { font-size: 0.7rem; }
 
-        /* Corrigé : Titre Urgence dynamique pour tenir sur 1 ligne */
         .urgency-box h4 {
           font-size: clamp(0.85rem, 3.8vw, 1.2rem);
           white-space: nowrap;
         }
         
-        /* Corrigé : Numéro de téléphone à la ligne sur mobile */
         .mobile-break {
           display: block;
           margin-top: 5px;
@@ -633,42 +641,50 @@
               <div class="plan-price">79€<span>/mois</span></div>
               <div class="plan-htva">HTVA (Régime franchise)</div>
               <ul class="plan-features">
-                <li>Jusqu'à <strong>3 actifs</strong> surveillés</li>
-                <li>Cartographie autonome via guide</li>
-                <li>Alerte critique rapide</li>
-                <li>Rapport de santé mensuel</li>
+                <li>Jusqu'à <strong>3 éléments</strong> surveillés (PC, site, serveur...)</li>
+                <li>Alerte immédiate si votre site web tombe en panne</li>
+                <li>Détection des failles sur vos logiciels obsolètes</li>
+                <li>Alerte fuite de données (mots de passe volés sur internet)</li>
+                <li>Rapport de sécurité mensuel simplifié</li>
               </ul>
               <a href="mailto:allan@proxysafe.be?subject=Souscription%20Starter" class="btn-pricing btn-outline-pricing">Choisir Starter</a>
             </div>
 
             <div class="pricing-card popular" id="card-essentiel">
-              <div class="badge-launch">LANCEMENT : 20 PLACES</div>
+              <div class="badge-launch">LANCEMENT : 10 PLACES</div>
               <div class="plan-name">Essentiel</div>
               <div class="plan-target">La couverture parfaite pour les PME</div>
               <div class="plan-price"><span class="price-strike">149€</span>99€<span>/mois</span></div>
               <div class="plan-htva">HTVA (Offre de lancement)</div>
               <ul class="plan-features">
-                <li>Jusqu'à <strong>15 actifs</strong> surveillés</li>
-                <li>Cartographie autonome via guide</li>
-                <li>Alerte prioritaire (marche à suivre)</li>
-                <li>Rapport de santé mensuel</li>
+                <li>Jusqu'à <strong>15 éléments</strong> surveillés</li>
+                <li>Surveillance Pannes, Failles logicielles & Mots de passe volés</li>
+                <li>Protection de votre marque (Détection de faux sites)</li>
+                <li>Alertes prioritaires avec guide de résolution simple</li>
+                <li>Rapport de sécurité mensuel complet</li>
               </ul>
               <a href="mailto:allan@proxysafe.be?subject=Souscription%20Essentiel" class="btn-pricing btn-solid-pricing">Bloquer mon tarif</a>
             </div>
 
             <div class="pricing-card">
               <div class="plan-name">Intégral</div>
-              <div class="plan-target">Structures matures (Industrie, Cliniques)</div>
+              <div class="plan-target">Structures matures (Industrie, Communes,...)</div>
               <div class="plan-price">290€<span>/mois</span></div>
               <div class="plan-htva">HTVA (Régime franchise)</div>
               <ul class="plan-features">
-                <li>Jusqu'à <strong>40 actifs</strong> surveillés</li>
-                <li><strong>Encodage initial fait par nos soins</strong></li>
-                <li>Alerte prioritaire (marche à suivre)</li>
-                <li>Point téléphonique trimestriel</li>
+                <li>Jusqu'à <strong>40 éléments</strong> surveillés (Au-delà : sur devis)</li>
+                <li><strong>Couverture totale à distance</strong> (Surveillance & conseil expert)</li>
+                <li>Installation initiale 100% gérée par notre équipe</li>
+                <li>Alertes critiques avec accompagnement</li>
+                <li>Bilan stratégique trimestriel de vive voix</li>
               </ul>
-              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Int%C3%A9gral" class="btn-pricing btn-outline-pricing">Déléguer ma veille</a>
+              <a href="mailto:allan@proxysafe.be?subject=Souscription%20Int%C3%A9gral" class="btn-pricing btn-outline-pricing">Déléguer ma sécurité</a>
             </div>
+          </div>
+          
+          <div class="pricing-disclaimer">
+            * Un élément (ou actif) surveillé équivaut à 1 PC (incluant tous ses logiciels), 1 serveur/NAS, ou 1 nom de domaine/site web.<br>
+            Note : Les abonnements incluent une surveillance et des recommandations à distance. Les interventions techniques physiques de dépannage sur site ne sont pas incluses.
           </div>
         </div>
       </section>
