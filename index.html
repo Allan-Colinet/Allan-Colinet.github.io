@@ -1037,15 +1037,15 @@
       }
 
       window.addEventListener('DOMContentLoaded', (event) => {
-        if (window.innerWidth <= 900) {
-          const grid = document.querySelector('.pricing-grid');
-          const popularCard = document.getElementById('card-essentiel');
-          if (grid && popularCard) {
-            const scrollPos = popularCard.offsetLeft - (window.innerWidth / 2) + (popularCard.offsetWidth / 2);
-            grid.scrollLeft = scrollPos;
-          }
-        }
-      });
+  if (window.innerWidth <= 900) {
+    const grid = document.querySelector('.pricing-grid');
+    const popularCard = document.getElementById('card-pro');
+    if (grid && popularCard) {
+      const scrollPos = popularCard.offsetLeft - (window.innerWidth / 2) + (popularCard.offsetWidth / 2);
+      grid.scrollLeft = scrollPos;
+    }
+  }
+});
 
       // SCRIPT DU QUIZ / TUNNEL JS
       let quizScore = 0;
