@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProxySafe | Spécialiste Cybersécurité & GRC à Couvin</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta
       name="description"
       content="ProxySafe : Accompagnement en cybersécurité pour PaME à Couvin. Audit de maturité, conformité NIS2/RGPD, sensibilisation et veille active contre les menaces."
@@ -52,7 +52,7 @@
         padding: 0 20px;
         width: 100%;
       }
-      
+
       /* Conteneur élargi pour les prix sur PC */
       .container-pricing {
         max-width: 1250px;
@@ -207,7 +207,9 @@
         border-radius: 5px;
         font-weight: bold;
         font-size: 1.1rem;
-        transition: background 0.3s ease, transform 0.2s;
+        transition:
+          background 0.3s ease,
+          transform 0.2s;
         box-shadow: 0 4px 10px rgba(0, 180, 216, 0.3);
         position: relative;
         z-index: 20;
@@ -236,7 +238,7 @@
       .sentinelle-section {
         position: relative;
         padding: 10vh 0 100px;
-        overflow: hidden; 
+        overflow: hidden;
       }
       .bg-video {
         position: absolute;
@@ -256,7 +258,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(10, 25, 47, 0.45); 
+        background-color: rgba(10, 25, 47, 0.45);
         z-index: 2;
       }
 
@@ -267,17 +269,17 @@
       .pricing-header h2 {
         font-size: clamp(2rem, 5vw, 2.8rem);
         color: var(--bg-white);
-        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         margin-bottom: 15px;
       }
       .pricing-header p {
         font-size: 1.15rem;
         color: #ffffff;
-        text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
         max-width: 700px;
         margin: 0 auto;
       }
-      
+
       .pricing-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -285,13 +287,13 @@
         align-items: center;
       }
       .pricing-card {
-        background: rgba(255, 255, 255, 0.98); 
+        background: rgba(255, 255, 255, 0.98);
         border: 1px solid var(--border-color);
         border-radius: 12px;
         padding: 40px 20px; /* Marges internes réduites pour élargir le texte sur PC */
         text-align: center;
         position: relative;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s;
         color: var(--text-main);
       }
@@ -303,7 +305,7 @@
         color: var(--bg-white);
         border: 2px solid var(--cyan-tech);
         transform: scale(1.05);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
       }
       .pricing-card.popular:hover {
         transform: scale(1.05) translateY(-5px);
@@ -322,23 +324,90 @@
         letter-spacing: 1px;
         white-space: nowrap;
       }
-      .plan-name { font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; }
-      .plan-target { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; height: 40px; }
-      .pricing-card.popular .plan-target { color: #a0aec0; }
-      .plan-price { font-size: 3rem; font-weight: bold; line-height: 1; margin-bottom: 5px; }
-      .plan-price span { font-size: 1rem; font-weight: normal; }
-      .price-strike { text-decoration: line-through; color: #a0aec0; font-size: 1.2rem; margin-right: 10px; }
-      .plan-htva { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 30px; }
-      .pricing-card.popular .plan-htva { color: #a0aec0; }
-      .plan-features { list-style: none; text-align: left; margin-bottom: 30px; }
-      .plan-features li { margin-bottom: 15px; font-size: 0.95rem; position: relative; padding-left: 25px; }
-      .plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--cyan-tech); font-weight: bold; }
-      .btn-pricing { display: block; width: 100%; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
-      .btn-outline-pricing { border: 2px solid var(--cyan-tech); color: var(--cyan-tech); }
-      .btn-outline-pricing:hover { background: var(--cyan-tech); color: var(--bg-white); }
-      .btn-solid-pricing { background: var(--cyan-tech); color: var(--navy-blue); border: 2px solid var(--cyan-tech); }
-      .btn-solid-pricing:hover { background: var(--cyan-hover); border-color: var(--cyan-hover); color: var(--bg-white); }
-      
+      .plan-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .plan-target {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        height: 40px;
+      }
+      .pricing-card.popular .plan-target {
+        color: #a0aec0;
+      }
+      .plan-price {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .plan-price span {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+      .price-strike {
+        text-decoration: line-through;
+        color: #a0aec0;
+        font-size: 1.2rem;
+        margin-right: 10px;
+      }
+      .plan-htva {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+      }
+      .pricing-card.popular .plan-htva {
+        color: #a0aec0;
+      }
+      .plan-features {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .plan-features li {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        position: relative;
+        padding-left: 25px;
+      }
+      .plan-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--cyan-tech);
+        font-weight: bold;
+      }
+      .btn-pricing {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
+      .btn-outline-pricing {
+        border: 2px solid var(--cyan-tech);
+        color: var(--cyan-tech);
+      }
+      .btn-outline-pricing:hover {
+        background: var(--cyan-tech);
+        color: var(--bg-white);
+      }
+      .btn-solid-pricing {
+        background: var(--cyan-tech);
+        color: var(--navy-blue);
+        border: 2px solid var(--cyan-tech);
+      }
+      .btn-solid-pricing:hover {
+        background: var(--cyan-hover);
+        border-color: var(--cyan-hover);
+        color: var(--bg-white);
+      }
+
       .pricing-disclaimer {
         text-align: center;
         margin-top: 40px;
@@ -359,9 +428,9 @@
         text-align: center;
         color: var(--navy-blue);
         font-size: clamp(1.8rem, 4vw, 2.2rem);
-        margin-bottom: 50px; 
+        margin-bottom: 50px;
       }
-      
+
       .swipe-indicator {
         display: none;
         text-align: center;
@@ -381,9 +450,11 @@
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 30px;
-        text-align: center; 
-        align-items: center; 
-        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+        align-items: center;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
         display: flex;
         flex-direction: column;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
@@ -393,15 +464,34 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         border-color: var(--cyan-tech);
       }
-      .card h3 { color: var(--navy-light); font-size: 1.4rem; margin-bottom: 15px; }
-      .card p { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 25px; }
-      
-      .btn-outline {
-        display: inline-block; padding: 10px 20px; color: var(--cyan-tech);
-        border: 2px solid var(--cyan-tech); text-decoration: none; border-radius: 4px;
-        font-weight: bold; text-align: center; transition: all 0.3s; margin-top: auto;
+      .card h3 {
+        color: var(--navy-light);
+        font-size: 1.4rem;
+        margin-bottom: 15px;
       }
-      .btn-outline:hover { background-color: var(--cyan-tech); color: var(--bg-white); }
+      .card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        flex-grow: 1;
+        margin-bottom: 25px;
+      }
+
+      .btn-outline {
+        display: inline-block;
+        padding: 10px 20px;
+        color: var(--cyan-tech);
+        border: 2px solid var(--cyan-tech);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+        margin-top: auto;
+      }
+      .btn-outline:hover {
+        background-color: var(--cyan-tech);
+        color: var(--bg-white);
+      }
 
       /* METHODOLOGIE */
       .methodology {
@@ -444,7 +534,7 @@
       /* ASSISTANCE & DIAGNOSTIC */
       .local-approach {
         padding: 80px 0;
-        background-color: rgba(17, 34, 64, 0.90);
+        background-color: rgba(17, 34, 64, 0.9);
         color: var(--bg-white);
         text-align: center;
       }
@@ -468,14 +558,14 @@
         margin: 0 auto;
         text-align: left;
         border-left: 5px solid var(--cyan-tech);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       }
       .urgency-box h4 {
         color: var(--cyan-tech);
         margin-bottom: 10px;
         font-size: 1.2rem;
       }
-      
+
       .btn-call {
         display: inline-block;
         margin-top: 15px;
@@ -487,7 +577,9 @@
         font-weight: bold;
         text-align: center;
       }
-      .mobile-break { display: inline; }
+      .mobile-break {
+        display: inline;
+      }
 
       /* FOOTER */
       footer {
@@ -497,10 +589,19 @@
         padding: 40px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
-      footer a { color: var(--cyan-tech); text-decoration: none; }
-      footer a:hover { text-decoration: underline; }
-      .footer-info { margin-top: 30px; font-size: 0.85rem; line-height: 1.8; }
-      
+      footer a {
+        color: var(--cyan-tech);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-info {
+        margin-top: 30px;
+        font-size: 0.85rem;
+        line-height: 1.8;
+      }
+
       .burger {
         display: none;
         flex-direction: column;
@@ -511,13 +612,18 @@
         border: none;
         cursor: pointer;
       }
-      .burger span { width: 100%; height: 3px; background-color: var(--navy-blue); border-radius: 5px; }
+      .burger span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--navy-blue);
+        border-radius: 5px;
+      }
 
       /* =========================================
          CSS MODALE QUIZ (LE TUNNEL JS)
          ========================================= */
       .quiz-modal {
-        display: none; 
+        display: none;
         position: fixed;
         z-index: 9999;
         left: 0;
@@ -536,7 +642,7 @@
         max-width: 600px;
         width: 100%;
         position: relative;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         border-top: 5px solid var(--cyan-tech);
       }
       .quiz-close {
@@ -559,8 +665,14 @@
         animation: fadeIn 0.4s ease-in-out;
       }
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .quiz-title {
         color: var(--navy-blue);
@@ -606,33 +718,81 @@
         border-radius: 8px;
         margin-bottom: 20px;
       }
-      .result-red { background: #ffebee; border: 1px solid #ffcdd2; color: #c62828; }
-      .result-orange { background: #fff3e0; border: 1px solid #ffe0b2; color: #ef6c00; }
-      .result-green { background: #e8f5e9; border: 1px solid #c8e6c9; color: #2e7d32; }
+      .result-red {
+        background: #ffebee;
+        border: 1px solid #ffcdd2;
+        color: #c62828;
+      }
+      .result-orange {
+        background: #fff3e0;
+        border: 1px solid #ffe0b2;
+        color: #ef6c00;
+      }
+      .result-green {
+        background: #e8f5e9;
+        border: 1px solid #c8e6c9;
+        color: #2e7d32;
+      }
 
       /* =========================================
          MEDIA QUERIES (OPTIMISATION SMARTPHONE)
          ========================================= */
       @media (max-width: 900px) {
-        header { padding: 10px 0; }
-        header img { height: 45px; }
-        
-        .burger { display: flex; }
-        nav {
-          display: none; position: absolute; top: 100%; left: 0; width: 100%;
-          background-color: var(--bg-white); flex-direction: column; padding: 10px 0;
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); border-top: 1px solid var(--border-color);
+        header {
+          padding: 10px 0;
         }
-        nav.active { display: flex; }
-        nav a { padding: 15px; width: 100%; text-align: center; font-size: 1.1rem; }
+        header img {
+          height: 45px;
+        }
 
-        .stats { flex-direction: row; flex-wrap: nowrap; gap: 15px; }
-        .stat-item { min-width: unset; padding: 15px 10px; width: 50%; }
-        .stat-item .number { font-size: 2rem; }
-        .stat-item p { font-size: 0.85rem; }
+        .burger {
+          display: flex;
+        }
+        nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--bg-white);
+          flex-direction: column;
+          padding: 10px 0;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+          border-top: 1px solid var(--border-color);
+        }
+        nav.active {
+          display: flex;
+        }
+        nav a {
+          padding: 15px;
+          width: 100%;
+          text-align: center;
+          font-size: 1.1rem;
+        }
 
-        .sentinelle-section { padding: 10vh 0 60px; }
-        .pricing-header { margin-bottom: 8vh; }
+        .stats {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 15px;
+        }
+        .stat-item {
+          min-width: unset;
+          padding: 15px 10px;
+          width: 50%;
+        }
+        .stat-item .number {
+          font-size: 2rem;
+        }
+        .stat-item p {
+          font-size: 0.85rem;
+        }
+
+        .sentinelle-section {
+          padding: 10vh 0 60px;
+        }
+        .pricing-header {
+          margin-bottom: 8vh;
+        }
         .pricing-grid {
           display: flex;
           overflow-x: auto;
@@ -644,13 +804,33 @@
           -webkit-overflow-scrolling: touch;
           scrollbar-width: none;
         }
-        .pricing-grid::-webkit-scrollbar { display: none; }
-        .pricing-card { flex: 0 0 85%; scroll-snap-align: center; }
-        .pricing-card.popular { transform: scale(1); }
+        .pricing-grid::-webkit-scrollbar {
+          display: none;
+        }
+        .pricing-card {
+          flex: 0 0 85%;
+          scroll-snap-align: center;
+        }
+        .pricing-card.popular {
+          transform: scale(1);
+        }
 
-        .swipe-indicator { display: block; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
-        
+        .swipe-indicator {
+          display: block;
+          animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+          0% {
+            opacity: 0.6;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.6;
+          }
+        }
+
         .grid {
           display: flex;
           overflow-x: auto;
@@ -663,83 +843,114 @@
           padding-right: 20px;
           scrollbar-width: none;
         }
-        .grid::-webkit-scrollbar { display: none; }
-        .card { flex: 0 0 85%; scroll-snap-align: center; }
+        .grid::-webkit-scrollbar {
+          display: none;
+        }
+        .card {
+          flex: 0 0 85%;
+          scroll-snap-align: center;
+        }
 
-        .framework-logos { 
-          flex-wrap: nowrap; 
-          gap: 10px; 
+        .framework-logos {
+          flex-wrap: nowrap;
+          gap: 10px;
           justify-content: space-between;
         }
-        .logo-item { flex: 1; text-align: center; }
-        .logo-item img { height: 40px; }
-        .logo-item span { font-size: 0.7rem; }
+        .logo-item {
+          flex: 1;
+          text-align: center;
+        }
+        .logo-item img {
+          height: 40px;
+        }
+        .logo-item span {
+          font-size: 0.7rem;
+        }
 
         .urgency-box h4 {
           font-size: clamp(0.85rem, 3.8vw, 1.2rem);
           white-space: nowrap;
         }
-        
+
         .mobile-break {
           display: block;
           margin-top: 5px;
           font-size: 1.1rem;
         }
-        
+
         /* Modale mobile */
-        .quiz-content { padding: 25px 20px; }
-        .quiz-title { font-size: 1.3rem; }
-        .quiz-question { font-size: 1rem; }
+        .quiz-content {
+          padding: 25px 20px;
+        }
+        .quiz-title {
+          font-size: 1.3rem;
+        }
+        .quiz-question {
+          font-size: 1rem;
+        }
       }
     </style>
-    
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8369CWJ6G"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T8369CWJ6G"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-T8369CWJ6G');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-T8369CWJ6G");
     </script>
-    
+
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "ProxySafe - Cybersécurité",
-      "alternateName": "ProxySafe",
-      "url": "https://www.proxysafe.be",
-      "logo": "https://www.proxysafe.be/logo_proxysafe.png", 
-      "image": "https://www.proxysafe.be/logo_proxysafe.png",
-      "description": "Consultant GRC et Cybersécurité pour les entreprises. Services d'audit, de sécurisation et de réponse aux incidents.",
-      "founder": {
-        "@type": "Person",
-        "name": "Allan Colinet"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rue Basse-Cornet, 21",
-        "addressLocality": "Frasnes",
-        "postalCode": "5660",
-        "addressCountry": "BE"
-      },
-      "telephone": "+3260860256",
-      "email": "allan@proxysafe.be",
-      "vatID": "BE1036976322",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Belgium"
-      },
-      "priceRange": "$$"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "ProxySafe - Cybersécurité",
+        "alternateName": "ProxySafe",
+        "url": "https://www.proxysafe.be",
+        "logo": "https://www.proxysafe.be/logo_proxysafe.png",
+        "image": "https://www.proxysafe.be/logo_proxysafe.png",
+        "description": "Consultant GRC et Cybersécurité pour les entreprises. Services d'audit, de sécurisation et de réponse aux incidents.",
+        "founder": {
+          "@type": "Person",
+          "name": "Allan Colinet"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rue Basse-Cornet, 21",
+          "addressLocality": "Frasnes",
+          "postalCode": "5660",
+          "addressCountry": "BE"
+        },
+        "telephone": "+3260860256",
+        "email": "allan@proxysafe.be",
+        "vatID": "BE1036976322",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Belgium"
+        },
+        "priceRange": "$$"
+      }
     </script>
-    </head>
+  </head>
   <body>
     <div id="top"></div>
 
     <header>
       <div class="header-content">
-        <img src="logo_proxysafe.png" alt="ProxySafe Logo" onerror="this.style.display='none'" />
-        <button class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+        <img
+          src="logo_proxysafe.png"
+          alt="ProxySafe Logo"
+          onerror="this.style.display = 'none'"
+        />
+        <button
+          class="burger"
+          onclick="toggleMenu()"
+          aria-label="Ouvrir le menu"
+        >
           <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
@@ -747,7 +958,8 @@
           <a href="#sentinelle" onclick="toggleMenu()">Abonnement</a>
           <a href="#services" onclick="toggleMenu()">Services</a>
           <a href="#assistance" onclick="toggleMenu()">Assistance</a>
-          <a href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact" onclick="toggleMenu()">Contact</a>
+          <a href="faq.html">FAQ</a>
+          <a href="#contact" onclick="toggleMenu()">Contact</a>
         </nav>
       </div>
     </header>
@@ -755,150 +967,287 @@
     <main>
       <section class="hero with-pattern">
         <div class="container">
-          <h1>Votre entreprise pourrait-elle survivre à plusieurs jours d'arrêt total ?</h1>
+          <h1>
+            Votre entreprise pourrait-elle survivre à plusieurs jours d'arrêt
+            total ?
+          </h1>
           <p class="lead">
-            Une simple erreur humaine peut paralyser votre activité. 
-            <strong>ProxySafe</strong> accompagne les indépendants, les professionnels de la santé et les PME locales<strong>pour sécuriser leurs données sensibles</strong> 
-            et garantir leur tranquilité d'esprit, tout en respectant les obligations légales (RGPD, NIS2).
+            Une simple erreur humaine peut paralyser votre activité.
+            <strong>ProxySafe</strong> accompagne les indépendants, les
+            professionnels de la santé et les PME locales<strong
+              >pour sécuriser leurs données sensibles</strong
+            >
+            et garantir leur tranquilité d'esprit, tout en respectant les
+            obligations légales (RGPD, NIS2).
           </p>
 
           <div class="stats">
             <div class="stat-item">
               <span class="number">21 jours</span>
-              <p>C'est le temps d'arrêt moyen d'une PME après une cyberattaque.</p>
+              <p>
+                C'est le temps d'arrêt moyen d'une PME après une cyberattaque.
+              </p>
             </div>
             <div class="stat-item">
               <span class="number">80%</span>
-              <p>Des failles exploitées proviennent d'une simple manipulation humaine.</p>
+              <p>
+                Des failles exploitées proviennent d'une simple manipulation
+                humaine.
+              </p>
             </div>
           </div>
           <div class="sources">*Sources : ENISA / Rapport IBM Security.</div>
 
           <div class="hero-buttons">
-            <a href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change" class="btn">🛡️ Sécuriser mon activité</a>
-            <a href="#" onclick="startQuiz(event)" class="btn btn-secondary">⏱️ Évaluer ma maturité en 2 min</a>
+            <a
+              href="mailto:allan@proxysafe.be?subject=Demande%20de%20contact%20-%20Premier%20%C3%A9change"
+              class="btn"
+              >🛡️ Sécuriser mon activité</a
+            >
+            <a href="#" onclick="startQuiz(event)" class="btn btn-secondary"
+              >⏱️ Évaluer ma maturité en 2 min</a
+            >
           </div>
         </div>
       </section>
 
       <section id="sentinelle" class="sentinelle-section">
-  <video autoplay loop muted playsinline class="bg-video">
-    <source src="threatmap.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la vidéo.
-  </video>
-  <div class="video-overlay"></div>
+        <video autoplay loop muted playsinline class="bg-video">
+          <source src="threatmap.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="video-overlay"></div>
 
-  <div class="container-pricing">
-    <div class="pricing-header">
-      <h2>Abonnement <span style="color: var(--cyan-tech);">Sentinelle</span></h2>
-      <p>
-        Une protection managée pour vos postes, smartphones, boîtes mail et outils cloud,
-        avec surveillance, correctifs de sécurité et protection des données.
-      </p>
-    </div>
+        <div class="container-pricing">
+          <div class="pricing-header">
+            <h2>
+              Abonnement <span style="color: var(--cyan-tech)">Sentinelle</span>
+            </h2>
+            <p>
+              Une protection managée pour vos postes, smartphones, boîtes mail
+              et outils cloud, avec surveillance, correctifs de sécurité et
+              protection des données.
+            </p>
+          </div>
 
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="plan-name">Solo</div>
-        <div class="plan-price">49€<span>/mois</span></div>
-        <div class="plan-htva">HTVA (Régime franchise)</div>
-        <ul class="plan-features">
-          <li><strong>1 poste* + 1 smartphone + 1 boîte mail**</strong></li>
-          <li><strong>Protection avancée</strong> contre ransomwares, phishing, malwares et menaces inconnues</li>
-          <li><strong>Protection messagerie & cloud**</strong> pour Microsoft 365 / Google Workspace pro.</li>
-          <li><strong>Gestion des vulnérabilités</strong> supervision et application des correctifs de sécurité</li>
-          <li><strong>Chiffrement des disques</strong> pour la protection des données en cas de vol</li>
-          <li><strong>Protection des données</strong> veille des fuites et rapport de sécurité mensuel</li>
-        </ul>
-        <a href="mailto:allan@proxysafe.be?subject=Souscription%20Solo" class="btn-pricing btn-outline-pricing">Choisir Solo</a>
-      </div>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <div class="plan-name">Solo</div>
+              <div class="plan-price">49€<span>/mois</span></div>
+              <div class="plan-htva">HTVA (Régime franchise)</div>
+              <ul class="plan-features">
+                <li>
+                  <strong>1 poste* + 1 smartphone + 1 boîte mail**</strong>
+                </li>
+                <li>
+                  <strong>Protection avancée</strong> contre ransomwares,
+                  phishing, malwares et menaces inconnues
+                </li>
+                <li>
+                  <strong>Protection messagerie & cloud**</strong> pour
+                  Microsoft 365 / Google Workspace pro.
+                </li>
+                <li>
+                  <strong>Gestion des vulnérabilités</strong> supervision et
+                  application des correctifs de sécurité
+                </li>
+                <li>
+                  <strong>Chiffrement des disques</strong> pour la protection
+                  des données en cas de vol
+                </li>
+                <li>
+                  <strong>Protection des données</strong> veille des fuites et
+                  rapport de sécurité mensuel
+                </li>
+              </ul>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Souscription%20Solo"
+                class="btn-pricing btn-outline-pricing"
+                >Choisir Solo</a
+              >
+            </div>
 
-      <div class="pricing-card popular" id="card-pro">
-        <div class="badge-launch">LANCEMENT : -20% POUR LES 5 PREMIERS CLIENTS</div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-price"><span class="price-strike">149€</span>119€<span>/mois</span></div>
-        <div class="plan-htva">HTVA (Régime franchise) - Offre de lancement*</div>
-        <ul class="plan-features">
-          <li><strong>Jusqu'à 5 postes* + 5 smartphones + 5 boîtes mail**</strong></li>
-          <li><strong>Protection avancée</strong> contre ransomwares, phishing, malwares et menaces inconnues</li>
-          <li><strong>Protection messagerie & cloud**</strong> pour Microsoft 365 / Google Workspace pro.</li>
-          <li><strong>Gestion des vulnérabilités</strong> supervision et application des correctifs de sécurité</li>
-          <li><strong>Chiffrement des disques</strong> pour la protection des données en cas de vol</li>
-          <li><strong>Protection des données</strong> veille des fuites et rapport de sécurité mensuel complet</li>
-        </ul>
-        <a href="mailto:allan@proxysafe.be?subject=Souscription%20Pro" class="btn-pricing btn-solid-pricing">Bloquer mon tarif</a>
-      </div>
+            <div class="pricing-card popular" id="card-pro">
+              <div class="badge-launch">
+                LANCEMENT : -20% POUR LES 5 PREMIERS CLIENTS
+              </div>
+              <div class="plan-name">Pro</div>
+              <div class="plan-price">
+                <span class="price-strike">149€</span>119€<span>/mois</span>
+              </div>
+              <div class="plan-htva">
+                HTVA (Régime franchise) - Offre de lancement*
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <strong
+                    >Jusqu'à 5 postes* + 5 smartphones + 5 boîtes mail**</strong
+                  >
+                </li>
+                <li>
+                  <strong>Protection avancée</strong> contre ransomwares,
+                  phishing, malwares et menaces inconnues
+                </li>
+                <li>
+                  <strong>Protection messagerie & cloud**</strong> pour
+                  Microsoft 365 / Google Workspace pro.
+                </li>
+                <li>
+                  <strong>Gestion des vulnérabilités</strong> supervision et
+                  application des correctifs de sécurité
+                </li>
+                <li>
+                  <strong>Chiffrement des disques</strong> pour la protection
+                  des données en cas de vol
+                </li>
+                <li>
+                  <strong>Protection des données</strong> veille des fuites et
+                  rapport de sécurité mensuel complet
+                </li>
+              </ul>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Souscription%20Pro"
+                class="btn-pricing btn-solid-pricing"
+                >Bloquer mon tarif</a
+              >
+            </div>
 
-      <div class="pricing-card">
-        <div class="plan-name">Premium</div>
-        <div class="plan-price">289€<span>/mois</span></div>
-        <div class="plan-htva">HTVA (Régime franchise)</div>
-        <ul class="plan-features">
-          <li><strong>Jusqu'à 12 postes* + 12 smartphones + 12 boîtes mail**</strong></li>
-          <li><strong>Protection avancée</strong> contre ransomwares, phishing, malwares et menaces inconnues</li>
-          <li><strong>Protection messagerie & cloud**</strong> pour Microsoft 365 / Google Workspace pro.</li>
-          <li><strong>Gestion des vulnérabilités</strong> supervision et application des correctifs de sécurité</li>
-          <li><strong>Chiffrement des disques</strong> pour la protection des données en cas de vol</li>
-          <li><strong>Protection des données</strong> veille des fuites, rapport de sécurité mensuel complet</li>
-        </ul>
-        <a href="mailto:allan@proxysafe.be?subject=Souscription%20Premium" class="btn-pricing btn-outline-pricing">Choisir Premium</a>
-      </div>
-    </div>
+            <div class="pricing-card">
+              <div class="plan-name">Premium</div>
+              <div class="plan-price">289€<span>/mois</span></div>
+              <div class="plan-htva">HTVA (Régime franchise)</div>
+              <ul class="plan-features">
+                <li>
+                  <strong
+                    >Jusqu'à 12 postes* + 12 smartphones + 12 boîtes
+                    mail**</strong
+                  >
+                </li>
+                <li>
+                  <strong>Protection avancée</strong> contre ransomwares,
+                  phishing, malwares et menaces inconnues
+                </li>
+                <li>
+                  <strong>Protection messagerie & cloud**</strong> pour
+                  Microsoft 365 / Google Workspace pro.
+                </li>
+                <li>
+                  <strong>Gestion des vulnérabilités</strong> supervision et
+                  application des correctifs de sécurité
+                </li>
+                <li>
+                  <strong>Chiffrement des disques</strong> pour la protection
+                  des données en cas de vol
+                </li>
+                <li>
+                  <strong>Protection des données</strong> veille des fuites,
+                  rapport de sécurité mensuel complet
+                </li>
+              </ul>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Souscription%20Premium"
+                class="btn-pricing btn-outline-pricing"
+                >Choisir Premium</a
+              >
+            </div>
+          </div>
 
-    <div class="pricing-disclaimer">
-      * Un poste correspond à 1 ordinateur fixe, 1 ordinateur portable ou 1 serveur.<br>
-      ** La protection messagerie & cloud nécessite un abonnement Microsoft 365 ou Google Workspace actif (abonnement non fourni). 
-      Pour les messageries standard (Gmail personnel, Outlook.com, etc.), la protection est assurée au niveau du poste et du mobile inclus dans la formule.<br>
-      Les smartphones, boîtes mail et outils cloud sont inclus dans la limite de chaque formule.<br>
-      Les abonnements incluent la protection, la gestion des vulnérabilités, l’application des correctifs et l’accompagnement à distance.<br>
-      La gestion automatisée des correctifs est principalement disponible sur Windows. Les postes macOS et Linux bénéficient d'une couverture partielle selon les fonctionnalités disponibles au moment de la prestation.<br>
-      La protection des données inclut le chiffrement des postes compatibles (firmware UEFI requis, Windows 10+ ou macOS Mojave+). Le chiffrement n'est pas disponible sur les postes avec BIOS Legacy.<br>
-      La veille des fuites de données et des signaux d’exposition externes est réalisée de manière périodique.<br>
-      L’offre de lancement Pro est réservée aux 5 premiers clients. Le tarif de lancement reste applicable tant que l’abonnement reste actif, sous réserve d’une révision tarifaire générale en cas d’évolution importante des coûts, de l’inflation ou du périmètre de service.<br>
-      Les interventions techniques spécifiques, hors périmètre ou exceptionnelles peuvent faire l’objet d’un devis.
-    </div>
-  </div>
-</section>
+          <div class="pricing-disclaimer">
+            * Un poste correspond à 1 ordinateur fixe, 1 ordinateur portable ou
+            1 serveur.<br />
+            ** La protection messagerie & cloud nécessite un abonnement
+            Microsoft 365 ou Google Workspace actif (abonnement non fourni).
+            Pour les messageries standard (Gmail personnel, Outlook.com, etc.),
+            la protection est assurée au niveau du poste et du mobile inclus
+            dans la formule.<br />
+            Les smartphones, boîtes mail et outils cloud sont inclus dans la
+            limite de chaque formule.<br />
+            Les abonnements incluent la protection, la gestion des
+            vulnérabilités, l’application des correctifs et l’accompagnement à
+            distance.<br />
+            La gestion automatisée des correctifs est principalement disponible
+            sur Windows. Les postes macOS et Linux bénéficient d'une couverture
+            partielle selon les fonctionnalités disponibles au moment de la
+            prestation.<br />
+            La protection des données inclut le chiffrement des postes
+            compatibles (firmware UEFI requis, Windows 10+ ou macOS Mojave+). Le
+            chiffrement n'est pas disponible sur les postes avec BIOS Legacy.<br />
+            La veille des fuites de données et des signaux d’exposition externes
+            est réalisée de manière périodique.<br />
+            L’offre de lancement Pro est réservée aux 5 premiers clients. Le
+            tarif de lancement reste applicable tant que l’abonnement reste
+            actif, sous réserve d’une révision tarifaire générale en cas
+            d’évolution importante des coûts, de l’inflation ou du périmètre de
+            service.<br />
+            Les interventions techniques spécifiques, hors périmètre ou
+            exceptionnelles peuvent faire l’objet d’un devis.
+          </div>
+        </div>
+      </section>
 
       <section id="services" class="services-section with-pattern">
         <div class="container">
           <h2 class="section-title">Accompagnement Cyber & GRC sur mesure</h2>
-          <div class="swipe-indicator">← Glissez pour découvrir nos services →</div>
+          <div class="swipe-indicator">
+            ← Glissez pour découvrir nos services →
+          </div>
 
           <div class="grid">
             <div class="card">
               <h3>État des lieux</h3>
               <p>
-                <em>Évaluation de votre santé numérique.</em> Un audit clair et pragmatique de votre organisation 
-                pour identifier les risques critiques et définir votre feuille de route priorisée.
+                <em>Évaluation de votre santé numérique.</em> Un audit clair et
+                pragmatique de votre organisation pour identifier les risques
+                critiques et définir votre feuille de route priorisée.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20Audit" class="btn-outline">Infos sur l'audit</a>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Audit"
+                class="btn-outline"
+                >Infos sur l'audit</a
+              >
             </div>
 
             <div class="card">
               <h3>Conformité & Continuité</h3>
               <p>
-                <em>Être en règle et limiter la casse.</em> Mise en conformité stratégique (NIS2, RGPD) 
-                et création de plans de relance pour minimiser l'impact financier d'un incident.
+                <em>Être en règle et limiter la casse.</em> Mise en conformité
+                stratégique (NIS2, RGPD) et création de plans de relance pour
+                minimiser l'impact financier d'un incident.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20Continuit%C3%A9" class="btn-outline">Infos continuité</a>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Continuit%C3%A9"
+                class="btn-outline"
+                >Infos continuité</a
+              >
             </div>
 
             <div class="card">
               <h3>Sensibilisation Active</h3>
               <p>
-                <em>Le meilleur bouclier, c'est votre équipe.</em> Des ateliers pratiques et simulations 
-                pour transformer vos collaborateurs en première ligne de défense, sans jargon technique.
+                <em>Le meilleur bouclier, c'est votre équipe.</em> Des ateliers
+                pratiques et simulations pour transformer vos collaborateurs en
+                première ligne de défense, sans jargon technique.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20Sensibilisation" class="btn-outline">Infos sensibilisation</a>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Sensibilisation"
+                class="btn-outline"
+                >Infos sensibilisation</a
+              >
             </div>
 
             <div class="card">
               <h3>Partenaire Sécurité au Quotidien</h3>
               <p>
-                <em>Votre allié sur le long terme.</em> Concentrez-vous sur votre métier, je reste à vos côtés chaque mois pour vous conseiller, valider vos choix techniques et m'assurer que vos protections restent efficaces.
+                <em>Votre allié sur le long terme.</em> Concentrez-vous sur
+                votre métier, je reste à vos côtés chaque mois pour vous
+                conseiller, valider vos choix techniques et m'assurer que vos
+                protections restent efficaces.
               </p>
-              <a href="mailto:allan@proxysafe.be?subject=Infos%20Accompagnement" class="btn-outline">Infos accompagnement</a>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Infos%20Accompagnement"
+                class="btn-outline"
+                >Infos accompagnement</a
+              >
             </div>
           </div>
         </div>
@@ -909,15 +1258,27 @@
           <h4>Méthodologie basée sur les standards officiels</h4>
           <div class="framework-logos">
             <div class="logo-item">
-              <img src="logo_cyfun.png" alt="CyberFundamentals CCB" title="CyberFundamentals (CCB)" />
+              <img
+                src="logo_cyfun.png"
+                alt="CyberFundamentals CCB"
+                title="CyberFundamentals (CCB)"
+              />
               <span>CyberFundamentals CCB</span>
             </div>
             <div class="logo-item">
-              <img src="icon_nis2.png" alt="Directive NIS2" title="Directive NIS2" />
+              <img
+                src="icon_nis2.png"
+                alt="Directive NIS2"
+                title="Directive NIS2"
+              />
               <span>Directive NIS2</span>
             </div>
             <div class="logo-item">
-              <img src="icon_rgpd.png" alt="RGPD Compliant" title="Conformité RGPD" />
+              <img
+                src="icon_rgpd.png"
+                alt="RGPD Compliant"
+                title="Conformité RGPD"
+              />
               <span>Conformité RGPD</span>
             </div>
           </div>
@@ -926,24 +1287,31 @@
 
       <section id="assistance" class="local-approach with-pattern">
         <div class="container">
-          <h2>Un partenaire de proximité, ancré dans votre réalité de terrain.</h2>
+          <h2>
+            Un partenaire de proximité, ancré dans votre réalité de terrain.
+          </h2>
           <p>
-            Basé dans l'Entre-Sambre-et-Meuse, j'accompagne les PME locales et transfrontalières 
-            avec une approche humaine et des solutions adaptées à la taille de votre structure.
+            Basé dans l'Entre-Sambre-et-Meuse, j'accompagne les PME locales et
+            transfrontalières avec une approche humaine et des solutions
+            adaptées à la taille de votre structure.
           </p>
 
           <div class="urgency-box">
             <h4>🚨 Assistance & Diagnostic d'Urgence</h4>
             <p>
-              Une suspicion d'intrusion ou un blocage de données nécessite une réaction immédiate et méthodique. 
-              Je vous accompagne dès les premières minutes par téléphone pour réaliser un 
-              <strong>diagnostic d'urgence</strong>, limiter la propagation et préparer l'intervention technique.
+              Une suspicion d'intrusion ou un blocage de données nécessite une
+              réaction immédiate et méthodique. Je vous accompagne dès les
+              premières minutes par téléphone pour réaliser un
+              <strong>diagnostic d'urgence</strong>, limiter la propagation et
+              préparer l'intervention technique.
             </p>
-            <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 10px;">
-              * Service d'assistance prioritaire réservé aux professionnels. Premier diagnostic facturé à l'acte ou inclus dans les forfaits de suivi.
+            <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 10px">
+              * Service d'assistance prioritaire réservé aux professionnels.
+              Premier diagnostic facturé à l'acte ou inclus dans les forfaits de
+              suivi.
             </p>
             <a href="tel:+3260860256" class="btn-call">
-              📞 Diagnostic d'urgence : 
+              📞 Diagnostic d'urgence :
               <span class="mobile-break">+32 (0) 60 86 02 56</span>
             </a>
           </div>
@@ -959,17 +1327,29 @@
         <!-- ETAPE 1 : AIGUILLAGE -->
         <div id="quiz-step-1" class="quiz-step active">
           <h3 class="quiz-title">Évaluation de Maturité Cyber</h3>
-          <p class="quiz-question">Savez-vous si votre entreprise est directement concernée par les obligations de la directive européenne NIS2 ?</p>
-          <div class="quiz-option" onclick="goToBranch('nis2')">Oui, nous sommes concernés (Entité Essentielle ou Importante).</div>
-          <div class="quiz-option" onclick="goToBranch('tpe')">Non, nous sommes trop petits ou hors secteur.</div>
-          <div class="quiz-option" onclick="goToBranch('tpe')">Je n'en ai aucune idée.</div>
+          <p class="quiz-question">
+            Savez-vous si votre entreprise est directement concernée par les
+            obligations de la directive européenne NIS2 ?
+          </p>
+          <div class="quiz-option" onclick="goToBranch('nis2')">
+            Oui, nous sommes concernés (Entité Essentielle ou Importante).
+          </div>
+          <div class="quiz-option" onclick="goToBranch('tpe')">
+            Non, nous sommes trop petits ou hors secteur.
+          </div>
+          <div class="quiz-option" onclick="goToBranch('tpe')">
+            Je n'en ai aucune idée.
+          </div>
         </div>
 
         <!-- ETAPE 2A : BRANCHE NIS2 -->
         <div id="quiz-step-nis2" class="quiz-step">
           <h3 class="quiz-title">Vos enjeux de conformité légale</h3>
-          
-          <p class="quiz-question">1. La direction a-t-elle validé une analyse de risques et un plan de continuité (PCA) cette année ?</p>
+
+          <p class="quiz-question">
+            1. La direction a-t-elle validé une analyse de risques et un plan de
+            continuité (PCA) cette année ?
+          </p>
           <select id="nis2-q1" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
             <option value="3">Oui, c'est à jour et testé.</option>
@@ -977,78 +1357,133 @@
             <option value="0">Non, nous n'avons rien de formel.</option>
           </select>
 
-          <p class="quiz-question">2. Vos fournisseurs informatiques sont-ils audités ou soumis à des clauses de sécurité ?</p>
+          <p class="quiz-question">
+            2. Vos fournisseurs informatiques sont-ils audités ou soumis à des
+            clauses de sécurité ?
+          </p>
           <select id="nis2-q2" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
-            <option value="3">Oui, nous avons un processus de contrôle strict.</option>
+            <option value="3">
+              Oui, nous avons un processus de contrôle strict.
+            </option>
             <option value="1">Partiellement (seulement certains).</option>
             <option value="0">Non, on leur fait confiance aveuglément.</option>
           </select>
 
-          <p class="quiz-question">3. En cas d'incident majeur, avez-vous le process pour notifier le CCB dans les 24h légales ?</p>
+          <p class="quiz-question">
+            3. En cas d'incident majeur, avez-vous le process pour notifier le
+            CCB dans les 24h légales ?
+          </p>
           <select id="nis2-q3" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
-            <option value="3">Oui, la procédure est documentée et claire.</option>
-            <option value="0">Non / Je ne savais pas que c'était obligatoire.</option>
+            <option value="3">
+              Oui, la procédure est documentée et claire.
+            </option>
+            <option value="0">
+              Non / Je ne savais pas que c'était obligatoire.
+            </option>
           </select>
 
-          <button class="btn" style="width:100%" onclick="calculateBranch('nis2')">Calculer mon score</button>
+          <button
+            class="btn"
+            style="width: 100%"
+            onclick="calculateBranch('nis2')"
+          >
+            Calculer mon score
+          </button>
         </div>
 
         <!-- ETAPE 2B : BRANCHE TPE/PME -->
         <div id="quiz-step-tpe" class="quiz-step">
           <h3 class="quiz-title">Vos enjeux de sécurité opérationnelle</h3>
-          
-          <p class="quiz-question">1. Si un ransomware bloque tout demain, vos sauvegardes sont-elles déconnectées et restaurables ?</p>
+
+          <p class="quiz-question">
+            1. Si un ransomware bloque tout demain, vos sauvegardes sont-elles
+            déconnectées et restaurables ?
+          </p>
           <select id="tpe-q1" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
             <option value="3">Oui, nous faisons des tests réguliers.</option>
-            <option value="1">Je l'espère, mon informaticien s'en occupe.</option>
+            <option value="1">
+              Je l'espère, mon informaticien s'en occupe.
+            </option>
             <option value="0">Non / Je ne sais pas.</option>
           </select>
 
-          <p class="quiz-question">2. Vos collaborateurs utilisent-ils la double validation (MFA) à distance ?</p>
+          <p class="quiz-question">
+            2. Vos collaborateurs utilisent-ils la double validation (MFA) à
+            distance ?
+          </p>
           <select id="tpe-q2" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
-            <option value="3">Oui, c'est obligatoire pour tout le monde.</option>
+            <option value="3">
+              Oui, c'est obligatoire pour tout le monde.
+            </option>
             <option value="1">Seulement la direction ou les admins.</option>
             <option value="0">Non, un simple mot de passe suffit.</option>
           </select>
 
-          <p class="quiz-question">3. Quel est votre niveau de surveillance face aux failles de vos équipements ?</p>
+          <p class="quiz-question">
+            3. Quel est votre niveau de surveillance face aux failles de vos
+            équipements ?
+          </p>
           <select id="tpe-q3" class="quiz-input">
             <option value="0">Choisissez une réponse...</option>
-            <option value="3">Veille continue (externalisée ou en interne).</option>
-            <option value="1">Vérification occasionnelle (1 à 2 fois par an).</option>
+            <option value="3">
+              Veille continue (externalisée ou en interne).
+            </option>
+            <option value="1">
+              Vérification occasionnelle (1 à 2 fois par an).
+            </option>
             <option value="0">Aucune surveillance proactive.</option>
           </select>
 
-          <button class="btn" style="width:100%" onclick="calculateBranch('tpe')">Calculer mon score</button>
+          <button
+            class="btn"
+            style="width: 100%"
+            onclick="calculateBranch('tpe')"
+          >
+            Calculer mon score
+          </button>
         </div>
 
         <!-- ETAPE 3 : RÉSULTAT FINAL -->
         <div id="quiz-step-result" class="quiz-step">
           <h3 class="quiz-title">Votre Résultat</h3>
           <div id="quiz-result-content"></div>
-          <div id="quiz-action-button" style="margin-top:20px; text-align:center;"></div>
+          <div
+            id="quiz-action-button"
+            style="margin-top: 20px; text-align: center"
+          ></div>
         </div>
       </div>
     </div>
 
-    <footer>
+    <footer id="contact">
       <div class="container">
-        <p style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
           Contactez ProxySafe pour un premier échange sans engagement.
         </p>
         <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
-        <p style="margin-top: 10px;">📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a></p>
-        
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+
         <div class="footer-info">
           <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
-          <p>Siège administratif : Rue Basse-Cornet, 21 - 5660 Frasnes, Belgique</p>
+          <p>
+            Siège administratif : Rue Basse-Cornet, 21 - 5660 Frasnes, Belgique
+          </p>
           <p>TVA : BE 1036.976.322</p>
-          <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 15px;">Petite entreprise soumise au régime de la franchise de la taxe.</p>
-          <p style="margin-top: 15px; font-style: italic; opacity: 0.7;">Spécialiste en Gouvernance (GRC) issu de l'analyse SOC et du Pentest, au service des PME.</p>
+          <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 15px">
+            Petite entreprise soumise au régime de la franchise de la taxe.
+          </p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.7">
+            Spécialiste en Gouvernance (GRC) issu de l'analyse SOC et du
+            Pentest, au service des PME.
+          </p>
         </div>
       </div>
     </footer>
@@ -1056,63 +1491,68 @@
     <script>
       // SCRIPT MENU MOBILE & CARROUSEL
       function toggleMenu() {
-        const nav = document.getElementById('nav-menu');
-        nav.classList.toggle('active');
+        const nav = document.getElementById("nav-menu");
+        nav.classList.toggle("active");
       }
 
-      window.addEventListener('DOMContentLoaded', (event) => {
-  if (window.innerWidth <= 900) {
-    const grid = document.querySelector('.pricing-grid');
-    const popularCard = document.getElementById('card-pro');
-    if (grid && popularCard) {
-      const scrollPos = popularCard.offsetLeft - (window.innerWidth / 2) + (popularCard.offsetWidth / 2);
-      grid.scrollLeft = scrollPos;
-    }
-  }
-});
+      window.addEventListener("DOMContentLoaded", (event) => {
+        if (window.innerWidth <= 900) {
+          const grid = document.querySelector(".pricing-grid");
+          const popularCard = document.getElementById("card-pro");
+          if (grid && popularCard) {
+            const scrollPos =
+              popularCard.offsetLeft -
+              window.innerWidth / 2 +
+              popularCard.offsetWidth / 2;
+            grid.scrollLeft = scrollPos;
+          }
+        }
+      });
 
       // SCRIPT DU QUIZ
       let quizScore = 0;
-      let selectedBranch = '';
+      let selectedBranch = "";
 
       function startQuiz(e) {
-        if(e) e.preventDefault();
-        document.getElementById('cyber-quiz-modal').style.display = 'flex';
-        showQuizStep('quiz-step-1');
-        quizScore = 0; 
-        document.querySelectorAll('.quiz-input').forEach(el => el.value = '');
+        if (e) e.preventDefault();
+        document.getElementById("cyber-quiz-modal").style.display = "flex";
+        showQuizStep("quiz-step-1");
+        quizScore = 0;
+        document
+          .querySelectorAll(".quiz-input")
+          .forEach((el) => (el.value = ""));
       }
 
       function closeQuiz() {
-        document.getElementById('cyber-quiz-modal').style.display = 'none';
+        document.getElementById("cyber-quiz-modal").style.display = "none";
       }
 
       function showQuizStep(stepId) {
-        document.querySelectorAll('.quiz-step').forEach(step => {
-          step.classList.remove('active');
+        document.querySelectorAll(".quiz-step").forEach((step) => {
+          step.classList.remove("active");
         });
-        document.getElementById(stepId).classList.add('active');
+        document.getElementById(stepId).classList.add("active");
       }
 
       function goToBranch(branch) {
         selectedBranch = branch;
-        showQuizStep('quiz-step-' + branch);
+        showQuizStep("quiz-step-" + branch);
       }
 
       function calculateBranch(branch) {
         quizScore = 0;
-        const q1 = parseInt(document.getElementById(branch + '-q1').value) || 0;
-        const q2 = parseInt(document.getElementById(branch + '-q2').value) || 0;
-        const q3 = parseInt(document.getElementById(branch + '-q3').value) || 0;
-        
+        const q1 = parseInt(document.getElementById(branch + "-q1").value) || 0;
+        const q2 = parseInt(document.getElementById(branch + "-q2").value) || 0;
+        const q3 = parseInt(document.getElementById(branch + "-q3").value) || 0;
+
         quizScore = q1 + q2 + q3;
-        displayResult(); 
+        displayResult();
       }
 
       function displayResult() {
-        showQuizStep('quiz-step-result');
-        const contentBox = document.getElementById('quiz-result-content');
-        const actionBtn = document.getElementById('quiz-action-button');
+        showQuizStep("quiz-step-result");
+        const contentBox = document.getElementById("quiz-result-content");
+        const actionBtn = document.getElementById("quiz-action-button");
 
         let html = `<h4>Votre Score : ${quizScore} / 9</h4>`;
 
@@ -1122,15 +1562,13 @@
             Votre entreprise est en danger immédiat. Si une attaque survient aujourd'hui, vous risquez l'arrêt total prolongé.
           </div>`;
           actionBtn.innerHTML = `<a href="mailto:allan@proxysafe.be?subject=Demande%20Audit%20Cyber-Start" class="btn">Réserver mon Audit Cyber-Start</a>`;
-        } 
-        else if (quizScore <= 6) {
+        } else if (quizScore <= 6) {
           html += `<div class="quiz-result-box result-orange">
             <strong>Vulnérabilités Silencieuses ⚠️</strong><br><br>
             Vous avez quelques bases, mais des portes sont encore ouvertes. Le risque principal est lié au manque de surveillance active.
           </div>`;
           actionBtn.innerHTML = `<a href="#sentinelle" class="btn btn-solid-pricing" onclick="closeQuiz()">Découvrir l'abonnement Sentinelle</a>`;
-        } 
-        else {
+        } else {
           html += `<div class="quiz-result-box result-green">
             <strong>Bonne Maturité ✅</strong><br><br>
             Félicitations, vous êtes au-dessus de la moyenne des PME. L'enjeu est désormais de maintenir ce cap face aux nouvelles menaces.

@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Cybersécurité | ProxySafe Couvin</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="Foire aux questions ProxySafe : Réponses claires sur la cybersécurité des PME, les tarifs, nos interventions d'urgence et la mise en conformité (NIS2, RGPD)."
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T8369CWJ6G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-T8369CWJ6G");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Combien coûte réellement une cyberattaque pour une petite entreprise ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Au-delà de la rançon éventuelle, le vrai coût est l'arrêt de l'activité. Une PME touchée met en moyenne 21 jours à relancer ses systèmes. Ajoutez à cela la perte de réputation et la fuite des clients."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que dois-je faire dans les premières minutes si je clique sur un lien frauduleux ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "N'éteignez pas l'ordinateur. Déconnectez-le immédiatement d'Internet (câble réseau ou Wi-Fi) pour éviter la propagation, puis contactez un expert en urgence pour un premier diagnostic."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Charte Graphique "Bleu Navy & Sérénité" (Importée de index) */
+      :root {
+        --navy-blue: #0a192f;
+        --navy-light: #112240;
+        --cyan-tech: #00b4d8;
+        --cyan-hover: #0077b6;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --text-main: #333333;
+        --text-muted: #666666;
+        --border-color: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-main);
+        background-color: var(--bg-light);
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      /* HEADER (Identique) */
+      header {
+        background-color: var(--bg-white);
+        padding: 15px 0;
+        border-bottom: 2px solid var(--cyan-tech);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header img {
+        height: 100px;
+        width: auto;
+        transition: height 0.3s;
+      }
+      nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      nav a {
+        color: var(--navy-blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: var(--cyan-tech);
+      }
+
+      /* EN-TÊTE FAQ */
+      .faq-header {
+        text-align: center;
+        padding: 60px 0 40px;
+      }
+      .faq-header h1 {
+        color: var(--navy-blue);
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .faq-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      /* ACCORDEON FAQ */
+      .faq-section {
+        margin-bottom: 40px;
+      }
+      .faq-category {
+        font-size: 1.4rem;
+        color: var(--cyan-tech);
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
+        margin: 40px 0 20px;
+        font-weight: bold;
+      }
+      .accordion-item {
+        background: var(--bg-white);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        overflow: hidden;
+      }
+      .accordion-header {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--navy-blue);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s;
+      }
+      .accordion-header:hover {
+        background: #f0fbff;
+        color: var(--cyan-hover);
+      }
+      .accordion-header.active {
+        background: #f0fbff;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--cyan-hover);
+      }
+      .icon {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--cyan-tech);
+        transition: transform 0.3s ease;
+      }
+      .accordion-header.active .icon {
+        transform: rotate(45deg);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: var(--bg-white);
+      }
+      .accordion-content-inner {
+        padding: 20px;
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: var(--navy-blue);
+        color: #a0aec0;
+        text-align: center;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+      }
+      footer a {
+        color: var(--cyan-tech);
+        text-decoration: none;
+      }
+
+      /* MOBILE */
+      .burger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .burger span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--navy-blue);
+        border-radius: 5px;
+      }
+      @media (max-width: 900px) {
+        header img {
+          height: 45px;
+        }
+        .burger {
+          display: flex;
+        }
+        nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--bg-white);
+          flex-direction: column;
+          padding: 10px 0;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+        }
+        nav.active {
+          display: flex;
+        }
+        nav a {
+          padding: 15px;
+          width: 100%;
+          text-align: center;
+        }
+        .accordion-header {
+          font-size: 1rem;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="index.html">
+          <img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+          />
+        </a>
+        <button
+          class="burger"
+          onclick="toggleMenu()"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html#top" onclick="toggleMenu()">Accueil</a>
+          <a href="index.html#sentinelle" onclick="toggleMenu()">Abonnement</a>
+          <a href="index.html#services" onclick="toggleMenu()">Services</a>
+          <a href="index.html#assistance" onclick="toggleMenu()">Assistance</a>
+          <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="faq-header">
+        <h1>Questions Fréquentes (FAQ)</h1>
+        <p>
+          Des réponses claires, pragmatiques et transparentes pour sécuriser
+          votre activité.
+        </p>
+      </div>
+
+      <h2 class="faq-category">La réalité des risques et l'investissement</h2>
+      <div class="faq-section">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            1. Ma PME est petite, suis-je vraiment une cible pour les pirates ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui. Les pirates ciblent l'argent facile et les vulnérabilités,
+              pas la taille de l'entreprise. L'automatisation des attaques fait
+              des indépendants et petites structures des proies de choix, car
+              ils sont souvent moins protégés que les grands groupes.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            2. Combien coûte réellement une cyberattaque pour une petite
+            entreprise ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Au-delà de la rançon éventuelle, le vrai coût est l'arrêt de
+              l'activité. Une PME touchée met en moyenne 21 jours à relancer ses
+              systèmes. Ajoutez à cela la perte de réputation, les pénalités et
+              la fuite des clients. Comparé à ce risque, un abonnement préventif
+              est un investissement dérisoire.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            3. Faut-il s'engager sur 12 ou 24 mois avec l'abonnement Sentinelle
+            ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Non, il n'y a aucune période d'engagement stricte. Vous pouvez
+              souscrire pour un mois. La résiliation se fait simplement en
+              prévenant un mois à l'avance par e-mail (tout mois entamé est dû),
+              sous réserve de confirmation de ma part.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            4. Je n'y connais rien en informatique, est-ce complexe à gérer ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Absolument pas. Le but de ProxySafe est de vous décharger de cette
+              charge mentale. Je m'occupe de la supervision, de l'application
+              automatique des correctifs et du blocage des menaces en
+              arrière-plan. Vous vous concentrez sur votre métier.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            5. L'abonnement couvre-t-il également mon smartphone personnel si je
+            l'utilise pour le travail ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui, la sécurisation des appareils mobiles (particulièrement sur
+              l'environnement Android) est incluse dans nos forfaits pour
+              protéger vos accès professionnels en déplacement.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="faq-category">L'urgence et l'intervention</h2>
+      <div class="faq-section">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            6. Que dois-je faire dans les premières minutes si je clique sur un
+            lien frauduleux ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              La première règle : n'éteignez pas l'ordinateur, mais
+              déconnectez-le immédiatement d'Internet (retirez le câble réseau
+              ou coupez le Wi-Fi) pour éviter la propagation. Ensuite,
+              contactez-moi en urgence pour un premier diagnostic.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            7. Intervenez-vous sur place en cas d'urgence ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui, selon la situation et la distance géographique (région de
+              l'Entre-Sambre-et-Meuse). Pour les urgences très éloignées, le
+              premier accompagnement de mise en sécurité se fait par téléphone
+              ou à distance.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            8. Si mon entreprise est paralysée, faites-vous de l'investigation
+            numérique (DFIR) ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Mon rôle est celui du premier répondant (urgentiste) :
+              j'accompagne sur les premiers gestes essentiels, j'isole la menace
+              et je coordonne la crise. Je ne suis pas équipé pour faire de
+              l'investigation profonde (DFIR), mais je vous mets en contact avec
+              des équipes spécialisées et assure le relai technique.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            9. Êtes-vous joignable en dehors des heures de bureau ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Pour les incidents critiques avérés (suspicion d'intrusion,
+              blocage), je suis joignable le soir et le week-end. Une
+              intervention de diagnostic en dehors des heures ouvrables fait
+              l'objet d'une tarification d'urgence (majoration sur le taux
+              horaire de base).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            10. Que se passe-t-il si mon ordinateur portable professionnel est
+            volé ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Si l'option a été activée sur votre matériel compatible, la
+              solution inclut le chiffrement complet des disques. Le disque dur
+              est mathématiquement illisible sans votre mot de passe, ce qui
+              protège vos données d'une fuite désastreuse.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="faq-category">L'installation technique et la cohabitation</h2>
+      <div class="faq-section">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            11. J'ai déjà un prestataire informatique, ProxySafe va-t-il le
+            remplacer ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Non, ProxySafe ne remplace pas votre informaticien, il l'aide.
+              Votre prestataire s'occupe de l'infrastructure (réseau, matériel),
+              tandis que je viens en supplément pour ajouter une couche
+              spécialisée de sécurité. Nous collaborons.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            12. Prenez-vous le contrôle de mon réseau d'entreprise ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Non. Je sécurise les terminaux (postes de travail, mobiles) et
+              protège les outils cloud. Je ne gère pas les routeurs ni
+              l'architecture réseau globale.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            13. L'installation des outils de sécurité est-elle à ma charge ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              C'est un service que je propose. Si vous êtes dans ma région, je
+              peux procéder à l'installation sur place. Pour un client éloigné,
+              je vous guide techniquement. La complexité dépend évidemment du
+              matériel (un serveur diffère d'un PC classique).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            14. Mon ordinateur risque-t-il d'être ralenti par la sécurité ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              L'époque des outils lourds est révolue. J'utilise des solutions
+              professionnelles multicouches de dernière génération, reconnues
+              pour être extrêmement légères, garantissant une protection en
+              temps réel sans impacter vos performances.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="faq-category">Conformité (NIS2, RGPD) & Formation</h2>
+      <div class="faq-section">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            15. La directive NIS2 s'applique-t-elle à ma PME ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Même si votre entreprise n'est pas directement ciblée par la loi,
+              vous y serez soumis indirectement si vous êtes le sous-traitant
+              d'une grande entreprise concernée. Elles exigeront des garanties
+              de sécurité strictes pour continuer à travailler avec vous.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            16. Comment prouver à mes partenaires que je protège leurs données
+            (RGPD) ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Je peux fournir un document formel (Attestation des mesures
+              techniques et organisationnelles) qui détaille les protections
+              mises en place sous ma supervision, prouvant votre diligence
+              envers la sécurité des données.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            17. Comment savoir si les mots de passe de mon entreprise circulent
+            sur le Dark Web ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              J'effectue des vérifications ponctuelles régulières pour
+              identifier si vos données ou adresses e-mails professionnelles ont
+              fuité lors de piratages tiers. Cela permet de vous alerter d'une
+              potentielle compromission afin de modifier vos accès et limiter
+              les risques d'intrusion.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            18. Organisez-vous des formations pour sensibiliser mes employés ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui. La majorité des attaques commencent par une erreur humaine.
+              Je propose des sessions de sensibilisation standard ou sur-mesure
+              (avec mise à l'épreuve), réalisées en visioconférence ou
+              directement dans vos locaux.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            19. Est-il intéressant de regrouper plusieurs entreprises pour une
+            formation ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui, j'organise 2 à 3 fois par an des sessions regroupant
+              plusieurs professionnels autour de thématiques de risques communes
+              (le phishing, les accès à distance). Cela permet d'échanger sur
+              les bonnes pratiques sans aborder de stratégies concurrentielles.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            20. Mes employés reçoivent-ils un justificatif après la formation ?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Oui, chaque participant reçoit une attestation de suivi. En cas de
+              contrôle, ce document est une preuve indispensable démontrant vos
+              efforts de sensibilisation du personnel. (Des places gratuites
+              sont offertes aux clients ayant souscrit un abonnement annuel).
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact">
+      <div class="container">
+        <p>
+          📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a> | 📞 +32
+          (0) 60 86 02 56
+        </p>
+        <p style="margin-top: 15px; font-size: 0.85rem">
+          <strong>&copy; 2026 ProxySafe - Allan Colinet</strong>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+      }
+
+      document.querySelectorAll(".accordion-header").forEach((button) => {
+        button.addEventListener("click", () => {
+          const accordionContent = button.nextElementSibling;
+
+          // Refermer les autres accordéons ouverts
+          document
+            .querySelectorAll(".accordion-header")
+            .forEach((otherButton) => {
+              if (otherButton !== button) {
+                otherButton.classList.remove("active");
+                otherButton.nextElementSibling.style.maxHeight = null;
+              }
+            });
+
+          // Ouvrir ou fermer l'accordéon cliqué
+          button.classList.toggle("active");
+          if (button.classList.contains("active")) {
+            accordionContent.style.maxHeight =
+              accordionContent.scrollHeight + "px";
+          } else {
+            accordionContent.style.maxHeight = null;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
