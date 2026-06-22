@@ -290,7 +290,7 @@
         background: rgba(255, 255, 255, 0.98);
         border: 1px solid var(--border-color);
         border-radius: 12px;
-        padding: 40px 20px; /* Marges internes réduites pour élargir le texte sur PC */
+        padding: 40px 20px;
         text-align: center;
         position: relative;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -328,15 +328,6 @@
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 5px;
-      }
-      .plan-target {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        margin-bottom: 20px;
-        height: 40px;
-      }
-      .pricing-card.popular .plan-target {
-        color: #a0aec0;
       }
       .plan-price {
         font-size: 3rem;
@@ -416,6 +407,44 @@
         opacity: 0.9;
         font-style: italic;
         padding: 0 20px;
+      }
+
+      /* ACCROCHE SANTE HORS GRILLE */
+      .health-cta-box {
+        max-width: 900px;
+        margin: 60px auto 0;
+        background: rgba(17, 34, 64, 0.95);
+        border: 2px solid var(--cyan-tech);
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      .health-cta-box h3 {
+        color: #ffffff;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+      .health-cta-box p {
+        color: #d1d5db;
+        font-size: 1.05rem;
+        margin-bottom: 20px;
+      }
+      .health-link-btn {
+        display: inline-block;
+        background-color: var(--cyan-tech);
+        color: var(--navy-blue);
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      .health-link-btn:hover {
+        background-color: var(--cyan-hover);
+        color: #ffffff;
       }
 
       /* SERVICES */
@@ -977,11 +1006,10 @@
             <a
               href="sante.html"
               style="color: var(--cyan-tech); text-decoration: underline"
-              >professionnels de la santé
-            </a>
-            et les PME locales<strong
-              >pour sécuriser leurs données sensibles</strong
+              >professionnels de la santé</a
             >
+            et les PME locales
+            <strong>pour sécuriser leurs données sensibles</strong>
             et garantir leur tranquilité d'esprit, tout en respectant les
             obligations légales (RGPD, NIS2).
           </p>
@@ -1039,7 +1067,7 @@
             <div class="pricing-card">
               <div class="plan-name">Solo</div>
               <div class="plan-price">49€<span>/mois</span></div>
-              <div class="plan-htva">HTVA (Régime franchise)</div>
+              <div class="plan-htva">HTVA</div>
               <ul class="plan-features">
                 <li>
                   <strong>1 poste* + 1 smartphone + 1 boîte mail**</strong>
@@ -1080,9 +1108,7 @@
               <div class="plan-price">
                 <span class="price-strike">149€</span>119€<span>/mois</span>
               </div>
-              <div class="plan-htva">
-                HTVA (Régime franchise) - Offre de lancement*
-              </div>
+              <div class="plan-htva">HTVA - Offre de lancement*</div>
               <ul class="plan-features">
                 <li>
                   <strong
@@ -1120,7 +1146,7 @@
             <div class="pricing-card">
               <div class="plan-name">Premium</div>
               <div class="plan-price">289€<span>/mois</span></div>
-              <div class="plan-htva">HTVA (Régime franchise)</div>
+              <div class="plan-htva">HTVA</div>
               <ul class="plan-features">
                 <li>
                   <strong
@@ -1157,119 +1183,17 @@
             </div>
           </div>
 
-          <div
-            class="pricing-header"
-            style="margin-top: 80px; margin-bottom: 40px"
-          >
-            <h2 style="font-size: 2.2rem">
-              Professions de la
-              <span style="color: var(--cyan-tech)">Santé &amp; Bien-être</span>
-            </h2>
+          <div class="health-cta-box">
+            <h3>Professions de la Santé &amp; du Bien-être soumis au RGPD</h3>
             <p>
-              Médecins, kinésithérapeutes, psychologues : protégez le secret
-              médical de vos patients et validez vos obligations réglementaires
-              RGPD en toute simplicité.
+              Médecins, kinésithérapeutes, psychologues, infirmiers : vos
+              dossiers patients exigent une conformité stricte vis-à-vis de
+              l'Autorité de Protection des Données (APD). Découvrez notre
+              solution sur mesure "Care".
             </p>
-          </div>
-
-          <div class="pricing-grid" style="max-width: 900px; margin: 0 auto">
-            <div
-              class="pricing-card"
-              style="border: 2px solid var(--cyan-tech)"
-            >
-              <div class="plan-name" style="color: var(--navy-blue)">
-                Santé Solo
-              </div>
-              <div class="plan-price" style="color: var(--navy-blue)">
-                69€<span>/mois</span>
-              </div>
-              <div class="plan-htva">HTVA — Par poste de consultation</div>
-              <ul class="plan-features">
-                <li>
-                  <strong>Couverture RGPD Maximale</strong> : Chiffrement total
-                  de votre disque dur. En cas de vol du PC, les données patients
-                  restent cryptées et inviolables (pas de notification
-                  obligatoire à l'APD).
-                </li>
-                <li>
-                  <strong>Blocage des menaces inconnues</strong> : Sécurité
-                  proactive de pointe contre les ransomwares et les emails de
-                  phishing ciblant le secteur médical.
-                </li>
-                <li>
-                  <strong>Gestion des vulnérabilités</strong> : Surveillance
-                  continue et application invisible des correctifs de sécurité
-                  de votre système.
-                </li>
-                <li>
-                  <strong>Registre APD Clé en main</strong> : Je réalise
-                  l'inventaire technique de votre poste pour pré-remplir votre
-                  registre légal des traitements.
-                </li>
-                <li>
-                  <strong>Configuration sur mesure</strong> : Paramétrage
-                  initial complet avec vous (verrouillage de sécurité, double
-                  authentification MFA, gestionnaire de mots de passe).
-                </li>
-                <li>
-                  <strong>Esprit Tranquille</strong> : Suivi technique rigoureux
-                  en arrière-plan et rapport de sécurité trimestriel simplifié.
-                </li>
-              </ul>
-              <a
-                href="mailto:allan@proxysafe.be?subject=Souscription%20Sant%C3%A9%20Solo"
-                class="btn-pricing btn-solid-pricing"
-                >Sécuriser mon Cabinet solo</a
-              >
-            </div>
-
-            <div
-              class="pricing-card popular"
-              style="transform: scale(1.02); border: 2px solid var(--cyan-tech)"
-            >
-              <div
-                class="badge-launch"
-                style="
-                  background-color: var(--bg-white);
-                  color: var(--navy-blue);
-                  border: 1px solid var(--cyan-tech);
-                "
-              >
-                AVANTAGE CABINET DE GROUPE
-              </div>
-              <div class="plan-name">Santé Cabinet</div>
-              <div class="plan-price">59€<span>/mois</span></div>
-              <div class="plan-htva" style="color: #a0aec0">
-                HTVA — Par poste (Dès 2 postes au même cabinet)
-              </div>
-              <ul class="plan-features">
-                <li>
-                  <strong>Mêmes garanties que l'offre Solo</strong> (Chiffrement
-                  total, blocage des menaces, registre APD, suivi technique).
-                </li>
-                <li>
-                  <strong>Tarif dégressif avantageux</strong> pour regrouper la
-                  sécurité de tous les praticiens ou secrétariats de votre
-                  structure.
-                </li>
-                <li>
-                  <strong>Gestion des accès segmentée</strong> : Conseils pour
-                  s'assurer que chaque collaborateur n'accède qu'aux données
-                  nécessaires à sa fonction.
-                </li>
-                <li>
-                  <strong>Session Flash incluse</strong> : Séance collective de
-                  sensibilisation aux pièges numériques (30 min) offerte au
-                  cabinet après 12 mois.
-                </li>
-              </ul>
-              <a
-                href="mailto:allan@proxysafe.be?subject=Souscription%20Sant%C3%A9%20Cabinet"
-                class="btn-pricing btn-solid-pricing"
-                style="background: var(--bg-white); color: var(--navy-blue)"
-                >Sécuriser notre Cabinet</a
-              >
-            </div>
+            <a href="sante.html" class="health-link-btn">
+              ⚖️ Découvrir l'Espace Santé &amp; Compliance RGPD
+            </a>
           </div>
 
           <div class="pricing-disclaimer">
@@ -1299,10 +1223,6 @@
             actif, sous réserve d’une révision tarifaire générale en cas
             d’évolution importante des coûts, de l’inflation ou du périmètre de
             service.<br />
-            <strong>Offres Santé</strong> : Engagement initial de 12 mois
-            requis. Les prestations de cybersécurité pour les professions
-            libérales de soins de santé sont 100% déductibles au titre de frais
-            professionnels en Belgique.<br />
             Les interventions techniques spécifiques, hors périmètre ou
             exceptionnelles peuvent faire l’objet d’un devis.
           </div>
@@ -1443,12 +1363,10 @@
       </section>
     </main>
 
-    <!-- MODALE QUIZ (ENTONNOIR JS) -->
     <div id="cyber-quiz-modal" class="quiz-modal">
       <div class="quiz-content">
         <span class="quiz-close" onclick="closeQuiz()">&times;</span>
 
-        <!-- ETAPE 1 : AIGUILLAGE -->
         <div id="quiz-step-1" class="quiz-step active">
           <h3 class="quiz-title">Évaluation de Maturité Cyber</h3>
           <p class="quiz-question">
@@ -1466,7 +1384,6 @@
           </div>
         </div>
 
-        <!-- ETAPE 2A : BRANCHE NIS2 -->
         <div id="quiz-step-nis2" class="quiz-step">
           <h3 class="quiz-title">Vos enjeux de conformité légale</h3>
 
@@ -1517,7 +1434,6 @@
           </button>
         </div>
 
-        <!-- ETAPE 2B : BRANCHE TPE/PME -->
         <div id="quiz-step-tpe" class="quiz-step">
           <h3 class="quiz-title">Vos enjeux de sécurité opérationnelle</h3>
 
@@ -1571,7 +1487,6 @@
           </button>
         </div>
 
-        <!-- ETAPE 3 : RÉSULTAT FINAL -->
         <div id="quiz-step-result" class="quiz-step">
           <h3 class="quiz-title">Votre Résultat</h3>
           <div id="quiz-result-content"></div>
@@ -1595,7 +1510,6 @@
           📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
         </p>
 
-        <!-- ESPACE DÉDIÉ SECTORIEL -->
         <div
           style="
             margin-top: 25px;
@@ -1623,7 +1537,7 @@
               transition: color 0.3s;
             "
           >
-            Espace Dédié : Professions de la Santé &amp; RGPD
+            🛡️ Espace Dédié : Professions de la Santé &amp; RGPD
           </a>
         </div>
 
