@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProxySafe | Cybersécurité & Conformité PME/Santé</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="ProxySafe : Accompagnement en cybersécurité pour PaME et professionnels de la santé. Conformité NIS2/RGPD, veille et audit."
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -24,7 +28,8 @@
         <nav id="nav-menu">
           <a href="#services" onclick="toggleMenu()">Services</a>
           <a href="#offres" onclick="toggleMenu()">Abonnements</a>
-          <a href="blog.html">Cas d'étude</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
           <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
@@ -56,6 +61,13 @@
       </section>
 
       <section id="offres" class="sentinelle-section">
+        <!-- Rétablissement de la vidéo d'arrière plan -->
+        <video autoplay loop muted playsinline class="bg-video">
+          <source src="threatmap.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="video-overlay"></div>
+
         <div class="container-pricing">
           <div class="pricing-header">
             <h2>
@@ -63,9 +75,9 @@
               <span style="color: var(--cyan-tech)">Sentinelle</span>
             </h2>
             <p>
-              Une sécurisation managée, silencieuse et efficace. <br /><strong
-                style="color: var(--cyan-tech)"
-                >Frais d'installation (150€) offerts</strong
+              Une sécurisation managée, silencieuse et efficace.<br />
+              <strong style="color: var(--cyan-tech)"
+                >Frais d'installation offerts</strong
               >
               pour tout engagement de 12 mois.
             </p>
@@ -76,13 +88,29 @@
             <div class="pricing-card">
               <div class="plan-name">Indépendant (Solo)</div>
               <div class="plan-price">49€<span>/mois</span></div>
-              <div style="font-size: 0.85rem; color: #888">HTVA</div>
+              <div style="font-size: 0.85rem; color: #888; margin-bottom: 20px">
+                HTVA
+              </div>
               <ul class="plan-features">
-                <li><strong>1 Poste + 1 Mobile + 1 Mail</strong></li>
-                <li>Protection anti-ransomware & phishing</li>
-                <li>Mises à jour de sécurité automatisées</li>
-                <li>Chiffrement du disque dur</li>
-                <li>Veille des fuites de données</li>
+                <li>
+                  <strong>1 Poste* + 1 Smartphone + 1 Boîte mail**</strong>
+                </li>
+                <li>
+                  <strong>Protection avancée</strong> contre ransomwares,
+                  phishing et malwares
+                </li>
+                <li>
+                  <strong>Protection messagerie & cloud**</strong> pour
+                  Microsoft 365 / Workspace
+                </li>
+                <li>
+                  <strong>Gestion des vulnérabilités</strong> et correctifs de
+                  sécurité automatiques***
+                </li>
+                <li>
+                  <strong>Chiffrement des disques</strong> en cas de vol du
+                  matériel
+                </li>
               </ul>
               <a
                 href="mailto:allan@proxysafe.be?subject=Information%20Offre%20Solo&body=Bonjour%2C%20je%20suis%20ind%C3%A9pendant%20et%20je%20souhaite%20m'informer%20sur%20l'offre%20Solo.%20Pouvons-nous%20en%20parler%20%3F"
@@ -92,22 +120,33 @@
               >
             </div>
 
-            <!-- Offre Santé (Care) - Mise en avant -->
+            <!-- Offre Santé (Care) -->
             <div class="pricing-card highlight">
-              <div class="badge-referral">
-                ⭐ -10% sur recommandation confrère
-              </div>
               <div class="plan-name">Santé & RGPD (Care)</div>
               <div class="plan-price">69€<span>/mois</span></div>
-              <div style="font-size: 0.85rem; color: #888">
+              <div style="font-size: 0.85rem; color: #888; margin-bottom: 20px">
                 HTVA - Déductible à 100%
               </div>
               <ul class="plan-features">
-                <li><strong>Sécurisation d'un poste médicalisé</strong></li>
-                <li>Protection stricte du secret médical</li>
-                <li>Accompagnement registre APD / RGPD</li>
-                <li>Attestation annuelle de conformité</li>
-                <li>Assistance en cas d'incident critique</li>
+                <li>
+                  <strong>1 Poste médicalisé* + 1 Smartphone + Cloud**</strong>
+                </li>
+                <li>
+                  <strong>Protection stricte</strong> du secret médical et
+                  blocage actif des intrusions
+                </li>
+                <li>
+                  <strong>Chiffrement RGPD</strong> garantissant la
+                  confidentialité des dossiers
+                </li>
+                <li>
+                  <strong>Accompagnement APD</strong> avec aide au registre et
+                  configuration MFA conjointe
+                </li>
+                <li>
+                  <strong>Attestation annuelle</strong> de sécurisation pour
+                  votre patientèle
+                </li>
               </ul>
               <a
                 href="mailto:allan@proxysafe.be?subject=Information%20Offre%20Sant%C3%A9%20Care&body=Bonjour%2C%20je%20suis%20professionnel%20de%20la%20sant%C3%A9%20et%20j'aimerais%20comprendre%20comment%20vous%20pouvez%20s%C3%A9curiser%20mes%20dossiers%20patients.%20Avez-vous%20des%20disponibilit%C3%A9s%20%3F"
@@ -121,17 +160,29 @@
             <div class="pricing-card">
               <div class="plan-name">Équipe (PME)</div>
               <div class="plan-price">Dès 119€<span>/mois</span></div>
-              <div style="font-size: 0.85rem; color: #888">
-                HTVA - Forfait base 3 à 5 postes
+              <div style="font-size: 0.85rem; color: #888; margin-bottom: 20px">
+                HTVA - 119€ (3 postes) / 149€ (5 postes)
               </div>
               <ul class="plan-features">
                 <li>
-                  <strong>Couverture multi-postes & flotte mobile</strong>
+                  <strong>Couverture multi-postes* & flotte mobile</strong>
                 </li>
-                <li>Gestion centralisée des vulnérabilités</li>
-                <li>Sécurisation Cloud (M365 / Workspace)</li>
-                <li>Accompagnement de la direction (GRC)</li>
-                <li>Sensibilisation de l'équipe (phishing)</li>
+                <li>
+                  <strong>Protection avancée</strong> anti-ransomware sur
+                  l'ensemble du parc
+                </li>
+                <li>
+                  <strong>Gestion centralisée</strong> des correctifs*** et
+                  remontée d'alertes
+                </li>
+                <li>
+                  <strong>Rapport mensuel complet</strong> de sécurité et veille
+                  des fuites de données
+                </li>
+                <li>
+                  <strong>Sensibilisation</strong> et support de la direction
+                  (GRC, NIS2)
+                </li>
               </ul>
               <a
                 href="mailto:allan@proxysafe.be?subject=Demande%20Analyse%20Besoins%20PME&body=Bonjour%2C%20nous%20sommes%20une%20PME%20et%20nous%20souhaitons%20structurer%20notre%20cybers%C3%A9curit%C3%A9.%20Pouvons-nous%20planifier%20un%20%C3%A9change%20t%C3%A9l%C3%A9phonique%20%3F"
@@ -141,23 +192,172 @@
               >
             </div>
           </div>
-          <p
+
+          <div
             style="
+              background: rgba(0, 180, 216, 0.1);
+              border: 1px solid var(--cyan-tech);
+              border-radius: 8px;
+              padding: 20px;
+              margin-top: 40px;
               text-align: center;
               color: #fff;
-              margin-top: 30px;
-              font-size: 0.9rem;
             "
           >
-            * Programme de parrainage : Vous recommandez ProxySafe à un
-            partenaire ou confrère ?
-            <strong>Profitez tous les deux de 10% de réduction</strong> sur
-            votre abonnement de suivi annuel.
-          </p>
+            <strong>🤝 Programme de recommandation :</strong> Vous recommandez
+            ProxySafe à un partenaire ou un confrère ? Profitez tous les deux de
+            <strong>10% de réduction</strong> sur votre abonnement !
+          </div>
+
+          <!-- Rétablissement des disclaimers complets (Index + Sante combinés) -->
+          <div class="pricing-disclaimer">
+            * Un poste correspond à 1 ordinateur fixe, portable ou 1 serveur.
+            Couverture mobile complète sous Android et via profils optimisés
+            sous iOS.<br />
+            ** La protection cloud nécessite un abonnement Microsoft 365 ou
+            Google Workspace pro actif (non fourni).<br />
+            *** La gestion automatisée des correctifs est principalement
+            disponible sur Windows (couverture partielle macOS/Linux). Le
+            chiffrement exige un matériel compatible (UEFI, Windows 10+, macOS
+            Mojave+).<br />
+            <strong>Pour l'offre Care :</strong> L'alignement aux exigences
+            RGPD/APD est co-dépendant de l'activation du MFA et du maintien des
+            sauvegardes par votre logiciel métier. En Belgique, les contrats de
+            cybersécurité pour les professions libérales de soins de santé sont
+            100% déductibles.<br />
+            Engagement initial de 12 mois. Interventions spécifiques hors
+            périmètre sur devis.
+          </div>
         </div>
       </section>
 
-      <!-- Tu pourras coller ici ta section "Services" simplifiée -->
+      <!-- Rétablissement de la section Services -->
+      <section id="services" class="services-section with-pattern">
+        <div class="container">
+          <h2 class="section-title">
+            Accompagnement, Sécurisation & Gouvernance
+          </h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3>État des lieux / Audit</h3>
+              <p>
+                <em>Évaluation de votre santé numérique.</em> Un audit clair et
+                pragmatique de votre organisation pour identifier les risques
+                critiques et définir votre feuille de route priorisée.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Renseignement%20-%20Audit&body=Bonjour%2C%20je%20souhaiterais%20en%20savoir%20plus%20sur%20votre%20m%C3%A9thode%20d'audit%20pour%20mon%20entreprise.%20Pouvons-nous%20en%20discuter%20%3F"
+                class="btn-outline"
+                >S'informer sur l'audit</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Conformité & Continuité</h3>
+              <p>
+                <em>Être en règle et limiter la casse.</em> Mise en conformité
+                stratégique (NIS2, RGPD) et création de plans de relance pour
+                minimiser l'impact financier d'un incident.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Renseignement%20-%20Conformit%C3%A9&body=Bonjour%2C%20j'ai%20des%20questions%20concernant%20nos%20obligations%20de%20conformit%C3%A9%20(RGPD/NIS2).%20Seriez-vous%20disponible%20pour%20%C3%A9changer%20%3F"
+                class="btn-outline"
+                >S'informer sur la continuité</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Sensibilisation & Formation</h3>
+              <p>
+                <em>Le meilleur bouclier, c'est votre équipe.</em> Des ateliers
+                pratiques et simulations pour transformer vos collaborateurs en
+                première ligne de défense, sans jargon technique.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Renseignement%20-%20Formation&body=Bonjour%2C%20j'aimerais%20former%20mon%20%C3%A9quipe%20aux%20r%C3%A9flexes%20de%20cybers%C3%A9curit%C3%A9.%20Comment%20proc%C3%A9dez-vous%20%3F"
+                class="btn-outline"
+                >S'informer sur la formation</a
+              >
+            </div>
+
+            <div class="card">
+              <h3>Partenaire au Quotidien</h3>
+              <p>
+                <em>Votre allié sur le long terme.</em> Concentrez-vous sur
+                votre métier, je reste à vos côtés chaque mois pour vous
+                conseiller et m'assurer que vos protections restent efficaces.
+              </p>
+              <a
+                href="mailto:allan@proxysafe.be?subject=Renseignement%20-%20Accompagnement&body=Bonjour%2C%20je%20recherche%20un%20partenaire%20pour%20nous%20accompagner%20sur%20le%20long%20terme.%20Pouvons-nous%20faire%20le%20point%20%3F"
+                class="btn-outline"
+                >S'informer sur l'accompagnement</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Méthodologie -->
+      <section class="methodology with-pattern">
+        <div class="container">
+          <h4>Méthodologie basée sur les standards officiels</h4>
+          <div class="framework-logos">
+            <div class="logo-item">
+              <img
+                src="logo_cyfun.png"
+                alt="CyberFundamentals CCB"
+                title="CyberFundamentals (CCB)"
+              />
+              <span>CyberFundamentals CCB</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="icon_nis2.png"
+                alt="Directive NIS2"
+                title="Directive NIS2"
+              />
+              <span>Directive NIS2</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="icon_rgpd.png"
+                alt="RGPD Compliant"
+                title="Conformité RGPD"
+              />
+              <span>Conformité RGPD</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Rétablissement du Footer complet -->
+    <footer id="contact">
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
+        </p>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

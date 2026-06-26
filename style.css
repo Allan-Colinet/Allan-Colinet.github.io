@@ -172,11 +172,26 @@ nav a.active {
   background-color: var(--cyan-tech);
   color: var(--bg-white) !important;
 }
+.btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--cyan-tech);
+  border: 2px solid var(--cyan-tech);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+.btn-outline:hover {
+  background-color: var(--cyan-tech);
+  color: var(--bg-white);
+}
 
 /* =========================================
-   PAGES SPECIFIQUES (HERO, PRICING, BLOG)
+   HERO ACCUEIL
    ========================================= */
-/* Hero Accueil */
 .hero {
   padding: 80px 0 60px;
   text-align: center;
@@ -201,13 +216,37 @@ nav a.active {
   margin-top: 20px;
 }
 
-/* Pricing Unifié */
+/* =========================================
+   ABONNEMENTS & VIDEO BACKGROUND
+   ========================================= */
 .sentinelle-section {
   position: relative;
   padding: 8vh 0 80px;
   overflow: hidden;
   background-color: var(--navy-blue);
 }
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.65);
+  z-index: 2;
+}
+
 .pricing-header {
   text-align: center;
   margin-bottom: 5vh;
@@ -230,7 +269,7 @@ nav a.active {
   align-items: stretch;
 }
 .pricing-card {
-  background: var(--bg-white);
+  background: rgba(255, 255, 255, 0.98);
   border-radius: 12px;
   padding: 40px 20px;
   text-align: center;
@@ -243,19 +282,7 @@ nav a.active {
   border: 3px solid var(--cyan-tech);
   transform: scale(1.02);
 }
-.badge-referral {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--cyan-tech);
-  color: var(--navy-blue);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  white-space: nowrap;
-}
+
 .plan-name {
   font-size: 1.5rem;
   font-weight: bold;
@@ -293,52 +320,124 @@ nav a.active {
   font-weight: bold;
 }
 
-/* Blog */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
-  margin: 50px 0;
-}
-.blog-card {
-  background: var(--bg-white);
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-  transition: transform 0.3s;
-}
-.blog-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--cyan-tech);
-}
-.card-img {
-  height: 200px;
-  background-color: var(--navy-light);
-  background-size: cover;
-  background-position: center;
-}
-.card-content {
-  padding: 25px;
+.pricing-disclaimer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #a0aec0;
+  opacity: 0.9;
+  font-style: italic;
+  padding: 0 20px;
+  line-height: 1.6;
 }
 
-/* Footer & Divers */
-footer {
-  background-color: var(--navy-light);
-  color: #a0aec0;
-  text-align: center;
-  padding: 40px 0;
-}
-footer a {
-  color: var(--cyan-tech);
-  text-decoration: none;
-}
+/* =========================================
+   SERVICES & METHODOLOGIE
+   ========================================= */
 .services-section {
+  background-color: rgba(249, 250, 251, 0.95);
   padding: 80px 0;
+  border-top: 1px solid var(--border-color);
+}
+.section-title {
+  text-align: center;
+  color: var(--navy-blue);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin-bottom: 50px;
 }
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--cyan-tech);
+}
+.card h3 {
+  color: var(--navy-light);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 25px;
+}
+
+.methodology {
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border-color);
+}
+.methodology h4 {
+  color: var(--navy-blue);
+  margin-bottom: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.framework-logos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.logo-item img {
+  height: 65px;
+  width: auto;
+  transition: transform 0.3s;
+}
+.logo-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy-light);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  background-color: var(--navy-blue);
+  color: #a0aec0;
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+  color: var(--cyan-tech);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-info {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  line-height: 1.8;
 }
 
 /* Responsive */
@@ -359,10 +458,23 @@ footer a {
     flex-direction: column;
     padding: 10px 0;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border-color);
   }
   nav.active {
     display: flex;
   }
+  nav a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .nav-phone {
+    border-radius: 0;
+    background: transparent;
+    color: var(--navy-blue) !important;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -372,5 +484,11 @@ footer a {
   }
   .grid-2 {
     grid-template-columns: 1fr;
+  }
+  .framework-logos {
+    gap: 20px;
+  }
+  .logo-item img {
+    height: 45px;
   }
 }
