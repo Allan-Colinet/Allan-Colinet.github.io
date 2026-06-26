@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Usurpation d'identité : Et si l'arnaque venait de votre entreprise ? |
+      ProxySafe
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="index.html"
+          ><img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+        /></a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html#services" onclick="toggleMenu()">Services</a>
+          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
+          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
+            >Blog</a
+          >
+          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-bottom: 60px">
+      <a
+        href="blog.html"
+        style="
+          display: inline-block;
+          margin-top: 30px;
+          color: var(--cyan-tech);
+          font-weight: bold;
+          text-decoration: none;
+        "
+        >← Retour au Blog</a
+      >
+
+      <section
+        style="
+          max-width: 850px;
+          margin: 20px auto 40px;
+          line-height: 1.8;
+          font-size: 1.1rem;
+          color: var(--text-main);
+        "
+      >
+        <h1
+          style="
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+          "
+        >
+          Et si l'arnaque venait de votre entreprise ?
+        </h1>
+
+        <img
+          src="img/card-spoofing.jpg"
+          alt="Alerte de sécurité email"
+          class="article-img-full"
+        />
+
+        <p>
+          Que se passerait-il si, aujourd'hui, vos clients ou patients
+          recevaient une fausse facture comportant un nouveau numéro de compte,
+          provenant directement de <strong>votre</strong> adresse e-mail
+          officielle ?
+        </p>
+
+        <p>
+          Pour un dirigeant, ce scénario est un cauchemar : perte de crédibilité
+          immédiate, factures impayées par des clients floués, et responsabilité
+          engagée face au RGPD.
+        </p>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Le "Spoofing" : Usurper sans pirater
+        </h2>
+        <p>
+          La réalité technique est surprenante : les cybercriminels n'ont
+          souvent même pas besoin de pirater votre mot de passe pour réaliser
+          cette attaque. Ils utilisent une faille historique de l'e-mail appelée
+          le <em>Spoofing</em>.
+        </p>
+        <p>
+          Imaginez envoyer une lettre par la Poste. Vous pouvez écrire l'adresse
+          de n'importe qui au dos de l'enveloppe dans la case "Expéditeur".
+          C'est exactement ce que font les pirates informatiques : ils envoient
+          des e-mails depuis leurs propres serveurs, mais modifient l'étiquette
+          pour afficher votre nom de domaine (ex:
+          <em>facturation@votre-entreprise.be</em>).
+        </p>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Comment verrouiller votre nom de domaine ?
+        </h2>
+        <p>
+          Pour empêcher quiconque d'utiliser votre identité numérique, il faut
+          configurer trois "sceaux de cire" invisibles au niveau de votre nom de
+          domaine (les enregistrements DNS). Ces normes permettent aux serveurs
+          du monde entier de vérifier que l'e-mail provient bien de vous :
+        </p>
+
+        <div
+          style="
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <h4 style="color: var(--cyan-tech); font-size: 1.2rem">
+            1. Le protocole SPF
+          </h4>
+          <p style="font-size: 0.95rem">
+            C'est la "liste des invités". Vous déclarez publiquement quels
+            serveurs (ex: Microsoft 365, Mailchimp) ont le droit d'envoyer des
+            e-mails en votre nom.
+          </p>
+
+          <h4
+            style="color: var(--cyan-tech); font-size: 1.2rem; margin-top: 20px"
+          >
+            2. Le protocole DKIM
+          </h4>
+          <p style="font-size: 0.95rem">
+            C'est la "signature cryptographique". Chaque e-mail envoyé est signé
+            numériquement, prouvant qu'il n'a pas été altéré en cours de route.
+          </p>
+
+          <h4
+            style="color: var(--cyan-tech); font-size: 1.2rem; margin-top: 20px"
+          >
+            3. La politique DMARC
+          </h4>
+          <p style="font-size: 0.95rem">
+            C'est le "vigile". Vous dictez aux autres messageries ce qu'elles
+            doivent faire si un e-mail échoue aux tests SPF et DKIM (ex: "S'il
+            ne vient pas de mes serveurs, détruisez l'e-mail avant qu'il
+            n'arrive chez mon client").
+          </p>
+        </div>
+
+        <p>
+          Mettre en place ces protocoles est une mission technique fine, mais
+          indispensable pour protéger la réputation de votre activité.
+        </p>
+      </section>
+
+      <div
+        style="
+          max-width: 850px;
+          margin: 40px auto 0;
+          background: rgba(0, 180, 216, 0.1);
+          border: 1px solid var(--cyan-tech);
+          padding: 40px;
+          border-radius: 12px;
+          text-align: center;
+        "
+      >
+        <h3
+          style="
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+          "
+        >
+          Vos e-mails arrivent souvent dans les spams de vos clients ?
+        </h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px">
+          C'est le symptôme principal d'un nom de domaine non sécurisé. Prenons
+          10 minutes pour vérifier ensemble la configuration de vos protocoles
+          de messagerie.
+        </p>
+        <a
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Securite%20Domaine"
+          class="btn"
+          style="border: none"
+          >Réserver mon audit flash gratuit</a
+        >
+      </div>
+    </main>
+    <footer id="contact">
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
+        </p>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

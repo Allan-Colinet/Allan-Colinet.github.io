@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quel gestionnaire de mots de passe choisir ? | ProxySafe</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- HEADER -->
     <header>
       <div class="header-content">
         <a href="index.html"
@@ -46,157 +44,170 @@
         >← Retour au Blog</a
       >
 
-      <!-- HERO DE L'ARTICLE -->
-      <article class="blog-hero" style="margin-top: 20px; min-height: 350px">
-        <div class="blog-hero-content">
-          <span
-            style="
-              background: var(--cyan-tech);
-              color: var(--navy-blue);
-              padding: 5px 12px;
-              border-radius: 20px;
-              font-size: 0.8rem;
-              font-weight: bold;
-              align-self: flex-start;
-              margin-bottom: 15px;
-              text-transform: uppercase;
-            "
-            >Outils & Productivité</span
-          >
-          <h1
-            style="
-              font-size: clamp(1.8rem, 3vw, 2.5rem);
-              margin-bottom: 10px;
-              line-height: 1.2;
-            "
-          >
-            La fin des mots de passe mémorisés : Quel gestionnaire choisir ?
-          </h1>
-        </div>
-        <div
-          class="blog-hero-img"
-          style="background-image: url(&quot;img/hero-password.jpg&quot;)"
-        ></div>
-      </article>
-
-      <!-- CORPS DE L'ARTICLE -->
       <section
         style="
-          max-width: 800px;
-          margin: 40px auto;
+          max-width: 850px;
+          margin: 20px auto 40px;
           line-height: 1.8;
           font-size: 1.1rem;
           color: var(--text-main);
         "
       >
+        <h1
+          style="
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+          "
+        >
+          La fin des mots de passe mémorisés : Quel gestionnaire choisir pour
+          votre entreprise ?
+        </h1>
+
+        <!-- Image principale reprise de la carte -->
+        <img
+          src="img/hero-password.jpg"
+          alt="Coffre-fort numérique"
+          class="article-img-full"
+        />
+
         <p>
           Post-it sous le clavier, carnet dans le tiroir, ou pire : le fameux
           <em>"PrenomAnnee!"</em> utilisé sur absolument tous vos comptes
           professionnels et personnels. Si vous vous reconnaissez dans ces
-          habitudes, votre entreprise est vulnérable.
+          habitudes, votre activité est vulnérable.
         </p>
 
         <p>
           Aujourd'hui, retenir des dizaines de mots de passe complexes est
           humainement impossible. C'est là qu'intervient le
           <strong>gestionnaire de mots de passe</strong>. Véritable coffre-fort
-          numérique, il mémorise tout à votre place, sécurise vos accès et vous
-          fait gagner un temps précieux au quotidien. Mais face à la multitude
-          de solutions, laquelle choisir pour une TPE/PME ou un cabinet médical
-          ?
+          numérique, il mémorise tout à votre place et sécurise vos accès. Face
+          à la multitude de solutions, laquelle choisir pour une TPE/PME ou un
+          cabinet de soins ?
         </p>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Le principe du coffre-fort numérique
+          Bitwarden : Le champion du Cloud et du travail en équipe
         </h2>
+
+        <img
+          src="img/bitwarden-ui.jpg"
+          alt="Interface de Bitwarden"
+          class="article-img-inline"
+        />
+
         <p>
-          Un gestionnaire de mots de passe fonctionne selon un principe simple :
-          il génère, stocke et saisit automatiquement des mots de passe
-          ultra-complexes (ex: <em>g7#K9pL2@wQ!</em>) pour chacun de vos
-          comptes.
-          <strong>Vous n'avez plus qu'un seul mot de passe à retenir</strong> :
-          le mot de passe "Maître", qui déverrouille votre coffre.
+          Pour la majorité des PME,
+          <a
+            href="https://bitwarden.com/"
+            target="_blank"
+            style="color: var(--cyan-tech); font-weight: bold"
+            >Bitwarden</a
+          >
+          est aujourd'hui la solution de référence. Contrairement à des outils
+          grand public, il est <em>Open Source</em>. Son code est public et
+          audité par des experts, garantissant l'absence de failles cachées.
         </p>
-        <p>
-          C'est non seulement un gain de sécurité majeur (finies les fuites de
-          données en chaîne), mais aussi un outil de productivité redoutable
-          lors de vos connexions.
-        </p>
+
+        <div class="pros-cons-grid">
+          <div class="box-pros">
+            <h4>✓ Avantages</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>
+                Synchronisation fluide sur tous vos appareils (PC, Mac,
+                Smartphone).
+              </li>
+              <li>
+                Partage sécurisé en équipe (idéal pour partager l'accès à un
+                outil sans dévoiler le mot de passe).
+              </li>
+              <li>
+                Version gratuite extrêmement généreuse pour un usage individuel.
+              </li>
+            </ul>
+          </div>
+          <div class="box-cons">
+            <h4>✗ Inconvénients</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>
+                Données stockées dans le Cloud (bien que chiffrées de bout en
+                bout).
+              </li>
+              <li>
+                Nécessite une connexion internet pour la première
+                synchronisation.
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Bitwarden : Le champion du Cloud et du collaboratif
+          KeePassXC : Le contrôle absolu et local
         </h2>
+
+        <img
+          src="img/keepass-ui.jpg"
+          alt="Interface de KeePassXC"
+          class="article-img-inline"
+        />
+
         <p>
-          Pour la majorité des PME, <strong>Bitwarden</strong> est aujourd'hui
-          la solution de référence. Contrairement à des outils grand public,
-          Bitwarden est <em>Open Source</em>. Son code est public et audité par
-          des milliers d'experts, garantissant l'absence de failles cachées.
+          Si la souveraineté totale de vos données est une priorité absolue,
+          <a
+            href="https://keepassxc.org/"
+            target="_blank"
+            style="color: var(--cyan-tech); font-weight: bold"
+            >KeePassXC</a
+          >
+          est la forteresse par excellence. Il ne s'agit pas d'un service en
+          ligne, mais d'un logiciel qui stocke un fichier crypté directement sur
+          votre machine.
         </p>
-        <ul style="margin-left: 20px; margin-bottom: 20px">
-          <li style="margin-bottom: 10px">
-            <strong>L'avantage :</strong> Il synchronise vos mots de passe sur
-            tous vos appareils (PC, smartphone) via le Cloud de manière
-            sécurisée (chiffrement de bout en bout). Il est idéal pour partager
-            des accès en équipe (ex: les codes du compte fournisseur) sans
-            jamais révéler le mot de passe en clair à vos employés.
-          </li>
-          <li style="margin-bottom: 10px">
-            <strong>L'inconvénient :</strong> Vos données cryptées transitent
-            par des serveurs externes. Bien que sécurisé, cela peut freiner
-            certaines structures extrêmement strictes.
-          </li>
-        </ul>
+
+        <div class="pros-cons-grid">
+          <div class="box-pros">
+            <h4>✓ Avantages</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>
+                Aucun Cloud : vos données ne quittent jamais votre ordinateur
+                local.
+              </li>
+              <li>Complètement gratuit et 100% hors ligne.</li>
+              <li>Niveau de chiffrement paramétrable à l'extrême.</li>
+            </ul>
+          </div>
+          <div class="box-cons">
+            <h4>✗ Inconvénients</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>Pas de synchronisation automatique avec votre smartphone.</li>
+              <li>
+                Vous devez gérer vous-même la sauvegarde du fichier (si le PC
+                lâche, le coffre est perdu).
+              </li>
+              <li>Interface moins moderne.</li>
+            </ul>
+          </div>
+        </div>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          KeePass / KeePassXC : Le contrôle absolu et local
+          Conclusion : Fini les mots de passe dans le navigateur
         </h2>
         <p>
-          Si la souveraineté totale de vos données est une priorité (notamment
-          pour certains professionnels de la santé ou du droit),
-          <strong>KeePassXC</strong> est la forteresse par excellence.
-        </p>
-        <ul style="margin-left: 20px; margin-bottom: 20px">
-          <li style="margin-bottom: 10px">
-            <strong>L'avantage :</strong> C'est une application qui s'installe
-            sur votre ordinateur. Aucun Cloud, aucun abonnement. La base de
-            données de vos mots de passe est un fichier crypté stocké
-            physiquement sur votre disque dur ou votre serveur local. Le
-            contrôle est absolu.
-          </li>
-          <li style="margin-bottom: 10px">
-            <strong>L'inconvénient :</strong> Il ne se synchronise pas
-            automatiquement sur votre smartphone. Vous devez gérer vous-même la
-            sauvegarde de ce fichier précieux. S'il est perdu, vos mots de passe
-            le sont aussi.
-          </li>
-        </ul>
-
-        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Et les mots de passe enregistrés dans Chrome ou Edge ?
-        </h2>
-        <p>
-          C'est une pratique à bannir dans un cadre professionnel. Les
-          navigateurs web ne sont pas des coffres-forts. Les mots de passe y
-          sont souvent stockés avec un faible niveau de chiffrement, et un
-          simple virus de type <em>"Stealer"</em> (voleur d'informations) peut
-          extraire l'intégralité de vos identifiants en quelques secondes.
-        </p>
-
-        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">Conclusion</h2>
-        <p>
-          Adopter un gestionnaire de mots de passe est la fondation de votre
-          hygiène informatique. Bitwarden offrira le meilleur compromis entre
-          sécurité et confort de travail en équipe, tandis que KeePass
-          conviendra aux environnements isolés et ultra-confidentiels. Le plus
-          dur n'est pas de l'utiliser, mais de configurer et d'accompagner votre
-          équipe dans la transition.
+          Enregistrer ses mots de passe dans Chrome ou Edge est une pratique à
+          bannir dans un cadre professionnel. Un simple virus de type
+          <em>"Stealer"</em> peut extraire ces identifiants en quelques
+          secondes. Adopter un gestionnaire dédié (comme Bitwarden pour la
+          praticité ou KeePassXC pour la souveraineté) est la fondation de votre
+          hygiène informatique.
         </p>
       </section>
 
       <!-- CTA ENCADRÉ -->
       <div
         style="
-          max-width: 800px;
+          max-width: 850px;
           margin: 40px auto 0;
           background: rgba(0, 180, 216, 0.1);
           border: 1px solid var(--cyan-tech);
@@ -217,7 +228,7 @@
         <p style="color: var(--text-muted); margin-bottom: 25px">
           La configuration initiale de ces logiciels et la migration de vos
           anciens mots de passe peuvent être délicates. Prenons 10 minutes pour
-          en discuter.
+          en discuter ensemble.
         </p>
         <a
           href="mailto:allan@proxysafe.be?subject=Renseignement%20-%20Gestionnaire%20de%20mots%20de%20passe"
@@ -227,8 +238,6 @@
         >
       </div>
     </main>
-
-    <!-- FOOTER -->
     <footer id="contact">
       <div class="container">
         <p

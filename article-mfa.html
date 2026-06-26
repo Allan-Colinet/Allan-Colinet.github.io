@@ -6,12 +6,10 @@
     <title>
       Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité | ProxySafe
     </title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- HEADER -->
     <header>
       <div class="header-content">
         <a href="index.html"
@@ -48,142 +46,163 @@
         >← Retour au Blog</a
       >
 
-      <!-- HERO DE L'ARTICLE -->
-      <article class="blog-hero" style="margin-top: 20px; min-height: 350px">
-        <div class="blog-hero-content">
-          <span
-            style="
-              background: var(--cyan-tech);
-              color: var(--navy-blue);
-              padding: 5px 12px;
-              border-radius: 20px;
-              font-size: 0.8rem;
-              font-weight: bold;
-              align-self: flex-start;
-              margin-bottom: 15px;
-              text-transform: uppercase;
-            "
-            >Sécurité Opérationnelle</span
-          >
-          <h1
-            style="
-              font-size: clamp(1.8rem, 3vw, 2.5rem);
-              margin-bottom: 10px;
-              line-height: 1.2;
-            "
-          >
-            Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité
-          </h1>
-        </div>
-        <div
-          class="blog-hero-img"
-          style="background-image: url(&quot;img/card-mfa.jpg&quot;)"
-        ></div>
-      </article>
-
-      <!-- CORPS DE L'ARTICLE -->
       <section
         style="
-          max-width: 800px;
-          margin: 40px auto;
+          max-width: 850px;
+          margin: 20px auto 40px;
           line-height: 1.8;
           font-size: 1.1rem;
           color: var(--text-main);
         "
       >
+        <h1
+          style="
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+          "
+        >
+          Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité
+        </h1>
+
+        <img
+          src="img/card-mfa.jpg"
+          alt="Smartphone avec cadenas MFA"
+          class="article-img-full"
+        />
+
         <p>
           Si vous pensez que votre entreprise est en sécurité parce que vos
-          collaborateurs utilisent des mots de passe complexes, il est temps de
-          faire une mise à jour. Face à l'industrialisation des cyberattaques et
-          aux fuites de données massives, le mot de passe ne suffit plus. Il
-          vous faut un verrou supplémentaire : le MFA.
+          collaborateurs utilisent des mots de passe complexes, une mise à jour
+          s'impose. Face à l'industrialisation des cyberattaques, le mot de
+          passe ne suffit plus. Il vous faut un verrou supplémentaire : le MFA
+          (Authentification Multifactorielle).
         </p>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Qu'est-ce que le MFA (Authentification Multifactorielle) ?
+          L'équivalent numérique de votre carte bancaire
         </h2>
         <p>
-          Le MFA, c'est l'équivalent numérique de la sécurité de votre carte
-          bancaire. Pour retirer de l'argent, vous avez besoin de deux choses :
-          votre carte physique (quelque chose que vous possédez) et votre code
-          PIN (quelque chose que vous connaissez).
-        </p>
-        <p>
-          En cybersécurité, c'est la même logique. Pour accéder à votre
-          messagerie Microsoft 365, Google Workspace ou à votre logiciel métier,
-          le système va vous demander :
+          Pour retirer de l'argent, vous avez besoin de deux choses : votre
+          carte physique (quelque chose que vous possédez) et votre code PIN
+          (quelque chose que vous connaissez). Pour vos accès professionnels,
+          c'est la même logique. Le système vous demande :
         </p>
         <ul style="margin-left: 20px; margin-bottom: 20px">
-          <li style="margin-bottom: 10px">
+          <li>
             <strong>Un facteur de connaissance :</strong> Votre mot de passe.
           </li>
-          <li style="margin-bottom: 10px">
-            <strong>Un facteur de possession :</strong> Une validation sur votre
-            smartphone, via une application dédiée.
+          <li>
+            <strong>Un facteur de possession :</strong> Un code temporaire ou
+            une validation via une application sur votre smartphone.
           </li>
         </ul>
-
-        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Pourquoi est-ce absolument indispensable ?
-        </h2>
         <p>
-          Même le meilleur des mots de passe peut être volé. Que ce soit via un
-          e-mail de phishing habile qui trompe votre vigilance, ou via la fuite
-          de données d'un site tiers où vous aviez réutilisé ce même mot de
-          passe. Si un pirate russe ou asiatique met la main sur vos
-          identifiants, le MFA l'empêchera de se connecter.
-        </p>
-        <p>
-          Le pirate aura beau taper le bon mot de passe, l'accès sera bloqué car
-          une notification d'approbation sera envoyée... sur
-          <strong>votre</strong> téléphone. Il vous suffira de refuser la
-          connexion pour stopper l'attaque nette.
+          Même si un attaquant vole votre mot de passe via un e-mail frauduleux,
+          il restera bloqué car il n'a pas votre téléphone entre les mains.
         </p>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Comment le mettre en place avec les bons outils ?
+          Quelles applications utiliser ?
         </h2>
         <p>
-          L'erreur la plus courante est de configurer le MFA via SMS. C'est
-          mieux que rien, mais les SMS peuvent être interceptés (technique du
-          <em>SIM Swapping</em>). La méthode recommandée par les standards
-          (RGPD, NIS2, CCB) est l'utilisation d'une application
-          d'authentification (TOTP).
+          L'erreur classique est d'utiliser la réception de codes par SMS
+          (facilement interceptables). La méthode la plus sûre est d'utiliser
+          une application d'authentification (TOTP).
         </p>
 
-        <p>
-          Voici les deux applications les plus robustes pour les professionnels
-          :
-        </p>
-        <ul style="margin-left: 20px; margin-bottom: 20px">
-          <li style="margin-bottom: 10px">
-            <strong>Microsoft Authenticator :</strong> Excellent si vous êtes
-            déjà dans l'écosystème Windows/M365. Il permet la validation par
-            simple notification "push" (Accepter / Refuser).
-          </li>
-          <li style="margin-bottom: 10px">
-            <strong>Authy :</strong> Une alternative très prisée car elle permet
-            de sauvegarder vos jetons de sécurité dans le Cloud. Si vous perdez
-            votre smartphone, vous ne perdez pas l'accès à tous vos comptes
-            (contrairement à Google Authenticator qui a longtemps posé ce
-            problème).
-          </li>
-        </ul>
+        <div class="pros-cons-grid">
+          <div
+            style="
+              background: rgba(10, 25, 47, 0.05);
+              padding: 25px;
+              border-radius: 8px;
+            "
+          >
+            <h4
+              style="
+                color: var(--navy-blue);
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+              "
+            >
+              Microsoft Authenticator
+            </h4>
+            <img
+              src="img/ms-auth.jpg"
+              alt="Microsoft Authenticator"
+              style="width: 100px; margin-bottom: 15px; border-radius: 12px"
+            />
+            <p style="font-size: 0.95rem">
+              Le standard si votre entreprise utilise déjà Microsoft 365. Très
+              confortable grâce à ses notifications "push" : vous recevez une
+              pop-up vous demandant simplement "Approuver la connexion ?".
+            </p>
+            <a
+              href="https://www.microsoft.com/fr-fr/security/mobile-authenticator-app"
+              target="_blank"
+              style="
+                color: var(--cyan-tech);
+                font-weight: bold;
+                font-size: 0.9rem;
+              "
+              >Site officiel</a
+            >
+          </div>
+
+          <div
+            style="
+              background: rgba(10, 25, 47, 0.05);
+              padding: 25px;
+              border-radius: 8px;
+            "
+          >
+            <h4
+              style="
+                color: var(--navy-blue);
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+              "
+            >
+              Twilio Authy
+            </h4>
+            <img
+              src="img/authy-logo.png"
+              alt="Authy"
+              style="width: 100px; margin-bottom: 15px; border-radius: 12px"
+            />
+            <p style="font-size: 0.95rem">
+              L'alternative redoutable. Son énorme avantage est la sauvegarde
+              Cloud cryptée. Si vous perdez votre téléphone ou changez
+              d'appareil, vous récupérez instantanément tous vos codes.
+            </p>
+            <a
+              href="https://authy.com/"
+              target="_blank"
+              style="
+                color: var(--cyan-tech);
+                font-weight: bold;
+                font-size: 0.9rem;
+              "
+              >Site officiel</a
+            >
+          </div>
+        </div>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">Conclusion</h2>
         <p>
-          Activer le MFA sur vos boîtes mails professionnelles, vos VPN et vos
-          logiciels de comptabilité/santé n'est plus une option, c'est une
-          obligation légale tacite sous le RGPD pour la protection des données.
           La configuration initiale prend quelques minutes par utilisateur, mais
-          elle réduit le risque d'intrusion de plus de 99%.
+          elle réduit le risque d'intrusion de plus de 99%. Dans le cadre de la
+          conformité RGPD, c'est d'ailleurs devenu une obligation technique
+          implicite.
         </p>
       </section>
 
       <!-- CTA ENCADRÉ -->
       <div
         style="
-          max-width: 800px;
+          max-width: 850px;
           margin: 40px auto 0;
           background: rgba(0, 180, 216, 0.1);
           border: 1px solid var(--cyan-tech);
@@ -205,7 +224,7 @@
         <p style="color: var(--text-muted); margin-bottom: 25px">
           L'activation du MFA pour l'ensemble d'une équipe nécessite une méthode
           pour éviter les blocages. Faisons le point sur votre situation
-          actuelle lors d'un diagnostic flash.
+          actuelle.
         </p>
         <a
           href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Mise%20en%20place%20MFA"
@@ -215,8 +234,6 @@
         >
       </div>
     </main>
-
-    <!-- FOOTER -->
     <footer id="contact">
       <div class="container">
         <p

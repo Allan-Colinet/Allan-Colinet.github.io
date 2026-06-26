@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Pourquoi les pirates frappent quand vous êtes absent | ProxySafe
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="index.html"
+          ><img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+        /></a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html#services" onclick="toggleMenu()">Services</a>
+          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
+          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
+            >Blog</a
+          >
+          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-bottom: 60px">
+      <a
+        href="blog.html"
+        style="
+          display: inline-block;
+          margin-top: 30px;
+          color: var(--cyan-tech);
+          font-weight: bold;
+          text-decoration: none;
+        "
+        >← Retour au Blog</a
+      >
+
+      <section
+        style="
+          max-width: 850px;
+          margin: 20px auto 40px;
+          line-height: 1.8;
+          font-size: 1.1rem;
+          color: var(--text-main);
+        "
+      >
+        <h1
+          style="
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+          "
+        >
+          Pourquoi les pirates frappent toujours quand vous êtes absent
+        </h1>
+
+        <img
+          src="img/card-weekend.jpg"
+          alt="Bureau vide avec un écran de code"
+          class="article-img-full"
+        />
+
+        <p>
+          C’est un grand classique : le vendredi en fin d'après-midi arrive, la
+          semaine a été intense, et l’esprit est déjà tourné vers le repos. Vous
+          coupez votre PC, mais les cybercriminels, eux, se mettent au travail.
+        </p>
+
+        <p>
+          Loin de frapper au hasard, les attaquants utilisent des stratégies de
+          reconnaissance avancées pour s'assurer que leurs virus (notamment les
+          ransomwares) auront un maximum de temps pour détruire vos données sans
+          être inquiétés.
+        </p>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Ils savent des choses que vous ignorez
+        </h2>
+        <p>
+          Comment un pirate basé à l'autre bout du monde sait-il que le cabinet
+          du Docteur Dupont est fermé, ou que le gérant de la PME X est en congé
+          ? La réponse tient en un mot : <strong>OSINT</strong> (Renseignement
+          d'Origine Sources Ouvertes).
+        </p>
+
+        <ul style="margin-left: 20px; margin-bottom: 20px">
+          <li style="margin-bottom: 10px">
+            <strong>Les réponses automatiques :</strong> En sondant votre
+            messagerie avec un simple e-mail, ils reçoivent votre message
+            <em>"Je suis absent du 12 au 20 août"</em>. La voie est libre.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Les réseaux sociaux :</strong> Une photo d'équipe publiée
+            sur LinkedIn lors d'un séminaire d'entreprise ("Toute l'équipe est
+            réunie à la côte ce week-end !") est une mine d'or pour un
+            attaquant.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Les horaires officiels :</strong> Une simple recherche sur
+            Google Maps indique les heures de fermeture de votre commerce ou de
+            votre secrétariat.
+          </li>
+        </ul>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          La stratégie du délai de 48 heures
+        </h2>
+        <p>
+          En déclenchant le chiffrement de vos données le vendredi soir ou la
+          veille d'un jour férié, le virus a tout le week-end pour :
+        </p>
+        <ol style="margin-left: 20px; margin-bottom: 20px">
+          <li style="margin-bottom: 10px">
+            Se propager silencieusement sur votre réseau.
+          </li>
+          <li style="margin-bottom: 10px">
+            Chercher et détruire vos disques de sauvegarde locaux.
+          </li>
+          <li style="margin-bottom: 10px">
+            Chiffrer chaque dossier de chaque ordinateur sans qu'aucun employé
+            ne le remarque.
+          </li>
+        </ol>
+        <p>
+          La panique sera totale le lundi matin à 8h00, forçant souvent
+          l'entreprise à envisager le paiement d'une rançon face à l'arrêt total
+          de la production.
+        </p>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Comment riposter ?
+        </h2>
+        <p>
+          Protéger son activité ne devrait pas signifier passer ses congés à
+          stresser. Une véritable posture de sécurité implique d'avoir des
+          outils qui veillent de manière autonome : des antivirus intelligents
+          (EDR) capables de bloquer un comportement anormal à 3h du matin un
+          dimanche, et des sauvegardes externalisées et déconnectées du réseau
+          principal.
+        </p>
+      </section>
+
+      <div
+        style="
+          max-width: 850px;
+          margin: 40px auto 0;
+          background: rgba(0, 180, 216, 0.1);
+          border: 1px solid var(--cyan-tech);
+          padding: 40px;
+          border-radius: 12px;
+          text-align: center;
+        "
+      >
+        <h3
+          style="
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+          "
+        >
+          Envie de partir l'esprit léger ce week-end ?
+        </h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px">
+          Vos sauvegardes résisteraient-elles à une attaque lancée pendant la
+          nuit ? Prenons 10 minutes pour faire le point sur vos protections
+          automatisées.
+        </p>
+        <a
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Securite%20Week-end"
+          class="btn"
+          style="border: none"
+          >Réserver mon audit flash (10 min)</a
+        >
+      </div>
+    </main>
+    <footer id="contact">
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
+        </p>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
