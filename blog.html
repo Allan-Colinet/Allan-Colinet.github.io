@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & Cas d'étude | ProxySafe</title>
+    <title>Blog & Actualités | ProxySafe</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <style>
-      /* Styles spécifiques au blog si besoin, l'essentiel est dans style.css */
+      /* Styles spécifiques au blog */
       .blog-hero {
         margin-top: 40px;
         border-radius: 16px;
@@ -18,6 +18,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
       @media (min-width: 768px) {
         .blog-hero {
@@ -27,10 +28,12 @@
       }
       .blog-hero-content {
         flex: 1;
-        padding: 40px;
+        padding: 50px 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 2;
+        background: var(--navy-blue);
       }
       .blog-hero-img {
         flex: 1;
@@ -38,10 +41,73 @@
         background-size: cover;
         background-position: center;
         min-height: 250px;
+        position: relative;
+      }
+      .blog-hero-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(10, 25, 47, 1) 0%,
+          rgba(10, 25, 47, 0) 100%
+        );
+      }
+
+      /* Styles pour la modale d'article */
+      .article-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 25, 47, 0.95);
+        overflow-y: auto;
+        padding: 40px 20px;
+      }
+      .article-modal-content {
+        background-color: var(--bg-white);
+        margin: 0 auto;
+        padding: 50px;
+        border-radius: 12px;
+        max-width: 800px;
+        position: relative;
+      }
+      .close-article {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--navy-blue);
+        cursor: pointer;
+      }
+      .article-modal-content h2 {
+        color: var(--navy-blue);
+        margin-bottom: 20px;
+        font-size: 2.2rem;
+      }
+      .article-modal-content p {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+      .article-modal-content ul {
+        margin: 0 0 20px 30px;
+        font-size: 1.1rem;
+      }
+      .article-modal-content li {
+        margin-bottom: 10px;
+      }
+
+      body.modal-open {
+        overflow: hidden;
       }
     </style>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <div class="header-content">
         <a href="index.html"
@@ -53,13 +119,16 @@
         <nav>
           <a href="index.html">Accueil</a>
           <a href="index.html#offres">Abonnements</a>
-          <a href="blog.html" class="active">Cas d'étude</a>
+          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
+            >Blog</a
+          >
           <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
     </header>
 
     <main class="container">
+      <!-- ARTICLE A LA UNE -->
       <article class="blog-hero">
         <div class="blog-hero-content">
           <span
@@ -72,23 +141,32 @@
               font-weight: bold;
               align-self: flex-start;
               margin-bottom: 15px;
+              text-transform: uppercase;
             "
             >Cas d'école - Santé</span
           >
-          <h1 style="font-size: 2rem; margin-bottom: 15px">
+          <h1
+            style="
+              font-size: clamp(1.8rem, 3vw, 2.5rem);
+              margin-bottom: 20px;
+              line-height: 1.2;
+            "
+          >
             Anatomie d'un ransomware en cabinet médical.
           </h1>
-          <p style="color: #cbd5e0; margin-bottom: 25px">
+          <p style="color: #cbd5e0; margin-bottom: 30px; font-size: 1.1rem">
             Un médecin clique sur une fausse facture. En quelques secondes, la
             base patient est chiffrée. Décryptage d'un incident qui aurait pu
             coûter des semaines d'arrêt.
           </p>
           <a
             href="#"
+            onclick="openArticle('article-1', event)"
             style="
               color: var(--cyan-tech);
               font-weight: bold;
               text-decoration: none;
+              font-size: 1.1rem;
             "
             >Lire l'analyse complète →</a
           >
@@ -111,7 +189,7 @@
         "
       >
         <div>
-          <h3 style="color: var(--navy-blue)">
+          <h3 style="color: var(--navy-blue); margin-bottom: 5px">
             La sécurité de vos données patients vous préoccupe ?
           </h3>
           <p style="color: var(--text-muted)">
@@ -119,15 +197,16 @@
           </p>
         </div>
         <a
-          href="mailto:allan@proxysafe.be?subject=Demande%20Rendez-vous%20-%20Audit%20Flash%20Sant%C3%A9&body=Bonjour%20Allan%2C%20je%20souhaiterais%20r%C3%A9aliser%20le%20diagnostic%20flash%20de%2010%20minutes%20pour%20mon%20cabinet.%20Quand%20%C3%AAtes-vous%20disponible%20%3F"
+          href="mailto:allan@proxysafe.be?subject=Demande%20Audit%20Flash"
           class="btn"
           style="border: none"
           >Planifier le diagnostic</a
         >
       </div>
 
+      <!-- GRILLE DES ARTICLES -->
       <div class="blog-grid">
-        <!-- Reste de tes articles -->
+        <!-- Carte Article 2 -->
         <article class="blog-card">
           <div
             class="card-img"
@@ -138,25 +217,114 @@
           <div class="card-content">
             <h2
               style="
-                font-size: 1.2rem;
+                font-size: 1.25rem;
                 color: var(--navy-blue);
-                margin-bottom: 10px;
+                margin-bottom: 15px;
+                line-height: 1.4;
               "
             >
-              NIS2 : Les sous-traitants sont-ils concernés ?
+              Usurpation d'identité : Et si l'arnaque venait de vous ?
             </h2>
             <p
               style="
                 color: var(--text-muted);
                 font-size: 0.95rem;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+                flex-grow: 1;
               "
             >
-              Faisons le tri entre obligations réelles et mythes pour les
-              petites structures.
+              Que se passerait-il si vos clients recevaient une fausse facture
+              provenant de votre adresse e-mail officielle ?
             </p>
             <a
               href="#"
+              onclick="openArticle('article-2', event)"
+              style="
+                color: var(--cyan-tech);
+                font-weight: bold;
+                text-decoration: none;
+              "
+              >Lire l'article →</a
+            >
+          </div>
+        </article>
+
+        <!-- Carte Article 3 -->
+        <article class="blog-card">
+          <div
+            class="card-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1614064641936-38998971c9cb?auto=format&fit=crop&w=800&q=80&quot;);
+            "
+          ></div>
+          <div class="card-content">
+            <h2
+              style="
+                font-size: 1.25rem;
+                color: var(--navy-blue);
+                margin-bottom: 15px;
+                line-height: 1.4;
+              "
+            >
+              Pourquoi les attaques frappent-elles le vendredi soir ?
+            </h2>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                flex-grow: 1;
+              "
+            >
+              Vous coupez votre PC ce week-end ? Les cybercriminels, eux,
+              allument leurs ordinateurs. Comprendre leur stratégie.
+            </p>
+            <a
+              href="#"
+              onclick="openArticle('article-3', event)"
+              style="
+                color: var(--cyan-tech);
+                font-weight: bold;
+                text-decoration: none;
+              "
+              >Lire l'article →</a
+            >
+          </div>
+        </article>
+
+        <!-- Carte Article 4 -->
+        <article class="blog-card">
+          <div
+            class="card-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80&quot;);
+            "
+          ></div>
+          <div class="card-content">
+            <h2
+              style="
+                font-size: 1.25rem;
+                color: var(--navy-blue);
+                margin-bottom: 15px;
+                line-height: 1.4;
+              "
+            >
+              RGPD en Belgique : Êtes-vous concerné ?
+            </h2>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                flex-grow: 1;
+              "
+            >
+              Il est parfois difficile de savoir par où commencer. Faisons le
+              point sur vos obligations réelles.
+            </p>
+            <a
+              href="#"
+              onclick="openArticle('article-4', event)"
               style="
                 color: var(--cyan-tech);
                 font-weight: bold;
@@ -168,5 +336,108 @@
         </article>
       </div>
     </main>
+
+    <!-- ZONE DES MODALES (Contenu caché qui s'affiche au clic) -->
+    <div id="article-1" class="article-modal">
+      <div class="article-modal-content">
+        <span class="close-article" onclick="closeArticle('article-1')"
+          >&times;</span
+        >
+        <span
+          style="
+            color: var(--cyan-tech);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+          "
+          >Cas d'école - Santé</span
+        >
+        <h2>Anatomie d'un ransomware en cabinet médical.</h2>
+        <p>
+          Vendredi, 18h. Un médecin généraliste clique sur la pièce jointe d'une
+          fausse facture. En quelques secondes, la base de données patient est
+          chiffrée...
+        </p>
+        <p><em>(Ici tu colleras le texte complet de l'article)</em></p>
+      </div>
+    </div>
+
+    <div id="article-2" class="article-modal">
+      <div class="article-modal-content">
+        <span class="close-article" onclick="closeArticle('article-2')"
+          >&times;</span
+        >
+        <h2>
+          Usurpation d'identité : Que se passerait-il si vos clients recevaient
+          une arnaque de votre adresse e-mail ?
+        </h2>
+        <p>
+          Pour un indépendant, un professionnel de la santé ou un dirigeant de
+          TPE/PME, ce scénario n'est pas qu'un simple problème informatique.
+          C'est un risque majeur pour votre réputation...
+        </p>
+        <p>
+          <em
+            >(Ici tu colleras le texte complet de l'article sur
+            l'usurpation)</em
+          >
+        </p>
+      </div>
+    </div>
+
+    <div id="article-3" class="article-modal">
+      <div class="article-modal-content">
+        <span class="close-article" onclick="closeArticle('article-3')"
+          >&times;</span
+        >
+        <h2>
+          Pourquoi les cyberattaques frappent-elles (presque) toujours le
+          vendredi soir ?
+        </h2>
+        <p>
+          C’est un classique : le vendredi soir arrive, la semaine a été
+          intense, et l’esprit est ailleurs. C’est exactement le moment que
+          choisissent les pirates pour frapper...
+        </p>
+        <p><em>(Ici tu colleras le texte complet)</em></p>
+      </div>
+    </div>
+
+    <div id="article-4" class="article-modal">
+      <div class="article-modal-content">
+        <span class="close-article" onclick="closeArticle('article-4')"
+          >&times;</span
+        >
+        <h2>RGPD en Belgique : Êtes-vous concerné et par où commencer ?</h2>
+        <p>
+          Entre les risques de cyberattaques et les obligations, il est parfois
+          difficile de savoir par où commencer. Chez ProxySafe, mon approche est
+          simple...
+        </p>
+        <p><em>(Ici tu colleras le texte complet)</em></p>
+      </div>
+    </div>
+
+    <!-- SCRIPT POUR OUVRIR/FERMER LES MODALES -->
+    <script>
+      function openArticle(id, event) {
+        event.preventDefault();
+        document.getElementById(id).style.display = "block";
+        document.body.classList.add("modal-open");
+      }
+
+      function closeArticle(id) {
+        document.getElementById(id).style.display = "none";
+        document.body.classList.remove("modal-open");
+      }
+
+      // Fermer la modale si on clique en dehors de la zone blanche
+      window.onclick = function (event) {
+        if (event.target.classList.contains("article-modal")) {
+          event.target.style.display = "none";
+          document.body.classList.remove("modal-open");
+        }
+      };
+    </script>
   </body>
 </html>

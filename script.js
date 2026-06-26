@@ -70,3 +70,17 @@ function displayResult() {
   }
   contentBox.innerHTML = html;
 }
+// Centrage automatique du carousel sur mobile
+window.addEventListener("DOMContentLoaded", (event) => {
+  if (window.innerWidth <= 900) {
+    const grid = document.querySelector(".pricing-grid");
+    const popularCard = document.querySelector(".pricing-card.highlight");
+    if (grid && popularCard) {
+      const scrollPos =
+        popularCard.offsetLeft -
+        window.innerWidth / 2 +
+        popularCard.offsetWidth / 2;
+      grid.scrollLeft = scrollPos;
+    }
+  }
+});
