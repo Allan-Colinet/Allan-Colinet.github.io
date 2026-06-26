@@ -4,81 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog & Cas d'étude | ProxySafe</title>
-    <meta
-      name="description"
-      content="Actualités cybersécurité, cas d'école et conseils GRC pour les entreprises et professionnels de la santé en Belgique."
-    />
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <style>
-      /* Charte Graphique */
-      :root {
-        --navy-blue: #0a192f;
-        --navy-light: #112240;
-        --cyan-tech: #00b4d8;
-        --cyan-hover: #0077b6;
-        --bg-light: #f4f7f6;
-        --bg-white: #ffffff;
-        --text-main: #2d3748;
-        --text-muted: #718096;
-        --border-color: #e2e8f0;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        line-height: 1.7;
-        color: var(--text-main);
-        background-color: var(--bg-light);
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* HEADER (Repris de ton index pour cohérence) */
-      header {
-        background-color: var(--bg-white);
-        padding: 15px 0;
-        border-bottom: 2px solid var(--cyan-tech);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      header img {
-        height: 70px;
-        width: auto;
-      }
-      nav {
-        display: flex;
-        gap: 20px;
-      }
-      nav a {
-        color: var(--navy-blue);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        transition: color 0.3s;
-      }
-      nav a:hover {
-        color: var(--cyan-tech);
-      }
-
-      /* HERO BLOG (Article à la une) */
+      /* Styles spécifiques au blog si besoin, l'essentiel est dans style.css */
       .blog-hero {
         margin-top: 40px;
         border-radius: 16px;
@@ -87,235 +17,117 @@
         color: var(--bg-white);
         display: flex;
         flex-direction: column;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         position: relative;
       }
       @media (min-width: 768px) {
         .blog-hero {
           flex-direction: row;
-          min-height: 450px;
+          min-height: 400px;
         }
       }
-
-      .blog-hero-img {
-        flex: 1;
-        background-image: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-        background-size: cover;
-        background-position: center;
-        min-height: 250px;
-        position: relative;
-      }
-      /* Overlay léger pour la tech */
-      .blog-hero-img::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to right,
-          rgba(10, 25, 47, 0.9) 0%,
-          rgba(10, 25, 47, 0.2) 100%
-        );
-      }
-
       .blog-hero-content {
         flex: 1;
-        padding: 50px 40px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index: 2;
-        background: var(--navy-blue);
       }
-
-      .badge {
-        display: inline-block;
-        background: var(--cyan-tech);
-        color: var(--navy-blue);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        align-self: flex-start;
-      }
-
-      .blog-hero h1 {
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        line-height: 1.2;
-        margin-bottom: 20px;
-        color: var(--bg-white);
-      }
-
-      .blog-hero p {
-        color: #cbd5e0;
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-      }
-
-      .read-more {
-        color: var(--cyan-tech);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: transform 0.3s;
-      }
-      .read-more:hover {
-        transform: translateX(5px);
-      }
-
-      /* GRILLE D'ARTICLES */
-      .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 30px;
-        margin: 60px 0;
-      }
-
-      .blog-card {
-        background: var(--bg-white);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
-        border: 1px solid var(--border-color);
-        display: flex;
-        flex-direction: column;
-      }
-      .blog-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        border-color: var(--cyan-tech);
-      }
-
-      .card-img {
-        height: 200px;
-        background-color: var(--navy-light);
+      .blog-hero-img {
+        flex: 1;
+        background-image: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1350&q=80");
         background-size: cover;
         background-position: center;
-      }
-      .card-content {
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-      .card-date {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        margin-bottom: 10px;
-      }
-      .card-title {
-        font-size: 1.25rem;
-        color: var(--navy-blue);
-        margin-bottom: 15px;
-        line-height: 1.4;
-      }
-      .card-excerpt {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 20px;
-        flex-grow: 1;
-      }
-
-      /* SOFT CTA SECTION (Entre les articles ou en fin de page) */
-      .soft-cta {
-        background: rgba(17, 34, 64, 0.03);
-        border-left: 4px solid var(--cyan-tech);
-        padding: 30px;
-        border-radius: 0 12px 12px 0;
-        margin: 40px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .soft-cta-text h3 {
-        color: var(--navy-blue);
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-      }
-      .soft-cta-text p {
-        color: var(--text-muted);
-      }
-
-      .btn-soft {
-        background: transparent;
-        color: var(--navy-blue);
-        border: 2px solid var(--navy-blue);
-        padding: 10px 25px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s;
-      }
-      .btn-soft:hover {
-        background: var(--navy-blue);
-        color: var(--bg-white);
+        min-height: 250px;
       }
     </style>
   </head>
   <body>
     <header>
       <div class="header-content">
-        <img
-          src="logo_proxysafe.png"
-          alt="ProxySafe"
-          onerror="this.style.display = 'none'"
-        />
+        <a href="index.html"
+          ><img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+        /></a>
         <nav>
           <a href="index.html">Accueil</a>
-          <a href="index.html#services">Services</a>
-          <a href="blog.html" style="color: var(--cyan-tech)">Cas d'étude</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="index.html#offres">Abonnements</a>
+          <a href="blog.html" class="active">Cas d'étude</a>
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
     </header>
 
     <main class="container">
-      <!-- Article à la une -->
       <article class="blog-hero">
         <div class="blog-hero-content">
-          <span class="badge">Cas d'école - Santé</span>
-          <h1>
-            Anatomie d'un ransomware : Comment ce cabinet a évité le pire.
+          <span
+            style="
+              background: var(--cyan-tech);
+              color: var(--navy-blue);
+              padding: 5px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: bold;
+              align-self: flex-start;
+              margin-bottom: 15px;
+            "
+            >Cas d'école - Santé</span
+          >
+          <h1 style="font-size: 2rem; margin-bottom: 15px">
+            Anatomie d'un ransomware en cabinet médical.
           </h1>
-          <p>
-            Vendredi, 18h. Un médecin généraliste clique sur la pièce jointe
-            d'une fausse facture. En quelques secondes, la base de données
-            patient est chiffrée. Décryptage d'un incident qui aurait pu coûter
-            des semaines d'arrêt.
+          <p style="color: #cbd5e0; margin-bottom: 25px">
+            Un médecin clique sur une fausse facture. En quelques secondes, la
+            base patient est chiffrée. Décryptage d'un incident qui aurait pu
+            coûter des semaines d'arrêt.
           </p>
-          <a href="#" class="read-more"
-            >Lire l'analyse complète <span>→</span></a
+          <a
+            href="#"
+            style="
+              color: var(--cyan-tech);
+              font-weight: bold;
+              text-decoration: none;
+            "
+            >Lire l'analyse complète →</a
           >
         </div>
         <div class="blog-hero-img"></div>
       </article>
 
-      <div class="soft-cta">
-        <div class="soft-cta-text">
-          <h3>La sécurité de vos données patients vous préoccupe ?</h3>
-          <p>
-            Découvrez comment l'offre Care anticipe ce type d'incidents et
-            assure votre conformité à l'APD.
+      <div
+        style="
+          background: rgba(17, 34, 64, 0.05);
+          border-left: 4px solid var(--cyan-tech);
+          padding: 30px;
+          margin: 40px 0;
+          border-radius: 0 8px 8px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 20px;
+        "
+      >
+        <div>
+          <h3 style="color: var(--navy-blue)">
+            La sécurité de vos données patients vous préoccupe ?
+          </h3>
+          <p style="color: var(--text-muted)">
+            Profitez d'un diagnostic flash de 10 min pour faire le point.
           </p>
         </div>
         <a
-          href="mailto:allan@proxysafe.be?subject=Demande%20de%20conseil%20-%20S%C3%A9curit%C3%A9%20Sant%C3%A9&body=Bonjour%2C%20j'ai%20lu%20votre%20cas%20d'%C3%A9cole%20sur%20le%20ransomware%20et%20je%20souhaiterais%20faire%20le%20point%20sur%20mon%20propre%20cabinet.%20Pouvons-nous%20en%20discuter%20%3F"
-          class="btn-soft"
-          >Demander un avis objectif</a
+          href="mailto:allan@proxysafe.be?subject=Demande%20Rendez-vous%20-%20Audit%20Flash%20Sant%C3%A9&body=Bonjour%20Allan%2C%20je%20souhaiterais%20r%C3%A9aliser%20le%20diagnostic%20flash%20de%2010%20minutes%20pour%20mon%20cabinet.%20Quand%20%C3%AAtes-vous%20disponible%20%3F"
+          class="btn"
+          style="border: none"
+          >Planifier le diagnostic</a
         >
       </div>
 
-      <!-- Grille des autres articles -->
       <div class="blog-grid">
+        <!-- Reste de tes articles -->
         <article class="blog-card">
           <div
             class="card-img"
@@ -324,117 +136,36 @@
             "
           ></div>
           <div class="card-content">
-            <div class="card-date">
-              Publié le 12 Mai 2026 • GRC & Compliance
-            </div>
-            <h2 class="card-title">
-              Directive NIS2 : Les TPE/PME sous-traitantes sont-elles vraiment
-              concernées ?
+            <h2
+              style="
+                font-size: 1.2rem;
+                color: var(--navy-blue);
+                margin-bottom: 10px;
+              "
+            >
+              NIS2 : Les sous-traitants sont-ils concernés ?
             </h2>
-            <p class="card-excerpt">
-              La directive européenne effraie beaucoup d'entreprises. Faisons le
-              tri entre obligations réelles et mythes pour les petites
-              structures de la région.
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+              "
+            >
+              Faisons le tri entre obligations réelles et mythes pour les
+              petites structures.
             </p>
-            <a href="#" class="read-more" style="font-size: 1rem"
-              >Lire l'article <span>→</span></a
+            <a
+              href="#"
+              style="
+                color: var(--cyan-tech);
+                font-weight: bold;
+                text-decoration: none;
+              "
+              >Lire l'article →</a
             >
           </div>
         </article>
-
-        <article class="blog-card">
-          <div
-            class="card-img"
-            style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1614064641936-38998971c9cb?auto=format&fit=crop&w=800&q=80&quot;);
-            "
-          ></div>
-          <div class="card-content">
-            <div class="card-date">Publié le 3 Avril 2026 • Vulnérabilités</div>
-            <h2 class="card-title">
-              Le danger silencieux des mots de passe partagés au secrétariat.
-            </h2>
-            <p class="card-excerpt">
-              Un post-it sous le clavier ou un mot de passe générique pour toute
-              l'équipe ? Pourquoi cette pratique courante annule vos protections
-              techniques.
-            </p>
-            <a href="#" class="read-more" style="font-size: 1rem"
-              >Lire l'article <span>→</span></a
-            >
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div
-            class="card-img"
-            style="
-              background-image: url(&quot;https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80&quot;);
-            "
-          ></div>
-          <div class="card-content">
-            <div class="card-date">
-              Publié le 15 Mars 2026 • Outils & Open Source
-            </div>
-            <h2 class="card-title">
-              Bitwarden vs KeePassXC : Quel gestionnaire choisir pour son
-              entreprise ?
-            </h2>
-            <p class="card-excerpt">
-              Comparatif technique et pratique des solutions open source pour
-              gérer les accès sensibles sans compromettre la confidentialité.
-            </p>
-            <a href="#" class="read-more" style="font-size: 1rem"
-              >Lire l'article <span>→</span></a
-            >
-          </div>
-        </article>
-      </div>
-
-      <!-- Section "Lead Magnet" discrète en bas -->
-      <div
-        style="
-          background: var(--bg-white);
-          border: 1px solid var(--border-color);
-          padding: 40px;
-          border-radius: 12px;
-          text-align: center;
-          margin-bottom: 60px;
-        "
-      >
-        <h3
-          style="
-            color: var(--navy-blue);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-          "
-        >
-          Un doute sur votre niveau de protection actuel ?
-        </h3>
-        <p
-          style="
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 25px;
-          "
-        >
-          Avant d'investir dans une solution complexe, prenez 15 minutes pour
-          identifier vos risques critiques réels. Cet échange informel est
-          offert et sans engagement.
-        </p>
-        <a
-          href="tel:+3260860256"
-          style="
-            background: var(--navy-blue);
-            color: var(--bg-white);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            display: inline-block;
-          "
-          >Planifier un diagnostic flash gratuit</a
-        >
       </div>
     </main>
   </body>
