@@ -607,15 +607,17 @@ footer a:hover {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  position: relative; /* Indispensable */
+  position: relative;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+  cursor: pointer; /* Force l'affichage de la main sur toute la carte */
 }
 
 .blog-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* S'assure que la carte reste au-dessus des autres */
 }
 
 .card-img {
@@ -656,7 +658,7 @@ footer a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1; /* Le calque est bien présent */
 }
 
 /* Mise en page "Pro" pour le contenu des articles */
