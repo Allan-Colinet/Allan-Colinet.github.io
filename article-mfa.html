@@ -10,6 +10,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- HEADER STANDARD -->
     <header>
       <div class="header-content">
         <a href="index.html"
@@ -68,7 +69,7 @@
 
         <img
           src="img/card-mfa.jpg"
-          alt="Smartphone avec cadenas MFA"
+          alt="Smartphone avec cadenas symbolisant le MFA"
           class="article-img-full"
         />
 
@@ -94,25 +95,26 @@
             <strong>Un facteur de connaissance :</strong> Votre mot de passe.
           </li>
           <li>
-            <strong>Un facteur de possession :</strong> Un code temporaire ou
-            une validation via une application sur votre smartphone.
+            <strong>Un facteur de possession :</strong> Une validation via une
+            application sur votre smartphone.
           </li>
         </ul>
         <p>
-          Même si un attaquant vole votre mot de passe via un e-mail frauduleux,
-          il restera bloqué car il n'a pas votre téléphone entre les mains.
+          Même si un attaquant vole votre mot de passe, il restera bloqué car il
+          n'a pas votre téléphone entre les mains.
         </p>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
           Quelles applications utiliser ?
         </h2>
         <p>
-          L'erreur classique est d'utiliser la réception de codes par SMS
-          (facilement interceptables). La méthode la plus sûre est d'utiliser
-          une application d'authentification (TOTP).
+          La méthode la plus sûre est d'utiliser une application
+          d'authentification installée sur votre smartphone. Voici les trois
+          références du marché :
         </p>
 
         <div class="pros-cons-grid">
+          <!-- Microsoft -->
           <div
             style="
               background: rgba(10, 25, 47, 0.05);
@@ -131,13 +133,20 @@
             </h4>
             <img
               src="img/ms-auth.jpg"
-              alt="Microsoft Authenticator"
-              style="width: 100px; margin-bottom: 15px; border-radius: 12px"
+              alt="Interface Microsoft Authenticator"
+              style="
+                width: 100%;
+                max-width: 180px;
+                display: block;
+                margin: 0 auto 15px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              "
             />
             <p style="font-size: 0.95rem">
-              Le standard si votre entreprise utilise déjà Microsoft 365. Très
-              confortable grâce à ses notifications "push" : vous recevez une
-              pop-up vous demandant simplement "Approuver la connexion ?".
+              Le standard si votre entreprise utilise Microsoft 365. Très
+              confortable grâce à ses notifications : vous recevez une pop-up
+              vous demandant "Approuver la connexion ?" sur votre téléphone.
             </p>
             <a
               href="https://www.microsoft.com/fr-fr/security/mobile-authenticator-app"
@@ -147,10 +156,11 @@
                 font-weight: bold;
                 font-size: 0.9rem;
               "
-              >Site officiel</a
+              >Site officiel →</a
             >
           </div>
 
+          <!-- Google -->
           <div
             style="
               background: rgba(10, 25, 47, 0.05);
@@ -165,41 +175,90 @@
                 font-size: 1.2rem;
               "
             >
-              Twilio Authy
+              Google Authenticator
             </h4>
             <img
-              src="img/authy-logo.png"
-              alt="Authy"
-              style="width: 100px; margin-bottom: 15px; border-radius: 12px"
+              src="img/google-auth.jpg"
+              alt="Logo Google Authenticator"
+              style="
+                width: 100%;
+                max-width: 180px;
+                display: block;
+                margin: 0 auto 15px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              "
             />
             <p style="font-size: 0.95rem">
-              L'alternative redoutable. Son énorme avantage est la sauvegarde
-              Cloud cryptée. Si vous perdez votre téléphone ou changez
-              d'appareil, vous récupérez instantanément tous vos codes.
+              L'application historique, parfaite si vous travaillez sur Google
+              Workspace. Elle génère un code à 6 chiffres qui change toutes les
+              30 secondes. Elle permet désormais la sauvegarde de vos codes dans
+              votre compte Google.
             </p>
             <a
-              href="https://authy.com/"
+              href="https://safety.google/intl/fr_fr/authentication/"
               target="_blank"
               style="
                 color: var(--cyan-tech);
                 font-weight: bold;
                 font-size: 0.9rem;
               "
-              >Site officiel</a
+              >Site officiel →</a
             >
           </div>
         </div>
 
+        <div
+          style="
+            background: rgba(10, 25, 47, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+          "
+        >
+          <h4
+            style="
+              color: var(--navy-blue);
+              margin-bottom: 10px;
+              font-size: 1.2rem;
+            "
+          >
+            Twilio Authy
+          </h4>
+          <img
+            src="img/authy-logo.png"
+            alt="Logo Authy"
+            style="width: 80px; display: block; margin: 0 0 15px"
+          />
+          <p style="font-size: 0.95rem">
+            Une excellente alternative indépendante. Son grand avantage est la
+            sauvegarde Cloud cryptée par défaut. Si vous perdez votre téléphone
+            ou changez d'appareil, vous récupérez facilement tous vos accès
+            sécurisés.
+          </p>
+          <a
+            href="https://authy.com/"
+            target="_blank"
+            style="
+              color: var(--cyan-tech);
+              font-weight: bold;
+              font-size: 0.9rem;
+            "
+            >Site officiel →</a
+          >
+        </div>
+
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">Conclusion</h2>
         <p>
-          La configuration initiale prend quelques minutes par utilisateur, mais
-          elle réduit le risque d'intrusion de plus de 99%. Dans le cadre de la
-          conformité RGPD, c'est d'ailleurs devenu une obligation technique
-          implicite.
+          Activer le MFA sur vos accès (boîte e-mail, réseaux sociaux
+          professionnels, outils de facturation) est de votre responsabilité
+          pour garantir l'étanchéité de votre entreprise. Prenez le temps de
+          l'activer sur vos comptes vitaux, le risque d'intrusion s'en trouvera
+          réduit de plus de 99%.
         </p>
       </section>
 
-      <!-- CTA ENCADRÉ -->
+      <!-- CTA ENCADRÉ REFORMULÉ (Audit de vulnérabilité) -->
       <div
         style="
           max-width: 850px;
@@ -218,22 +277,24 @@
             font-size: 1.5rem;
           "
         >
-          Vous ne savez pas si votre infrastructure est bien protégée par le MFA
-          ?
+          Vous avez un doute sur la sécurité de vos accès ?
         </h3>
         <p style="color: var(--text-muted); margin-bottom: 25px">
-          L'activation du MFA pour l'ensemble d'une équipe nécessite une méthode
-          pour éviter les blocages. Faisons le point sur votre situation
-          actuelle.
+          Il est parfois difficile de savoir quels outils sont réellement
+          protégés. Lors de notre audit flash gratuit, nous faisons un état des
+          lieux rapide de vos vulnérabilités et vous conseillons sur les
+          priorités à sécuriser, sans perturber votre activité.
         </p>
         <a
-          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Mise%20en%20place%20MFA"
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Bilan%20de%20Securite"
           class="btn"
           style="border: none"
-          >Réserver mon audit de 10 min</a
+          >Réserver mon bilan flash de 10 min</a
         >
       </div>
     </main>
+
+    <!-- FOOTER STANDARD -->
     <footer id="contact">
       <div class="container">
         <p

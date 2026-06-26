@@ -11,6 +11,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- HEADER STANDARD -->
     <header>
       <div class="header-content">
         <a href="index.html"
@@ -33,6 +34,7 @@
         </nav>
       </div>
     </header>
+
     <main class="container" style="padding-bottom: 60px">
       <a
         href="blog.html"
@@ -68,99 +70,92 @@
 
         <img
           src="img/card-spoofing.jpg"
-          alt="Alerte de sécurité email"
+          alt="Alerte de sécurité sur un e-mail de phishing"
           class="article-img-full"
         />
 
         <p>
           Que se passerait-il si, aujourd'hui, vos clients ou patients
           recevaient une fausse facture comportant un nouveau numéro de compte,
-          provenant directement de <strong>votre</strong> adresse e-mail
-          officielle ?
+          provenant apparemment directement de <strong>votre</strong> adresse
+          e-mail officielle ?
         </p>
 
         <p>
-          Pour un dirigeant, ce scénario est un cauchemar : perte de crédibilité
-          immédiate, factures impayées par des clients floués, et responsabilité
-          engagée face au RGPD.
-        </p>
-
-        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Le "Spoofing" : Usurper sans pirater
-        </h2>
-        <p>
-          La réalité technique est surprenante : les cybercriminels n'ont
-          souvent même pas besoin de pirater votre mot de passe pour réaliser
-          cette attaque. Ils utilisent une faille historique de l'e-mail appelée
-          le <em>Spoofing</em>.
-        </p>
-        <p>
-          Imaginez envoyer une lettre par la Poste. Vous pouvez écrire l'adresse
-          de n'importe qui au dos de l'enveloppe dans la case "Expéditeur".
-          C'est exactement ce que font les pirates informatiques : ils envoient
-          des e-mails depuis leurs propres serveurs, mais modifient l'étiquette
-          pour afficher votre nom de domaine (ex:
-          <em>facturation@votre-entreprise.be</em>).
+          Pour un dirigeant, ce scénario est une catastrophe : perte de
+          confiance, factures payées à des escrocs, et responsabilité engagée.
+          Bien souvent, ce type d'arnaque est le résultat de deux menaces
+          combinées : le <strong>Spoofing</strong> (usurpation d'identité) et le
+          <strong>Phishing</strong> (hameçonnage).
         </p>
 
         <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
-          Comment verrouiller votre nom de domaine ?
+          Le "Spoofing" : Usurper sans même pirater votre mot de passe
         </h2>
         <p>
-          Pour empêcher quiconque d'utiliser votre identité numérique, il faut
-          configurer trois "sceaux de cire" invisibles au niveau de votre nom de
-          domaine (les enregistrements DNS). Ces normes permettent aux serveurs
-          du monde entier de vérifier que l'e-mail provient bien de vous :
+          La réalité technique est parfois surprenante. Les cybercriminels n'ont
+          pas toujours besoin de pirater votre boîte mail pour se faire passer
+          pour vous. Imaginez envoyer une lettre par la Poste : vous pouvez
+          écrire l'adresse de n'importe qui au dos de l'enveloppe dans la case
+          "Expéditeur". C'est exactement ce que font les pirates informatiques
+          avec les e-mails.
+        </p>
+        <p>
+          Si la configuration technique de votre nom de domaine (les paramètres
+          SPF, DKIM, DMARC gérés par votre hébergeur) n'est pas strictement
+          verrouillée, n'importe quel pirate peut envoyer un e-mail de
+          <strong>phishing</strong> extrêmement convaincant en utilisant votre
+          nom, pour tromper vos propres clients.
+        </p>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Le Phishing et la fuite de données (Le vrai danger)
+        </h2>
+        <p>
+          L'autre méthode, encore plus redoutable, intervient lorsque
+          <strong>vos propres données ont déjà fuité</strong>. Les pirates
+          savent à quels services en ligne vous êtes abonné. S'ils parviennent à
+          récupérer votre mot de passe suite au piratage d'un site tiers, ils
+          peuvent accéder directement à votre messagerie professionnelle.
+        </p>
+        <p>
+          Une fois à l'intérieur, ils lisent vos échanges, imitent votre style
+          d'écriture, et attendent le moment opportun (comme la fin du mois, au
+          moment des facturations) pour envoyer de faux e-mails (Phishing ciblé)
+          à vos partenaires commerciaux ou patients.
         </p>
 
         <div
           style="
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
+            background: rgba(198, 40, 40, 0.05);
+            border-left: 4px solid #c62828;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
             margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
           "
         >
-          <h4 style="color: var(--cyan-tech); font-size: 1.2rem">
-            1. Le protocole SPF
+          <h4 style="color: #c62828; margin-bottom: 10px">
+            Les signaux d'alerte :
           </h4>
-          <p style="font-size: 0.95rem">
-            C'est la "liste des invités". Vous déclarez publiquement quels
-            serveurs (ex: Microsoft 365, Mailchimp) ont le droit d'envoyer des
-            e-mails en votre nom.
-          </p>
-
-          <h4
-            style="color: var(--cyan-tech); font-size: 1.2rem; margin-top: 20px"
-          >
-            2. Le protocole DKIM
-          </h4>
-          <p style="font-size: 0.95rem">
-            C'est la "signature cryptographique". Chaque e-mail envoyé est signé
-            numériquement, prouvant qu'il n'a pas été altéré en cours de route.
-          </p>
-
-          <h4
-            style="color: var(--cyan-tech); font-size: 1.2rem; margin-top: 20px"
-          >
-            3. La politique DMARC
-          </h4>
-          <p style="font-size: 0.95rem">
-            C'est le "vigile". Vous dictez aux autres messageries ce qu'elles
-            doivent faire si un e-mail échoue aux tests SPF et DKIM (ex: "S'il
-            ne vient pas de mes serveurs, détruisez l'e-mail avant qu'il
-            n'arrive chez mon client").
-          </p>
+          <ul style="margin-left: 20px; font-size: 0.95rem">
+            <li>
+              Vos propres e-mails légitimes arrivent souvent dans la boîte
+              "Spam" de vos clients (signe d'une mauvaise configuration de
+              domaine).
+            </li>
+            <li>
+              Vous réutilisez le même mot de passe pour plusieurs services
+              professionnels en ligne.
+            </li>
+            <li>
+              Vous recevez des e-mails d'échec de distribution (Delivery
+              Failure) pour des messages que vous n'avez jamais envoyés.
+            </li>
+          </ul>
         </div>
-
-        <p>
-          Mettre en place ces protocoles est une mission technique fine, mais
-          indispensable pour protéger la réputation de votre activité.
-        </p>
       </section>
 
+      <!-- CTA ENCADRÉ REFORMULÉ (Recherche OSINT de fuite) -->
       <div
         style="
           max-width: 850px;
@@ -179,23 +174,29 @@
             font-size: 1.5rem;
           "
         >
-          Vos e-mails arrivent souvent dans les spams de vos clients ?
+          Vos adresses e-mails professionnelles circulent-elles sur le Dark Web
+          ?
         </h3>
         <p style="color: var(--text-muted); margin-bottom: 25px">
-          C'est le symptôme principal d'un nom de domaine non sécurisé. Prenons
-          10 minutes pour vérifier ensemble la configuration de vos protocoles
-          de messagerie.
+          Avant même de toucher à la technique, la première étape est de savoir
+          si vos données sont déjà compromises. Lors de notre audit flash, nous
+          vérifions discrètement si vos identifiants ont fuité lors de
+          cyberattaques mondiales. Une vérification rapide, externe et 100%
+          confidentielle.
         </p>
         <a
-          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Securite%20Domaine"
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Recherche%20de%20fuite%20de%20donnees"
           class="btn"
           style="border: none"
-          >Réserver mon audit flash gratuit</a
+          >Vérifier mes adresses e-mails (Gratuit)</a
         >
       </div>
     </main>
+
+    <!-- FOOTER STANDARD -->
     <footer id="contact">
       <div class="container">
+        <!-- Contenu identique au reste -->
         <p
           style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
         >
