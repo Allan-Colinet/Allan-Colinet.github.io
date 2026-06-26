@@ -597,3 +597,26 @@ footer a:hover {
   gap: 30px;
   margin: 50px 0;
 }
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  /* Transition pour l'effet de zoom fluide */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px) scale(1.02); /* Grossissement léger + effet lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
