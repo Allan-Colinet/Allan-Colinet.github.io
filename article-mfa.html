@@ -2,64 +2,221 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Le MFA : Votre assurance-vie numérique | ProxySafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité | ProxySafe
+    </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header><!-- Ton header standard --></header>
-    <main class="container" style="padding: 40px 0">
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <a href="index.html"
+          ><img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+        /></a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html#services" onclick="toggleMenu()">Services</a>
+          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
+          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
+            >Blog</a
+          >
+          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding-bottom: 60px">
       <a
         href="blog.html"
         style="
-          text-decoration: none;
+          display: inline-block;
+          margin-top: 30px;
           color: var(--cyan-tech);
           font-weight: bold;
+          text-decoration: none;
         "
         >← Retour au Blog</a
       >
 
-      <article
+      <!-- HERO DE L'ARTICLE -->
+      <article class="blog-hero" style="margin-top: 20px; min-height: 350px">
+        <div class="blog-hero-content">
+          <span
+            style="
+              background: var(--cyan-tech);
+              color: var(--navy-blue);
+              padding: 5px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: bold;
+              align-self: flex-start;
+              margin-bottom: 15px;
+              text-transform: uppercase;
+            "
+            >Sécurité Opérationnelle</span
+          >
+          <h1
+            style="
+              font-size: clamp(1.8rem, 3vw, 2.5rem);
+              margin-bottom: 10px;
+              line-height: 1.2;
+            "
+          >
+            Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité
+          </h1>
+        </div>
+        <div
+          class="blog-hero-img"
+          style="background-image: url(&quot;img/card-mfa.jpg&quot;)"
+        ></div>
+      </article>
+
+      <!-- CORPS DE L'ARTICLE -->
+      <section
         style="
           max-width: 800px;
-          margin: 20px auto;
-          background: var(--bg-white);
-          padding: 40px;
-          border-radius: 12px;
-          border: 1px solid var(--border-color);
+          margin: 40px auto;
+          line-height: 1.8;
+          font-size: 1.1rem;
+          color: var(--text-main);
         "
       >
-        <h1>Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité</h1>
         <p>
-          Le mot de passe, aussi complexe soit-il, ne suffit plus. Il est
-          souvent la première chose qui tombe en cas de fuite de données.
+          Si vous pensez que votre entreprise est en sécurité parce que vos
+          collaborateurs utilisent des mots de passe complexes, il est temps de
+          faire une mise à jour. Face à l'industrialisation des cyberattaques et
+          aux fuites de données massives, le mot de passe ne suffit plus. Il
+          vous faut un verrou supplémentaire : le MFA.
         </p>
-        <h2>Qu'est-ce que le MFA ?</h2>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Qu'est-ce que le MFA (Authentification Multifactorielle) ?
+        </h2>
         <p>
-          Le <em>Multi-Factor Authentication</em> (ou double authentification)
-          ajoute une couche de protection : pour accéder à votre compte, vous
-          devez non seulement connaître votre mot de passe, mais aussi valider
-          une demande sur un appareil physique (votre smartphone).
-        </p>
-        <h2>Comment le configurer ?</h2>
-        <p>
-          1. Téléchargez une application comme
-          <strong>Microsoft Authenticator</strong> ou <strong>Authy</strong>.
-        </p>
-        <p>
-          2. Dans les paramètres de sécurité de votre messagerie ou compte pro,
-          activez "l'authentification à deux facteurs".
+          Le MFA, c'est l'équivalent numérique de la sécurité de votre carte
+          bancaire. Pour retirer de l'argent, vous avez besoin de deux choses :
+          votre carte physique (quelque chose que vous possédez) et votre code
+          PIN (quelque chose que vous connaissez).
         </p>
         <p>
-          3. Scannez le QR Code affiché à l'écran avec l'application. C'est tout
-          !
+          En cybersécurité, c'est la même logique. Pour accéder à votre
+          messagerie Microsoft 365, Google Workspace ou à votre logiciel métier,
+          le système va vous demander :
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 20px">
+          <li style="margin-bottom: 10px">
+            <strong>Un facteur de connaissance :</strong> Votre mot de passe.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Un facteur de possession :</strong> Une validation sur votre
+            smartphone, via une application dédiée.
+          </li>
+        </ul>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Pourquoi est-ce absolument indispensable ?
+        </h2>
+        <p>
+          Même le meilleur des mots de passe peut être volé. Que ce soit via un
+          e-mail de phishing habile qui trompe votre vigilance, ou via la fuite
+          de données d'un site tiers où vous aviez réutilisé ce même mot de
+          passe. Si un pirate russe ou asiatique met la main sur vos
+          identifiants, le MFA l'empêchera de se connecter.
         </p>
         <p>
-          <strong>Résultat :</strong> Même si un pirate vole votre mot de passe,
-          il restera bloqué devant la porte car il n'a pas votre téléphone en
-          main.
+          Le pirate aura beau taper le bon mot de passe, l'accès sera bloqué car
+          une notification d'approbation sera envoyée... sur
+          <strong>votre</strong> téléphone. Il vous suffira de refuser la
+          connexion pour stopper l'attaque nette.
         </p>
-      </article>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">
+          Comment le mettre en place avec les bons outils ?
+        </h2>
+        <p>
+          L'erreur la plus courante est de configurer le MFA via SMS. C'est
+          mieux que rien, mais les SMS peuvent être interceptés (technique du
+          <em>SIM Swapping</em>). La méthode recommandée par les standards
+          (RGPD, NIS2, CCB) est l'utilisation d'une application
+          d'authentification (TOTP).
+        </p>
+
+        <p>
+          Voici les deux applications les plus robustes pour les professionnels
+          :
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 20px">
+          <li style="margin-bottom: 10px">
+            <strong>Microsoft Authenticator :</strong> Excellent si vous êtes
+            déjà dans l'écosystème Windows/M365. Il permet la validation par
+            simple notification "push" (Accepter / Refuser).
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Authy :</strong> Une alternative très prisée car elle permet
+            de sauvegarder vos jetons de sécurité dans le Cloud. Si vous perdez
+            votre smartphone, vous ne perdez pas l'accès à tous vos comptes
+            (contrairement à Google Authenticator qui a longtemps posé ce
+            problème).
+          </li>
+        </ul>
+
+        <h2 style="color: var(--navy-blue); margin: 40px 0 20px">Conclusion</h2>
+        <p>
+          Activer le MFA sur vos boîtes mails professionnelles, vos VPN et vos
+          logiciels de comptabilité/santé n'est plus une option, c'est une
+          obligation légale tacite sous le RGPD pour la protection des données.
+          La configuration initiale prend quelques minutes par utilisateur, mais
+          elle réduit le risque d'intrusion de plus de 99%.
+        </p>
+      </section>
+
+      <!-- CTA ENCADRÉ -->
+      <div
+        style="
+          max-width: 800px;
+          margin: 40px auto 0;
+          background: rgba(0, 180, 216, 0.1);
+          border: 1px solid var(--cyan-tech);
+          padding: 40px;
+          border-radius: 12px;
+          text-align: center;
+        "
+      >
+        <h3
+          style="
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+          "
+        >
+          Vous ne savez pas si votre infrastructure est bien protégée par le MFA
+          ?
+        </h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px">
+          L'activation du MFA pour l'ensemble d'une équipe nécessite une méthode
+          pour éviter les blocages. Faisons le point sur votre situation
+          actuelle lors d'un diagnostic flash.
+        </p>
+        <a
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Mise%20en%20place%20MFA"
+          class="btn"
+          style="border: none"
+          >Réserver mon audit de 10 min</a
+        >
+      </div>
     </main>
+
+    <!-- FOOTER -->
     <footer id="contact">
       <div class="container">
         <p
@@ -71,7 +228,6 @@
         <p style="margin-top: 10px">
           📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
         </p>
-
         <div class="footer-info">
           <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
           <p>

@@ -2,59 +2,76 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Titre | ProxySafe Blog</title>
+    <title>Titre de l'article | ProxySafe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><!-- Ton header standard --></header>
-    <main class="container" style="padding-top: 40px; padding-bottom: 60px">
+    <header><!-- Ton header --></header>
+
+    <main class="container">
       <a
         href="blog.html"
         style="
-          text-decoration: none;
+          display: inline-block;
+          margin-top: 20px;
           color: var(--cyan-tech);
           font-weight: bold;
+          text-decoration: none;
         "
         >← Retour au Blog</a
       >
 
-      <article
-        style="
-          max-width: 800px;
-          margin: 20px auto 0;
-          background: var(--bg-white);
-          padding: 40px;
-          border-radius: 12px;
-          border: 1px solid var(--border-color);
-        "
-      >
-        <!-- Insère ici ton contenu (images, titres h2, paragraphes) -->
+      <!-- Le "Hero" de l'article (Visuel pro) -->
+      <article class="blog-hero" style="margin-top: 20px">
+        <div class="blog-hero-content">
+          <span
+            style="
+              background: var(--cyan-tech);
+              padding: 5px 12px;
+              border-radius: 20px;
+              font-weight: bold;
+              font-size: 0.8rem;
+              text-transform: uppercase;
+            "
+            >SÉCURITÉ</span
+          >
+          <h1 style="margin: 20px 0">Le MFA : Pourquoi c'est l'étape n°1</h1>
+        </div>
+        <div
+          class="blog-hero-img"
+          style="background-image: url(&quot;mfa.jpg&quot;)"
+        ></div>
       </article>
 
-      <!-- Encadré Conversion (Soft CTA) -->
-      <div
+      <!-- Le corps de l'article -->
+      <section
         style="
           max-width: 800px;
           margin: 40px auto;
-          background: rgba(0, 180, 216, 0.1);
-          padding: 30px;
-          border-radius: 8px;
-          text-align: center;
+          line-height: 1.8;
+          font-size: 1.1rem;
         "
       >
-        <h3>Besoin d'aide pour mettre cela en place ?</h3>
-        <p>
-          Prenons 10 minutes pour faire le point gratuitement sur votre
-          protection.
-        </p>
-        <a
-          href="mailto:allan@proxysafe.be?subject=Audit%20Flash"
-          class="btn"
-          style="border: none"
+        <!-- Ton texte ici -->
+      </section>
+
+      <!-- CTA en bas d'article -->
+      <div
+        style="
+          text-align: center;
+          padding: 40px;
+          background: var(--bg-white);
+          border-radius: 12px;
+          margin-bottom: 50px;
+        "
+      >
+        <h3>Besoin d'aide pour configurer cela ?</h3>
+        <p>Prenons 10 minutes pour faire le point gratuitement.</p>
+        <a href="mailto:allan@proxysafe.be?subject=Audit%20Flash" class="btn"
           >Réserver un Audit Flash</a
         >
       </div>
     </main>
-    <footer><!-- Ton footer standard --></footer>
+    <footer><!-- Ton footer --></footer>
   </body>
 </html>

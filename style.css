@@ -591,28 +591,30 @@ footer a:hover {
     opacity: 0.6;
   }
 }
+/* Grille du blog */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   margin: 50px 0;
 }
+
+/* Carte article avec effet de survol */
 .blog-card {
   display: flex;
   flex-direction: column;
   background: var(--bg-white);
   border-radius: 12px;
-  overflow: hidden;
   border: 1px solid var(--border-color);
-  /* Transition pour l'effet de zoom fluide */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px) scale(1.02); /* Grossissement léger + effet lift */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
