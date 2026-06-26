@@ -605,11 +605,12 @@ footer a:hover {
   flex-direction: column;
   background: var(--bg-white);
   border-radius: 12px;
+  overflow: hidden;
   border: 1px solid var(--border-color);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  overflow: hidden;
+  position: relative;
 }
 
 .blog-card:hover {
@@ -636,15 +637,26 @@ footer a:hover {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.05rem;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto; /* Pousse le lien tout en bas de la carte */
+  margin-top: auto; /* Pousse le lien vers le bas */
 }
 .read-more-link:hover {
   transform: translateX(5px); /* Petit effet de glissement vers la droite */
   color: var(--cyan-hover);
+}
+.read-more-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* Mise en page "Pro" pour le contenu des articles */
