@@ -612,6 +612,7 @@ footer a:hover {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   cursor: pointer; /* Force l'affichage de la main sur toute la carte */
+  will-change: transform, box-shadow;
 }
 
 .blog-card:hover {
@@ -633,6 +634,12 @@ footer a:hover {
   flex-grow: 1;
 }
 
+.blog-card:hover .read-more-link {
+  margin-left: 5px;
+  color: var(
+    --cyan-hover
+  ); /* Assure-toi que cette variable existe bien dans ton code */
+}
 /* Nouveau style pour le lien "Lire l'article" */
 .read-more-link {
   color: var(--cyan-tech);
@@ -640,12 +647,12 @@ footer a:hover {
   text-decoration: none;
   font-size: 1.05rem;
   transition:
-    transform 0.3s ease,
+    margin-left 0.3s ease,
     color 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto; /* Pousse le lien vers le bas */
+  margin-top: auto;
 }
 .read-more-link:hover {
   transform: translateX(5px); /* Petit effet de glissement vers la droite */
