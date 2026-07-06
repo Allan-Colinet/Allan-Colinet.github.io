@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Les bons réflexes de sécurité pour une petite structure | ProxySafe
+    </title>
+    <meta
+      name="description"
+      content="Les bons réflexes de sécurité pour indépendants et petites structures : mots de passe, double authentification, sauvegardes, emails et accès."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER STANDARD -->
+    <header>
+      <div class="header-content">
+        <a href="index.html"
+          ><img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+        /></a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html#services" onclick="toggleMenu()">Services</a>
+          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
+          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
+            >Blog</a
+          >
+          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENU ARTICLE -->
+    <section style="padding: 60px 0; background-color: var(--bg-white)">
+      <div class="container" style="max-width: 900px">
+        <h1
+          style="
+            color: var(--navy-blue);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: 25px;
+          "
+        >
+          Les bons réflexes de sécurité pour une petite structure
+        </h1>
+
+        <p
+          style="
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+          "
+        >
+          On pense souvent que la sécurité informatique est un sujet réservé aux
+          grandes entreprises. En réalité, dans une petite structure, ce sont
+          souvent quelques habitudes simples qui font la plus grande différence.
+        </p>
+
+        <img
+          src="img/article-bons-reflexes-cover.jpg"
+          alt="Poste de travail sécurisé dans une petite structure"
+          class="article-img-full"
+        />
+
+        <p>
+          Quand on est indépendant ou à la tête d’une petite équipe, on n’a ni
+          le temps ni l’envie de transformer son quotidien en procédure
+          compliquée. Et c’est normal.
+        </p>
+
+        <p>
+          Le but n’est pas de tout verrouiller partout. Le but est de mettre en
+          place une base claire, simple et efficace pour éviter les problèmes
+          les plus courants.
+        </p>
+
+        <p>
+          Dans la majorité des cas, une petite structure n’a pas besoin d’une
+          usine à gaz. Elle a besoin de bons réflexes, appliqués de manière
+          régulière.
+        </p>
+
+        <h2
+          style="
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--navy-blue);
+            font-size: 1.8rem;
+          "
+        >
+          Commencer par les bons comptes
+        </h2>
+
+        <p>
+          Tous les accès n’ont pas le même niveau de sensibilité. Certains
+          comptes doivent être protégés en priorité, parce qu’ils ouvrent la
+          porte au reste.
+        </p>
+
+        <ul style="padding-left: 22px; margin: 15px 0 25px">
+          <li>La messagerie professionnelle.</li>
+          <li>Les espaces cloud et documents partagés.</li>
+          <li>Les outils de facturation ou de gestion.</li>
+          <li>Les accès d’administration.</li>
+          <li>Les comptes utilisés par plusieurs personnes.</li>
+        </ul>
+
+        <p>
+          Très souvent, mieux sécuriser quelques accès clés change déjà beaucoup
+          de choses.
+        </p>
+
+        <img
+          src="img/article-bons-reflexes-inline-1.jpg"
+          alt="Organisation des accès et sécurisation des comptes"
+          class="article-img-inline"
+        />
+
+        <h2
+          style="
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--navy-blue);
+            font-size: 1.8rem;
+          "
+        >
+          Les 4 réflexes de base à mettre en place
+        </h2>
+
+        <p>
+          Si vous ne savez pas par où commencer, voici les quatre habitudes les
+          plus utiles au quotidien.
+        </p>
+
+        <h3
+          style="
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+          "
+        >
+          1. Des mots de passe différents
+        </h3>
+
+        <p>
+          Réutiliser le même mot de passe sur plusieurs services reste l’une des
+          erreurs les plus courantes. En cas de fuite ou de compromission, un
+          seul accès peut alors en ouvrir plusieurs.
+        </p>
+
+        <h3
+          style="
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+          "
+        >
+          2. La double authentification
+        </h3>
+
+        <p>
+          Activer la double authentification sur la messagerie, le cloud et les
+          comptes critiques est souvent l’une des protections les plus rentables
+          à mettre en place.
+        </p>
+
+        <h3
+          style="
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+          "
+        >
+          3. Des sauvegardes testées
+        </h3>
+
+        <p>
+          Une sauvegarde n’a de valeur que si elle peut être restaurée.
+          Sauvegarder “quelque part” ne suffit pas. Il faut aussi vérifier que
+          la restauration fonctionne réellement.
+        </p>
+
+        <h3
+          style="
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+          "
+        >
+          4. Vérifier avant d’agir
+        </h3>
+
+        <p>
+          Un email inhabituel, une pièce jointe inattendue, une urgence, un
+          changement de compte bancaire… ce sont souvent les mêmes mécanismes
+          qui reviennent. Le bon réflexe consiste à ralentir et confirmer avant
+          d’agir.
+        </p>
+
+        <img
+          src="img/article-bons-reflexes-inline-2.jpg"
+          alt="Vérification d'un email et bonnes pratiques de sécurité"
+          class="article-img-inline"
+        />
+
+        <h2
+          style="
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--navy-blue);
+            font-size: 1.8rem;
+          "
+        >
+          Les erreurs les plus fréquentes
+        </h2>
+
+        <p>
+          Dans beaucoup de petites structures, les problèmes ne viennent pas
+          d’un manque total d’outils, mais d’un manque de clarté sur les
+          priorités.
+        </p>
+
+        <div class="pros-cons-grid">
+          <div class="box-cons">
+            <h4>Erreurs fréquentes</h4>
+            <ul>
+              <li>Réutiliser les mêmes mots de passe.</li>
+              <li>Penser qu’un antivirus suffit à lui seul.</li>
+              <li>Ne jamais tester les sauvegardes.</li>
+              <li>Laisser des accès inutiles actifs.</li>
+              <li>Répondre trop vite à une demande urgente.</li>
+            </ul>
+          </div>
+
+          <div class="box-pros">
+            <h4>Réflexes utiles</h4>
+            <ul>
+              <li>Prioriser les comptes les plus sensibles.</li>
+              <li>Activer la double authentification.</li>
+              <li>Tester les sauvegardes régulièrement.</li>
+              <li>Limiter les accès au strict nécessaire.</li>
+              <li>Vérifier avant de valider.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2
+          style="
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--navy-blue);
+            font-size: 1.8rem;
+          "
+        >
+          Ce qu’une petite structure peut mettre en place rapidement
+        </h2>
+
+        <p>
+          L’idée n’est pas d’ajouter de la complexité. L’idée est de poser des
+          règles simples que tout le monde peut comprendre et appliquer.
+        </p>
+
+        <ul style="padding-left: 22px; margin: 15px 0 25px">
+          <li>Une règle pour les changements de coordonnées bancaires.</li>
+          <li>Une règle pour la gestion des mots de passe.</li>
+          <li>Une règle pour les accès aux comptes partagés.</li>
+          <li>Une vérification régulière des sauvegardes.</li>
+          <li>Un petit point mensuel sur les accès et habitudes.</li>
+        </ul>
+
+        <p>
+          Souvent, cette base suffit déjà à gagner en sérénité et à éviter une
+          grande partie des erreurs du quotidien.
+        </p>
+
+        <h2
+          style="
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--navy-blue);
+            font-size: 1.8rem;
+          "
+        >
+          Conclusion
+        </h2>
+
+        <p>
+          La sécurité utile, ce n’est pas forcément plus d’outils. C’est surtout
+          de meilleures habitudes, appliquées dans la durée.
+        </p>
+
+        <p>
+          Pour une petite structure, une base simple et bien suivie vaut souvent
+          beaucoup plus qu’un gros chantier ponctuel lancé trop tard.
+        </p>
+
+        <!-- CTA ENCADRÉ -->
+        <div
+          style="
+            max-width: 850px;
+            margin: 40px auto 0;
+            background: rgba(0, 180, 216, 0.1);
+            border: 1px solid var(--cyan-tech);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+          "
+        >
+          <h3
+            style="
+              color: var(--navy-blue);
+              margin-bottom: 15px;
+              font-size: 1.5rem;
+            "
+          >
+            Vous avez un doute sur vos priorités de sécurité ?
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 25px">
+            Il n’est pas toujours simple de savoir par quoi commencer. Lors de
+            notre test rapide, nous faisons un état des lieux rapide de vos
+            pratiques et identifions avec vous les points les plus urgents à
+            renforcer.
+          </p>
+          <a
+            href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Priorites%20de%20Securite"
+            class="btn"
+            style="border: none"
+            >Réserver mon bilan rapide et gratuit</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER STANDARD -->
+    <footer id="contact">
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
+        </p>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
