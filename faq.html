@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ Cybersécurité | ProxySafe Couvin</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
       content="Foire aux questions ProxySafe : Réponses claires sur la cybersécurité des PME, les tarifs, nos interventions d'urgence et la mise en conformité (NIS2, RGPD)."
@@ -191,230 +192,8 @@
         ]
       }
     </script>
-
-    <style>
-      /* Charte Graphique "Bleu Navy & Sérénité" (Importée de index) */
-      :root {
-        --navy-blue: #0a192f;
-        --navy-light: #112240;
-        --cyan-tech: #00b4d8;
-        --cyan-hover: #0077b6;
-        --bg-light: #f9fafb;
-        --bg-white: #ffffff;
-        --text-main: #333333;
-        --text-muted: #666666;
-        --border-color: #e5e7eb;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: var(--text-main);
-        background-color: var(--bg-light);
-      }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-        width: 100%;
-      }
-
-      /* HEADER (Identique) */
-      header {
-        background-color: var(--bg-white);
-        padding: 15px 0;
-        border-bottom: 2px solid var(--cyan-tech);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      header img {
-        height: 100px;
-        width: auto;
-        transition: height 0.3s;
-      }
-      nav {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-      }
-      nav a {
-        color: var(--navy-blue);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        transition: color 0.3s;
-      }
-      nav a:hover {
-        color: var(--cyan-tech);
-      }
-
-      /* EN-TÊTE FAQ */
-      .faq-header {
-        text-align: center;
-        padding: 60px 0 40px;
-      }
-      .faq-header h1 {
-        color: var(--navy-blue);
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-      }
-      .faq-header p {
-        color: var(--text-muted);
-        font-size: 1.1rem;
-      }
-
-      /* ACCORDEON FAQ */
-      .faq-section {
-        margin-bottom: 40px;
-      }
-      .faq-category {
-        font-size: 1.4rem;
-        color: var(--cyan-tech);
-        border-bottom: 2px solid var(--border-color);
-        padding-bottom: 10px;
-        margin: 40px 0 20px;
-        font-weight: bold;
-      }
-      .accordion-item {
-        background: var(--bg-white);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-      }
-      .accordion-header {
-        width: 100%;
-        text-align: left;
-        background: none;
-        border: none;
-        padding: 20px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--navy-blue);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background 0.3s;
-      }
-      .accordion-header:hover {
-        background: #f0fbff;
-        color: var(--cyan-hover);
-      }
-      .accordion-header.active {
-        background: #f0fbff;
-        border-bottom: 1px solid var(--border-color);
-        color: var(--cyan-hover);
-      }
-      .icon {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--cyan-tech);
-        transition: transform 0.3s ease;
-      }
-      .accordion-header.active .icon {
-        transform: rotate(45deg);
-      }
-
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        background: var(--bg-white);
-      }
-      .accordion-content-inner {
-        padding: 20px;
-        color: var(--text-muted);
-        font-size: 1rem;
-      }
-
-      /* FOOTER */
-      footer {
-        background-color: var(--navy-blue);
-        color: #a0aec0;
-        text-align: center;
-        padding: 40px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 60px;
-      }
-      footer a {
-        color: var(--cyan-tech);
-        text-decoration: none;
-      }
-
-      /* MOBILE */
-      .burger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-      }
-      .burger span {
-        width: 100%;
-        height: 3px;
-        background-color: var(--navy-blue);
-        border-radius: 5px;
-      }
-      @media (max-width: 900px) {
-        header img {
-          height: 45px;
-        }
-        .burger {
-          display: flex;
-        }
-        nav {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          background-color: var(--bg-white);
-          flex-direction: column;
-          padding: 10px 0;
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-        }
-        nav.active {
-          display: flex;
-        }
-        nav a {
-          padding: 15px;
-          width: 100%;
-          text-align: center;
-        }
-        .accordion-header {
-          font-size: 1rem;
-          padding: 15px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <!-- HEADER -->
-    <!-- HEADER UNIVERSEL À COPIER SUR TOUTES LES PAGES -->
     <header>
       <div class="header-content">
         <a href="index.html" class="nav-logo-link">
@@ -428,11 +207,11 @@
           <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
-          <!-- On ajoute / devant les ancres pour qu'elles forcent le retour à l'accueil depuis le blog/faq -->
-          <a href="/#services" class="nav-link" onclick="toggleMenu()"
+          <a href="index.html" class="nav-link">Accueil</a>
+          <a href="index.html#services" class="nav-link" onclick="toggleMenu()"
             >Services</a
           >
-          <a href="/#offres" class="nav-link" onclick="toggleMenu()"
+          <a href="index.html#offres" class="nav-link" onclick="toggleMenu()"
             >Abonnements</a
           >
           <a href="blog.html" class="nav-link">Blog</a>
@@ -776,15 +555,31 @@
       </div>
     </main>
 
+    <!-- FOOTER STANDARD -->
     <footer id="contact">
       <div class="container">
-        <p>
-          📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a> | 📞 +32
-          (0) 60 86 02 56
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
         </p>
-        <p style="margin-top: 15px; font-size: 0.85rem">
-          <strong>&copy; 2026 ProxySafe - Allan Colinet</strong>
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
         </p>
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
       </div>
     </footer>
 

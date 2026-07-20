@@ -1,39 +1,73 @@
 // Menu Mobile
-// Menu Mobile
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   nav.classList.toggle("active");
 }
 
-// Gestion dynamique de la classe 'active' dans le menu de navigation
+// Gestion dynamique de la couleur Cyan (Page active et défilement)
 document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll("#nav-menu .nav-link");
-  const logoLink = document.querySelector(".nav-logo-link");
 
-  // Règle spéciale pour l'accueil
-  if (currentPath === "index.html" || currentPath === "") {
-    logoLink.style.color = "var(--cyan-tech)";
-  } else {
-    logoLink.style.color = "";
-  }
-
-  // Colorer le lien correspondant à la page en cours
+  // 1. Colorer "Blog" ou "FAQ" si on est sur ces pages
   navLinks.forEach((link) => {
-    // Nettoyer la classe active et le style par défaut
-    link.classList.remove("active");
-    link.style.color = "";
-
     const linkHref = link.getAttribute("href");
-    if (
-      linkHref &&
-      linkHref.includes(currentPath) &&
-      currentPath !== "index.html"
-    ) {
-      link.classList.add("active");
+    if (linkHref === currentPath) {
       link.style.color = "var(--cyan-tech)";
+    } else {
+      link.style.color = "";
     }
   });
+
+  // 2. Gérer le défilement pour "Accueil", "Services" et "Abonnements" sur l'index
+  if (currentPath === "index.html" || currentPath === "") {
+    const sections = document.querySelectorAll("section[id]");
+    const header = document.querySelector("header");
+
+    // Colorer "Accueil" par défaut quand on est tout en haut
+    const homeLink = document.querySelector('#nav-menu a[href="index.html"]');
+    if (homeLink) homeLink.style.color = "var(--cyan-tech)";
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let isAnySectionVisible = false;
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isAnySectionVisible = true;
+            // Retirer le cyan de tous les liens de l'accueil
+            navLinks.forEach((link) => {
+              if (link.getAttribute("href").includes("index.html")) {
+                link.style.color = "";
+              }
+            });
+
+            // Ajouter le cyan à la section actuellement visible
+            const activeLink = document.querySelector(
+              `#nav-menu a[href="index.html#${entry.target.id}"]`,
+            );
+            if (activeLink) {
+              activeLink.style.color = "var(--cyan-tech)";
+            }
+          }
+        });
+
+        // Si aucune section spécifique n'est visible (on est tout en haut du site)
+        if (!isAnySectionVisible && window.scrollY < 200) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute("href").includes("index.html"))
+              link.style.color = "";
+          });
+          if (homeLink) homeLink.style.color = "var(--cyan-tech)";
+        }
+      },
+      {
+        rootMargin: "-100px 0px -60% 0px", // Ajuste le point de déclenchement au milieu de l'écran
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
 });
 
 // Logique du Quiz / Tunnel

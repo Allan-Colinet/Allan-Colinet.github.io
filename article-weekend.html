@@ -10,25 +10,28 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- HEADER STANDARD -->
     <header>
       <div class="header-content">
-        <a href="index.html"
-          ><img
+        <a href="index.html" class="nav-logo-link">
+          <img
             src="logo_proxysafe.png"
             alt="ProxySafe Logo"
             onerror="this.style.display = 'none'"
-        /></a>
+          />
+        </a>
         <button class="burger" onclick="toggleMenu()" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
-          <a href="index.html#services" onclick="toggleMenu()">Services</a>
-          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
-          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
-            >Blog</a
+          <a href="index.html" class="nav-link">Accueil</a>
+          <a href="index.html#services" class="nav-link" onclick="toggleMenu()"
+            >Services</a
           >
-          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="index.html#offres" class="nav-link" onclick="toggleMenu()"
+            >Abonnements</a
+          >
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
           <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
@@ -199,7 +202,7 @@
           votre protection actuelle.
         </p>
         <a
-          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Securite%20Week-end&body=Bonjour%20Allan%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20audit%20flash%20de%2010%20minutes%20pour%20faire%20le%20point%20sur%20mes%20protections%20actuelles%20et%20m'assurer%20que%20mon%20infrastructure%20est%20par%C3%A9e%20contre%20les%20attaques%20survenant%20pendant%20mes%20p%C3%A9riodes%20d'absence.%0A%0ACordialement.%0A%0A%5BNom%5D%0A%5BT%C3%A9l%C3%A9phone%5D"
+          href="mailto:allan@proxysafe.be?subject=Audit%20Flash%20-%20Securite%20Week-end&body=Bonjour%20Allan%2C%0A%0A%20Je%20souhaite%20r%C3%A9server%20un%20audit%20flash%20de%2010%20minutes%20pour%20faire%20le%20point%20sur%20mes%20protections%20actuelles%20et%20m'assurer%20que%20mon%20infrastructure%20est%20par%C3%A9e%20contre%20les%20attaques%20survenant%20pendant%20mes%20p%C3%A9riodes%20d'absence.%0A%0ACordialement."
           class="btn"
           style="border: none"
           >Réserver mon audit flash (10 min)</a
