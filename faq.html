@@ -9,7 +9,7 @@
       name="description"
       content="Foire aux questions ProxySafe : Réponses claires sur la cybersécurité des PME, les tarifs, nos interventions d'urgence et la mise en conformité (NIS2, RGPD)."
     />
-
+    <script src="script.js" defer></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-T8369CWJ6G"
@@ -30,10 +30,42 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Ma PME est petite, suis-je vraiment une cible pour les pirates ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Les pirates ciblent l'argent facile et les vulnérabilités, pas la taille de l'entreprise. L'automatisation des attaques fait des indépendants et petites structures des proies de choix, car ils sont souvent moins protégés que les grands groupes."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Combien coûte réellement une cyberattaque pour une petite entreprise ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Au-delà de la rançon éventuelle, le vrai coût est l'arrêt de l'activité. Une PME touchée met en moyenne 21 jours à relancer ses systèmes. Ajoutez à cela la perte de réputation et la fuite des clients."
+              "text": "Au-delà de la rançon éventuelle, le vrai coût est l'arrêt de l'activité. Une PME touchée met en moyenne 21 jours à relancer ses systèmes. Ajoutez à cela la perte de réputation, les pénalités et la fuite des clients. Comparé à ce risque, un abonnement préventif est un investissement dérisoire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il s'engager sur 12 ou 24 mois avec l'abonnement Sentinelle ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non, il n'y a aucune période d'engagement stricte. Vous pouvez souscrire pour un mois. La résiliation se fait simplement en prévenant un mois à l'avance par e-mail (tout mois entamé est dû), sous réserve de confirmation de ma part."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je n'y connais rien en informatique, est-ce complexe à gérer ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolument pas. Le but de ProxySafe est de vous décharger de cette charge mentale. Je m'occupe de la supervision, de l'application automatique des correctifs et du blocage des menaces en arrière-plan. Vous vous concentrez sur votre métier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L'abonnement couvre-t-il également mon smartphone personnel si je l'utilise pour le travail ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, la sécurisation des appareils mobiles (particulièrement sur l'environnement Android) est incluse dans nos forfaits pour protéger vos accès professionnels en déplacement."
             }
           },
           {
@@ -41,7 +73,119 @@
             "name": "Que dois-je faire dans les premières minutes si je clique sur un lien frauduleux ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "N'éteignez pas l'ordinateur. Déconnectez-le immédiatement d'Internet (câble réseau ou Wi-Fi) pour éviter la propagation, puis contactez un expert en urgence pour un premier diagnostic."
+              "text": "La première règle : n'éteignez pas l'ordinateur, mais déconnectez-le immédiatement d'Internet (retirez le câble réseau ou coupez le Wi-Fi) pour éviter la propagation. Ensuite, contactez-moi en urgence pour un premier diagnostic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Intervenez-vous sur place en cas d'urgence ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, selon la situation et la distance géographique (région de l'Entre-Sambre-et-Meuse). Pour les urgences très éloignées, le premier accompagnement de mise en sécurité se fait par téléphone ou à distance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Si mon entreprise est paralysée, faites-vous de l'investigation numérique (DFIR) ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mon rôle est celui du premier répondant (urgentiste) : j'accompagne sur les premiers gestes essentiels, j'isole la menace et je coordonne la crise. Je ne suis pas équipé pour faire de l'investigation profonde (DFIR), mais je vous mets en contact avec des équipes spécialisées et assure le relai technique."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Êtes-vous joignable en dehors des heures de bureau ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pour les incidents critiques avérés (suspicion d'intrusion, blocage), je suis joignable le soir et le week-end. Une intervention de diagnostic en dehors des heures ouvrables fait l'objet d'une tarification d'urgence (majoration sur le taux horaire de base)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que se passe-t-il si mon ordinateur portable professionnel est volé ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si l'option a été activée sur votre matériel compatible, la solution inclut le chiffrement complet des disques. Le disque dur est mathématiquement illisible sans votre mot de passe, ce qui protège vos données d'une fuite désastreuse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "J'ai déjà un prestataire informatique, ProxySafe va-t-il le remplacer ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non, ProxySafe ne remplace pas votre informaticien, il l'aide. Votre prestataire s'occupe de l'infrastructure (réseau, matériel), tandis que je viens en supplément pour ajouter une couche spécialisée de sécurité. Nous collaborons."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Prenez-vous le contrôle de mon réseau d'entreprise ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Je sécurise les terminaux (postes de travail, mobiles) et protège les outils cloud. Je ne gère pas les routeurs ni l'architecture réseau globale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L'installation des outils de sécurité est-elle à ma charge ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "C'est un service que je propose. Si vous êtes dans ma région, je peux procéder à l'installation sur place. Pour un client éloigné, je vous guide techniquement. La complexité dépend évidemment du matériel (un serveur diffère d'un PC classique)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mon ordinateur risque-t-il d'être ralenti par la sécurité ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'époque des outils lourds est révolue. J'utilise des solutions professionnelles multicouches de dernière génération, reconnues pour être extrêmement légères, garantissant une protection en temps réel sans impacter vos performances."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "La directive NIS2 s'applique-t-elle à ma PME ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Même si votre entreprise n'est pas directement ciblée par la loi, vous y serez soumis indirectement si vous êtes le sous-traitant d'une grande entreprise concernée. Elles exigeront des garanties de sécurité strictes pour continuer à travailler avec vous."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment prouver à mes partenaires que je protège leurs données (RGPD) ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je peux fournir un document formel (Attestation des mesures techniques et organisationnelles) qui détaille les protections mises en place sous ma supervision, prouvant votre diligence envers la sécurité des données."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment savoir si les mots de passe de mon entreprise circulent sur le Dark Web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "J'effectue des vérifications ponctuelles régulières pour identifier si vos données ou adresses e-mails professionnelles ont fuité lors de piratages tiers. Cela permet de vous alerter d'une potentielle compromission afin de modifier vos accès et limiter les risques d'intrusion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Organisez-vous des formations pour sensibiliser mes employés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. La majorité des attaques commencent par une erreur humaine. Je propose des sessions de sensibilisation standard ou sur-mesure (avec mise à l'épreuve), réalisées en visioconférence ou directement dans vos locaux."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Est-il intéressant de regrouper plusieurs entreprises pour une formation ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, j'organise 2 à 3 fois par an des sessions regroupant plusieurs professionnels autour de thématiques de risques communes (le phishing, les accès à distance). Cela permet d'échanger sur les bonnes pratiques sans aborder de stratégies concurrentielles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mes employés reçoivent-ils un justificatif après la formation ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, chaque participant reçoit une attestation de suivi. En cas de contrôle, ce document est une preuve indispensable démontrant vos efforts de sensibilisation du personnel. (Des places gratuites sont offertes aux clients ayant souscrit un abonnement annuel)."
             }
           }
         ]
@@ -269,24 +413,26 @@
     </style>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <div class="header-content">
-        <a href="index.html"
-          ><img
+        <a href="index.html">
+          <img
             src="logo_proxysafe.png"
             alt="ProxySafe Logo"
             onerror="this.style.display = 'none'"
-        /></a>
+          />
+        </a>
         <button class="burger" onclick="toggleMenu()" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
           <a href="index.html#services" onclick="toggleMenu()">Services</a>
           <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
-          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
-            >Blog</a
+          <a href="blog.html">Blog</a>
+          <a href="faq.html" class="active" style="color: var(--cyan-tech)"
+            >FAQ</a
           >
-          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
           <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
@@ -639,10 +785,6 @@
     </footer>
 
     <script>
-      function toggleMenu() {
-        document.getElementById("nav-menu").classList.toggle("active");
-      }
-
       document.querySelectorAll(".accordion-header").forEach((button) => {
         button.addEventListener("click", () => {
           const accordionContent = button.nextElementSibling;
