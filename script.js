@@ -1,8 +1,40 @@
 // Menu Mobile
+// Menu Mobile
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   nav.classList.toggle("active");
 }
+
+// Gestion dynamique de la classe 'active' dans le menu de navigation
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll("#nav-menu .nav-link");
+  const logoLink = document.querySelector(".nav-logo-link");
+
+  // Règle spéciale pour l'accueil
+  if (currentPath === "index.html" || currentPath === "") {
+    logoLink.style.color = "var(--cyan-tech)";
+  } else {
+    logoLink.style.color = "";
+  }
+
+  // Colorer le lien correspondant à la page en cours
+  navLinks.forEach((link) => {
+    // Nettoyer la classe active et le style par défaut
+    link.classList.remove("active");
+    link.style.color = "";
+
+    const linkHref = link.getAttribute("href");
+    if (
+      linkHref &&
+      linkHref.includes(currentPath) &&
+      currentPath !== "index.html"
+    ) {
+      link.classList.add("active");
+      link.style.color = "var(--cyan-tech)";
+    }
+  });
+});
 
 // Logique du Quiz / Tunnel
 let quizScore = 0;

@@ -60,25 +60,29 @@
     </style>
   </head>
   <body>
-    <!-- HEADER -->
+    <!-- HEADER UNIVERSEL À COPIER SUR TOUTES LES PAGES -->
     <header>
       <div class="header-content">
-        <a href="index.html"
-          ><img
+        <a href="index.html" class="nav-logo-link">
+          <img
             src="logo_proxysafe.png"
             alt="ProxySafe Logo"
             onerror="this.style.display = 'none'"
-        /></a>
+          />
+        </a>
         <button class="burger" onclick="toggleMenu()" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
         <nav id="nav-menu">
-          <a href="index.html#services" onclick="toggleMenu()">Services</a>
-          <a href="index.html#offres" onclick="toggleMenu()">Abonnements</a>
-          <a href="blog.html" class="active" style="color: var(--cyan-tech)"
-            >Blog</a
+          <!-- On ajoute / devant les ancres pour qu'elles forcent le retour à l'accueil depuis le blog/faq -->
+          <a href="/#services" class="nav-link" onclick="toggleMenu()"
+            >Services</a
           >
-          <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+          <a href="/#offres" class="nav-link" onclick="toggleMenu()"
+            >Abonnements</a
+          >
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
           <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
         </nav>
       </div>
