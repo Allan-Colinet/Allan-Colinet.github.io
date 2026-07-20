@@ -720,3 +720,96 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================
+   PAGE FAQ & ACCORDEONS
+   ========================================= */
+.faq-header {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.faq-header h1 {
+  color: var(--navy-blue);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.faq-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.faq-section {
+  margin-bottom: 40px;
+}
+.faq-category {
+  font-size: 1.4rem;
+  color: var(--cyan-tech);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+
+.accordion-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy-blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.accordion-header:hover {
+  background: #f0fbff;
+  color: var(--cyan-hover);
+}
+.accordion-header.active {
+  background: #f0fbff;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--cyan-hover);
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cyan-tech);
+  transition: transform 0.3s ease;
+}
+.accordion-header.active .icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: var(--bg-white);
+}
+.accordion-content-inner {
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Ajustement Mobile spécifique à la FAQ */
+@media (max-width: 900px) {
+  .accordion-header {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
