@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProxySafe | 1 Mois de Sécurité Offert pour les PME</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="Découvrez l'accompagnement cybersécurité ProxySafe. Profitez d'un mois d'essai gratuit et sans engagement pour protéger vos données locales."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <!-- Grille spécifique pour les 3 cartes de réassurance -->
+    <style>
+      .grid-3-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Le Header COMPLET -->
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="nav-logo-link">
+          <img
+            src="logo_proxysafe.png"
+            alt="ProxySafe Logo"
+            onerror="this.style.display = 'none'"
+          />
+        </a>
+        <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="nav-menu">
+          <a href="index.html" class="nav-link">Accueil</a>
+          <a href="index.html#services" class="nav-link" onclick="toggleMenu()"
+            >Services</a
+          >
+          <a href="index.html#offres" class="nav-link" onclick="toggleMenu()"
+            >Abonnements</a
+          >
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a
+            href="decouverte.html"
+            class="nav-link"
+            style="color: var(--cyan-tech); font-weight: bold"
+            >🎁 1 Mois Offert</a
+          >
+          <a href="tel:+3260860256" class="nav-phone">📞 060 86 02 56</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section Héro - Accroche -->
+      <section
+        class="hero with-pattern"
+        style="padding-top: 120px; padding-bottom: 60px"
+      >
+        <div class="container">
+          <h1
+            style="
+              color: var(--cyan-tech);
+              font-size: 2.5rem;
+              margin-bottom: 20px;
+            "
+          >
+            Sécurisez vos données professionnelles. <br />
+            <!-- CORRECTION : Texte en bleu marine pour être lisible sur fond clair -->
+            <span style="color: var(--navy-blue)"
+              >Je vous offre le premier mois.</span
+            >
+          </h1>
+          <p class="lead">
+            Expert en cybersécurité basé dans l'Entre-Sambre-et-Meuse, je
+            propose aux comptables, courtiers et professionnels de la santé une
+            contre-expertise gratuite de leur informatique.
+          </p>
+
+          <!-- Réassurance Zéro Risque (Utilisation de ta classe .card pour le hover) -->
+          <div class="grid-3-cards">
+            <div
+              class="card"
+              style="
+                border: 2px solid var(--cyan-tech);
+                padding: 20px;
+                min-height: auto;
+              "
+            >
+              <h3 style="color: var(--cyan-tech); margin: 0; font-size: 1.3rem">
+                ⚡ Rapide, simple, efficace
+              </h3>
+            </div>
+            <div
+              class="card"
+              style="
+                border: 2px solid var(--cyan-tech);
+                padding: 20px;
+                min-height: auto;
+              "
+            >
+              <h3 style="color: var(--cyan-tech); margin: 0; font-size: 1.3rem">
+                🔓 Sans engagement
+              </h3>
+            </div>
+            <div
+              class="card"
+              style="
+                border: 2px solid var(--cyan-tech);
+                padding: 20px;
+                min-height: auto;
+              "
+            >
+              <h3 style="color: var(--cyan-tech); margin: 0; font-size: 1.3rem">
+                🔍 100% Transparent
+              </h3>
+            </div>
+          </div>
+
+          <div class="hero-buttons" style="margin-top: 50px">
+            <a
+              href="tel:+3260860256"
+              class="btn"
+              style="font-size: 1.2rem; padding: 15px 30px"
+              >📞 M'appeler directement</a
+            >
+            <a
+              href="mailto:allan@proxysafe.be?subject=Demande%20Essai%20Gratuit%201%20Mois&body=Bonjour%20Allan%2C%0A%0AJe%20souhaite%20profiter%20du%20mois%20d'essai%20gratuit%20pour%20s%C3%A9curiser%20mes%20postes%20de%20travail.%0A%0APouvons-nous%20planifier%20l'Audit%20Flash%20%3F%0A%0A%5BNom%5D%0A%5BT%C3%A9l%C3%A9phone%5D"
+              class="btn btn-secondary"
+              style="font-size: 1.2rem; padding: 15px 30px"
+              >✉️ M'envoyer un e-mail</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Méthode en 3 étapes -->
+      <section class="services-section" style="padding: 60px 0">
+        <div class="container">
+          <h2 class="section-title">Comment fonctionne votre mois d'essai ?</h2>
+          <p
+            style="
+              text-align: center;
+              margin-bottom: 40px;
+              color: var(--text-muted);
+            "
+          >
+            Une méthode simple, conçue pour ne jamais ralentir votre activité
+            quotidienne.
+          </p>
+
+          <div class="grid-2">
+            <div class="card" style="border-top: 3px solid var(--cyan-tech)">
+              <h3>1. L'Audit Flash (15 min)</h3>
+              <p>
+                Je me déplace dans vos locaux. Nous faisons un diagnostic rapide
+                de vos PC pour identifier les éventuels oublis ou les paramètres
+                de sécurité auxquels on ne pense pas forcément au quotidien.
+              </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--cyan-tech)">
+              <h3>2. Déploiement Silencieux</h3>
+              <p>
+                J'installe rapidement la solution de protection sur vos postes
+                professionnels. Pour ne pas perturber votre activité, je peux
+                tout à fait intervenir en dehors de vos heures de forte
+                sollicitation.
+              </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--cyan-tech)">
+              <h3>3. Protection Active (30 Jours)</h3>
+              <p>
+                J'analyse activement votre niveau de sécurité, je bloque les
+                menaces informatiques et je veille à ce que vos mots de passe et
+                données professionnelles restent strictement confidentiels. De
+                votre côté, vous travaillez sereinement.
+              </p>
+            </div>
+            <div class="card" style="border-top: 3px solid var(--cyan-tech)">
+              <h3>4. Le Bilan</h3>
+              <p>
+                Au bout d'un mois, je vous remets un rapport de sécurité. Vous
+                êtes libre de continuer avec l'abonnement mensuel, ou nous
+                arrêtons là, sans frais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Le Footer COMPLET -->
+    <footer id="contact">
+      <div class="container">
+        <p
+          style="font-size: 1.2rem; margin-bottom: 20px; color: var(--bg-white)"
+        >
+          Contactez ProxySafe pour un premier échange sans engagement.
+        </p>
+
+        <p style="margin-bottom: 20px">
+          <a
+            href="decouverte.html"
+            style="
+              color: var(--cyan-tech);
+              font-weight: bold;
+              font-size: 1.1rem;
+              text-decoration: underline;
+            "
+          >
+            🎁 Découvrir le mois d'essai gratuit
+          </a>
+        </p>
+
+        <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
+        <p style="margin-top: 10px">
+          📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
+        </p>
+
+        <div class="footer-info">
+          <p><strong>&copy; 2026 ProxySafe - Allan Colinet</strong></p>
+          <p>
+            Siège administratif : Rue du Carmel, 1 - 5680 Matagne-la-Petite,
+            Belgique
+          </p>
+          <p>TVA : BE 1036.976.322</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.8">
+            Spécialiste en sécurisation informatique et gouvernance (GRC), au
+            service de la tranquillité d'esprit des indépendants, professions
+            libérales et PME locales.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
