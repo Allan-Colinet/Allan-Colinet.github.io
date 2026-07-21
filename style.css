@@ -479,9 +479,13 @@ footer a:hover {
     font-size: 1.1rem;
   }
   .nav-phone {
-    border-radius: 0;
-    background: transparent;
-    color: var(--navy-blue) !important;
+    background: var(--navy-light) !important; /* Force le fond bleu marine */
+    color: var(--bg-white) !important; /* Force le texte en blanc */
+    border-radius: 5px;
+    width: fit-content !important; /* Annule les 100% de largeur des autres liens */
+    margin: 15px auto; /* Centre le bouton au milieu du menu */
+    justify-content: center; /* Centre le petit téléphone et le texte */
+    padding: 10px 20px !important;
   }
 
   .pricing-grid {
@@ -546,7 +550,7 @@ footer a:hover {
 }
 
 /* CAROUSEL MOBILE (Remplace le comportement de la grille sur petit écran) */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .pricing-grid,
   .grid-2 {
     display: flex;
