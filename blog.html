@@ -11,53 +11,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <style>
-      /* Styles spécifiques au Hero du blog pour un rendu optimal */
-      .blog-hero {
-        margin-top: 40px;
-        border-radius: 16px;
-        overflow: hidden;
-        background-color: var(--navy-blue);
-        color: var(--bg-white);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      }
-      @media (min-width: 768px) {
-        .blog-hero {
-          flex-direction: row;
-          min-height: 400px;
-        }
-      }
-      .blog-hero-content {
-        flex: 1;
-        padding: 50px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 2;
-        background: var(--navy-blue);
-      }
-      .blog-hero-img {
-        flex: 1;
-        background-image: url("img/hero-password.jpg");
-        background-size: cover;
-        background-position: center;
-        min-height: 250px;
-        position: relative;
-      }
-      .blog-hero-img::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to right,
-          rgba(10, 25, 47, 1) 0%,
-          rgba(10, 25, 47, 0) 100%
-        );
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -175,213 +128,248 @@
 
       <!-- GRILLE DES ARTICLES -->
       <div class="blog-grid">
+        <!-- Carte Article RGPD (Nouveau) -->
+        <article class="blog-card">
+          <a href="article-rgpd-independant.html" class="card-entire-link">
+            <div
+              class="card-img"
+              style="background-image: url(&quot;img/rgpd-hero.jpg&quot;)"
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                RGPD pour les Indépendants : Les 3 actions obligatoires
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Le RGPD concerne aussi les indépendants et petites entreprises.
+                Découvrez comment sécuriser les données de vos clients sans y
+                passer le week-end.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
+        </article>
+
         <!-- Carte Article 2 : MFA -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="background-image: url(&quot;img/card-mfa.jpg&quot;)"
-          ></div>
-          <div class="card-content">
-            <h2
-              style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
-              "
-            >
-              Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Le mot de passe ne suffit plus face aux fuites de données.
-              Découvrez pourquoi et comment la double authentification
-              verrouille vos accès professionnels.
-            </p>
-            <a href="article-mfa.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+          <a href="article-mfa.html" class="card-entire-link">
+            <div
+              class="card-img"
+              style="background-image: url(&quot;img/card-mfa.jpg&quot;)"
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Le MFA : Pourquoi c'est l'étape n°1 de votre sécurité
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Le mot de passe ne suffit plus face aux fuites de données.
+                Découvrez pourquoi et comment la double authentification
+                verrouille vos accès professionnels.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
 
         <!-- Carte Article 3 : Spoofing / Usurpation -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="background-image: url(&quot;img/card-spoofing.jpg&quot;)"
-          ></div>
-          <div class="card-content">
-            <h2
-              style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
-              "
-            >
-              Et si l'arnaque venait de votre entreprise ?
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Que se passerait-il si vos clients recevaient une fausse facture
-              provenant de votre adresse officielle ? Comprendre l'usurpation
-              d'identité (Spoofing).
-            </p>
-            <a href="article-usurpation.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+          <a href="article-usurpation.html" class="card-entire-link">
+            <div
+              class="card-img"
+              style="background-image: url(&quot;img/card-spoofing.jpg&quot;)"
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Et si l'arnaque venait de votre entreprise ?
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Que se passerait-il si vos clients recevaient une fausse facture
+                provenant de votre adresse officielle ? Comprendre l'usurpation
+                d'identité (Spoofing).
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
 
         <!-- Carte Article 4 : Attaques du week-end -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="background-image: url(&quot;img/card-weekend.jpg&quot;)"
-          ></div>
-          <div class="card-content">
-            <h2
-              style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
-              "
-            >
-              Pourquoi les pirates frappent toujours quand vous êtes absent
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Ils analysent vos habitudes et attendent que vous coupiez votre
-              PC. Décryptage d'une stratégie redoutable et silencieuse.
-            </p>
-            <a href="article-weekend.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+          <a href="article-weekend.html" class="card-entire-link">
+            <div
+              class="card-img"
+              style="background-image: url(&quot;img/card-weekend.jpg&quot;)"
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Pourquoi les pirates frappent toujours quand vous êtes absent
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Ils analysent vos habitudes et attendent que vous coupiez votre
+                PC. Décryptage d'une stratégie redoutable et silencieuse.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
 
         <!-- Carte Article 5 : Faux devis et changement bancaire -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="
-              background-image: url(&quot;img/article-faux-devis-cover.jpg&quot;);
-            "
-          ></div>
-          <div class="card-content">
-            <h2
+          <a href="article-faux-devis.html" class="card-entire-link">
+            <div
+              class="card-img"
               style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
+                background-image: url(&quot;img/article-faux-devis-cover.jpg&quot;);
               "
-            >
-              Faux devis et changement de compte bancaire : les bons réflexes
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Un email banal, un contact connu, une demande urgente… et l’erreur
-              peut arriver très vite. Voici les réflexes simples à adopter pour
-              éviter les fraudes les plus courantes.
-            </p>
-            <a href="article-faux-devis.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Faux devis et changement de compte bancaire : les bons réflexes
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Un email banal, un contact connu, une demande urgente… et
+                l’erreur peut arriver très vite. Voici les réflexes simples à
+                adopter pour éviter les fraudes les plus courantes.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
 
         <!-- Carte Article 6 : Les bons réflexes -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="
-              background-image: url(&quot;img/article-bons-reflexes-cover.jpg&quot;);
-            "
-          ></div>
-          <div class="card-content">
-            <h2
+          <a href="article-bons-reflexes.html" class="card-entire-link">
+            <div
+              class="card-img"
               style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
+                background-image: url(&quot;img/article-bons-reflexes-cover.jpg&quot;);
               "
-            >
-              Les bons réflexes de sécurité pour une petite structure
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Mots de passe, double authentification, sauvegardes, emails et
-              accès : les bases simples à mettre en place pour protéger son
-              activité sans complexifier son quotidien.
-            </p>
-            <a href="article-bons-reflexes.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Les bons réflexes de sécurité pour une petite structure
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Mots de passe, double authentification, sauvegardes, emails et
+                accès : les bases simples à mettre en place pour protéger son
+                activité sans complexifier son quotidien.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
-        <!-- Carte 7 -->
+
+        <!-- Carte 7 : Abonnement -->
         <article class="blog-card">
-          <div
-            class="card-img"
-            style="
-              background-image: url(&quot;img/article-abonnement-cover.jpg&quot;);
-            "
-          ></div>
-          <div class="card-content">
-            <h2
+          <a href="article-abonnement-securite.html" class="card-entire-link">
+            <div
+              class="card-img"
               style="
-                font-size: 1.25rem;
-                color: var(--navy-blue);
-                margin-bottom: 15px;
-                line-height: 1.4;
+                background-image: url(&quot;img/article-abonnement-cover.jpg&quot;);
               "
-            >
-              Pourquoi un abonnement de sécurité est souvent plus simple qu’une
-              intervention ponctuelle
-            </h2>
-            <p
-              style="
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-              "
-            >
-              Un suivi continu, des priorités claires et moins de charge mentale
-              : découvrez pourquoi l’abonnement est souvent plus simple pour les
-              petites structures.
-            </p>
-            <a href="article-abonnement-securite.html" class="read-more-link"
-              >Lire l'article →</a
-            >
-          </div>
+            ></div>
+            <div class="card-content">
+              <h2
+                style="
+                  font-size: 1.25rem;
+                  color: var(--navy-blue);
+                  margin-bottom: 15px;
+                  line-height: 1.4;
+                "
+              >
+                Pourquoi un abonnement de sécurité est souvent plus simple
+                qu’une intervention ponctuelle
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 20px;
+                "
+              >
+                Un suivi continu, des priorités claires et moins de charge
+                mentale : découvrez pourquoi l’abonnement est souvent plus
+                simple pour les petites structures.
+              </p>
+              <span class="read-more-link">Lire l'article →</span>
+            </div>
+          </a>
         </article>
       </div>
     </main>
@@ -416,6 +404,13 @@
           <a
             href="https://www.facebook.com/ProxySafe"
             target="_blank"
+            onclick="
+              openFacebookApp(
+                event,
+                '1195252143665660',
+                'https://www.facebook.com/ProxySafe',
+              )
+            "
             rel="noopener noreferrer"
             style="
               color: #1877f2;
@@ -424,6 +419,7 @@
               display: inline-flex;
               align-items: center;
               gap: 8px;
+              cursor: pointer;
             "
           >
             <svg

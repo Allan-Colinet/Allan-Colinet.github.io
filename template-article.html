@@ -2,8 +2,17 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 1. CHANGER LE TITRE DE LA PAGE POUR LE SEO -->
     <title>Titre de l'article | ProxySafe</title>
+    <!-- 2. CHANGER LA DESCRIPTION POUR GOOGLE -->
+    <meta
+      name="description"
+      content="Courte description de l'article pour les résultats de recherche."
+    />
+
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -39,12 +48,13 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="container" style="padding-bottom: 60px">
+      <!-- BOUTON RETOUR -->
       <a
         href="blog.html"
         style="
           display: inline-block;
-          margin-top: 20px;
+          margin-top: 30px;
           color: var(--cyan-tech);
           font-weight: bold;
           text-decoration: none;
@@ -52,57 +62,142 @@
         >← Retour au Blog</a
       >
 
-      <!-- Le "Hero" de l'article (Visuel pro) -->
-      <article class="blog-hero" style="margin-top: 20px">
-        <div class="blog-hero-content">
-          <span
-            style="
-              background: var(--cyan-tech);
-              padding: 5px 12px;
-              border-radius: 20px;
-              font-weight: bold;
-              font-size: 0.8rem;
-              text-transform: uppercase;
-            "
-            >SÉCURITÉ</span
-          >
-          <h1 style="margin: 20px 0">Le MFA : Pourquoi c'est l'étape n°1</h1>
-        </div>
-        <div
-          class="blog-hero-img"
-          style="background-image: url(&quot;mfa.jpg&quot;)"
-        ></div>
-      </article>
-
-      <!-- Le corps de l'article -->
+      <!-- CONTENU DE L'ARTICLE (Structure unifiée) -->
       <section
         style="
-          max-width: 800px;
-          margin: 40px auto;
+          max-width: 850px;
+          margin: 20px auto 40px;
           line-height: 1.8;
           font-size: 1.1rem;
+          color: var(--text-main);
         "
       >
-        <!-- Ton texte ici -->
+        <!-- 3. CATÉGORIE DE L'ARTICLE -->
+        <span
+          style="
+            background: var(--cyan-tech);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #000;
+            display: inline-block;
+            margin-bottom: 15px;
+          "
+        >
+          NOM DE LA CATÉGORIE
+        </span>
+
+        <!-- 4. TITRE PRINCIPAL (H1) -->
+        <h1
+          style="
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--navy-blue);
+            margin-bottom: 10px;
+            line-height: 1.2;
+          "
+        >
+          Titre principal de ton article
+        </h1>
+
+        <!-- 5. SOUS-TITRE D'ACCROCHE (H2) -->
+        <h2
+          style="
+            color: var(--navy-blue);
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            font-weight: normal;
+          "
+        >
+          Une petite phrase d'accroche ou un sous-titre pertinent.
+        </h2>
+
+        <!-- 6. IMAGE PRINCIPALE -->
+        <img
+          src="img/ton-image-hero.jpg"
+          alt="Description de l'image"
+          class="article-img-full"
+        />
+
+        <!-- 7. CORPS DU TEXTE -->
+        <h2 style="color: var(--cyan-tech); margin-top: 40px">
+          Premier grand point
+        </h2>
+        <p>Ton premier paragraphe commence ici.</p>
+
+        <h3 style="margin-top: 25px">Sous-point (si nécessaire)</h3>
+        <p>
+          Exemple de paragraphe avec une
+          <a href="#" style="color: var(--cyan-tech); font-weight: bold"
+            >mise en avant ou un lien</a
+          >.
+        </p>
+
+        <!-- Modèle de liste à puces pour ton template -->
+        <ul style="margin-bottom: 20px; padding-left: 20px">
+          <li><strong>Point 1 :</strong> Explication.</li>
+          <li><strong>Point 2 :</strong> Explication.</li>
+        </ul>
+
+        <!-- Modèle de bloc Avantages/Inconvénients (Optionnel, à supprimer si non utilisé) -->
+        <div class="pros-cons-grid">
+          <div class="box-pros">
+            <h4>✓ Avantages</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>Premier avantage</li>
+              <li>Deuxième avantage</li>
+            </ul>
+          </div>
+          <div class="box-cons">
+            <h4>✗ Inconvénients</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>Premier inconvénient</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <!-- CTA en bas d'article -->
+      <!-- 8. APPEL À L'ACTION (CTA) DE FIN D'ARTICLE -->
       <div
         style="
+          max-width: 800px;
           text-align: center;
           padding: 40px;
           background: var(--bg-white);
+          border: 1px solid var(--border-color);
+          border-left: 4px solid var(--cyan-tech);
           border-radius: 12px;
-          margin-bottom: 50px;
+          margin: 0 auto 50px auto;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         "
       >
-        <h3>Besoin d'aide pour configurer cela ?</h3>
-        <p>Prenons 10 minutes pour faire le point gratuitement.</p>
-        <a href="mailto:allan@proxysafe.be?subject=Audit%20Flash" class="btn"
-          >Réserver un Audit Flash</a
+        <h3
+          style="
+            color: var(--navy-blue);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          "
         >
+          Besoin d'aide pour configurer cela ?
+        </h3>
+        <p
+          style="
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+          "
+        >
+          Prenons 10 minutes pour faire le point gratuitement. Aucun engagement,
+          aucune pression commerciale.
+        </p>
+        <a href="mailto:allan@proxysafe.be?subject=Audit%20Flash" class="btn">
+          Réserver un Audit Flash (10 min)
+        </a>
       </div>
     </main>
+
     <footer id="contact">
       <div class="container">
         <p
@@ -110,7 +205,6 @@
         >
           Contactez ProxySafe pour un premier échange sans engagement.
         </p>
-
         <p style="margin-bottom: 20px">
           <a
             href="decouverte.html"
@@ -124,7 +218,6 @@
             🎁 Découvrir le mois d'essai gratuit
           </a>
         </p>
-
         <p>📧 <a href="mailto:allan@proxysafe.be">allan@proxysafe.be</a></p>
         <p style="margin-top: 10px">
           📞 <a href="tel:+3260860256">+32 (0) 60 86 02 56</a>
@@ -133,6 +226,13 @@
           <a
             href="https://www.facebook.com/ProxySafe"
             target="_blank"
+            onclick="
+              openFacebookApp(
+                event,
+                '1195252143665660',
+                'https://www.facebook.com/ProxySafe',
+              )
+            "
             rel="noopener noreferrer"
             style="
               color: #1877f2;
@@ -141,6 +241,7 @@
               display: inline-flex;
               align-items: center;
               gap: 8px;
+              cursor: pointer;
             "
           >
             <svg

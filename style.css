@@ -603,7 +603,7 @@ footer a:hover {
   margin: 50px 0;
 }
 
-/* Carte article avec effet de survol */
+/* Carte article avec effet de survol corrigé */
 .blog-card {
   display: flex;
   flex-direction: column;
@@ -611,18 +611,17 @@ footer a:hover {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  position: relative;
+  position: relative; /* Indispensable pour que le lien transparent recouvre toute la carte */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  cursor: pointer; /* Force l'affichage de la main sur toute la carte */
+  cursor: pointer;
   will-change: transform, box-shadow;
 }
 
 .blog-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-6px); /* Plus de scale() pour éviter le clignotement */
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  z-index: 2; /* S'assure que la carte reste au-dessus des autres */
 }
 
 .card-img {
@@ -630,48 +629,64 @@ footer a:hover {
   background-size: cover;
   background-position: center;
 }
-/* Correction de l'espacement dans les cartes du blog */
+
 .card-content {
-  padding: 30px; /* Ajoute de l'espace à l'intérieur */
+  padding: 30px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
+/* Animation fluide du lien au survol de la carte */
 .blog-card:hover .read-more-link {
-  margin-left: 5px;
-  color: var(
-    --cyan-hover
-  ); /* Assure-toi que cette variable existe bien dans ton code */
+  color: var(--cyan-hover);
+  transform: translateX(
+    5px
+  ); /* On utilise transform plutôt que margin pour la fluidité */
 }
-/* Nouveau style pour le lien "Lire l'article" */
+
+/* Style de base du lien "Lire l'article" */
 .read-more-link {
   color: var(--cyan-tech);
   font-weight: bold;
   text-decoration: none;
   font-size: 1.05rem;
   transition:
-    margin-left 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  position: static; /* Important : permet au calque ::after de se baser sur .blog-card */
+}
+
+.read-more-link:hover {
+  color: var(--cyan-hover);
+}
+
+/* Le nouveau conteneur de lien qui enveloppera tout le contenu */
+.card-entire-link {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* S'assure que le lien prend toute la hauteur de la carte */
+  text-decoration: none;
+  color: inherit; /* Empêche le texte de devenir bleu (couleur par défaut des liens) */
+}
+
+/* Le bouton textuel devient un simple élément visuel */
+.read-more-link {
+  color: var(--cyan-tech);
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition:
+    transform 0.3s ease,
     color 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: auto;
 }
-.read-more-link:hover {
-  transform: translateX(5px); /* Petit effet de glissement vers la droite */
-  color: var(--cyan-hover);
-}
-.read-more-link::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1; /* Le calque est bien présent */
-}
-
 /* Mise en page "Pro" pour le contenu des articles */
 .article-img-full,
 .article-img-inline {
@@ -816,4 +831,55 @@ footer a:hover {
     font-size: 1rem;
     padding: 15px;
   }
+}
+/* =========================================
+   HERO DU BLOG (Article à la une)
+   ========================================= */
+.blog-hero {
+  margin-top: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--navy-blue);
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .blog-hero {
+    flex-direction: row;
+    min-height: 400px;
+  }
+}
+
+.blog-hero-content {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  background: var(--navy-blue);
+}
+
+.blog-hero-img {
+  flex: 1;
+  background-image: url("img/hero-password.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  position: relative;
+}
+
+.blog-hero-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 25, 47, 1) 0%,
+    rgba(10, 25, 47, 0) 100%
+  );
 }

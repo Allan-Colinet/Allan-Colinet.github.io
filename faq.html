@@ -605,6 +605,13 @@
           <a
             href="https://www.facebook.com/ProxySafe"
             target="_blank"
+            onclick="
+              openFacebookApp(
+                event,
+                '1195252143665660',
+                'https://www.facebook.com/ProxySafe',
+              )
+            "
             rel="noopener noreferrer"
             style="
               color: #1877f2;
@@ -613,6 +620,7 @@
               display: inline-flex;
               align-items: center;
               gap: 8px;
+              cursor: pointer;
             "
           >
             <svg
@@ -644,32 +652,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.querySelectorAll(".accordion-header").forEach((button) => {
-        button.addEventListener("click", () => {
-          const accordionContent = button.nextElementSibling;
-
-          // Refermer les autres accordéons ouverts
-          document
-            .querySelectorAll(".accordion-header")
-            .forEach((otherButton) => {
-              if (otherButton !== button) {
-                otherButton.classList.remove("active");
-                otherButton.nextElementSibling.style.maxHeight = null;
-              }
-            });
-
-          // Ouvrir ou fermer l'accordéon cliqué
-          button.classList.toggle("active");
-          if (button.classList.contains("active")) {
-            accordionContent.style.maxHeight =
-              accordionContent.scrollHeight + "px";
-          } else {
-            accordionContent.style.maxHeight = null;
-          }
-        });
-      });
-    </script>
   </body>
 </html>

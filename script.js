@@ -150,3 +150,62 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 });
+
+function openFacebookApp(event, pageId, webUrl) {
+  // On empêche le navigateur d'ouvrir le lien web immédiatement
+  event.preventDefault();
+
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Détection pour iOS (iPhone/iPad)
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    window.location.href = "fb://profile/" + pageId;
+  }
+  // Détection pour Android
+  else if (/android/i.test(userAgent)) {
+    window.location.href = "fb://page/" + pageId;
+  }
+  // Si c'est un PC (ou si la détection échoue)
+  else {
+    window.open(webUrl, "_blank");
+    return;
+  }
+
+  // Fallback de sécurité : si l'application n'est pas installée sur le mobile,
+  // on redirige vers le site web au bout d'une demi-seconde.
+  setTimeout(function () {
+    window.open(webUrl, "_blank");
+  }, 500);
+}
+// --- GESTION DES ACCORDÉONS (PAGE FAQ) ---
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+  if (accordionHeaders.length > 0) {
+    // Vérifie qu'on est bien sur une page avec des accordéons
+    accordionHeaders.forEach((button) => {
+      button.addEventListener("click", () => {
+        const accordionContent = button.nextElementSibling;
+
+        // Refermer les autres accordéons ouverts
+        document
+          .querySelectorAll(".accordion-header")
+          .forEach((otherButton) => {
+            if (otherButton !== button) {
+              otherButton.classList.remove("active");
+              otherButton.nextElementSibling.style.maxHeight = null;
+            }
+          });
+
+        // Ouvrir ou fermer l'accordéon cliqué
+        button.classList.toggle("active");
+        if (button.classList.contains("active")) {
+          accordionContent.style.maxHeight =
+            accordionContent.scrollHeight + "px";
+        } else {
+          accordionContent.style.maxHeight = null;
+        }
+      });
+    });
+  }
+});
