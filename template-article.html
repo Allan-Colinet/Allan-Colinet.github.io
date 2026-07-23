@@ -13,6 +13,33 @@
 
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.proxysafe.be/article-abonnement-securite.html"
+        },
+        "headline": "Pourquoi un abonnement de sécurité est souvent plus simple qu’une intervention ponctuelle",
+        "image": "https://www.proxysafe.be/img/article-abonnement-cover.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Allan Colinet",
+          "jobTitle": "Consultant en cybersécurité"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ProxySafe",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.proxysafe.be/logo_proxysafe.png"
+          }
+        },
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23"
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -29,6 +56,7 @@
         </button>
         <nav id="nav-menu">
           <a href="index.html" class="nav-link">Accueil</a>
+          <a href="a-propos.html" class="nav-link">À propos</a>
           <a href="index.html#services" class="nav-link" onclick="toggleMenu()"
             >Services</a
           >
@@ -157,20 +185,40 @@
             </ul>
           </div>
         </div>
+        <div
+          style="
+            background: rgba(0, 229, 255, 0.05);
+            padding: 25px;
+            border-left: 4px solid var(--cyan-tech);
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+          "
+        >
+          <h3 style="margin-top: 0; color: var(--cyan-tech)">
+            💡 Le saviez-vous ?
+          </h3>
+          <p>
+            En Belgique, les contrats de cybersécurité pour les professionnels
+            sont <strong>100% déductibles</strong> au titre de frais
+            professionnels. De plus, ProxySafe vous délivre une
+            <strong>Attestation de sécurisation annuelle</strong> à afficher
+            fièrement pour prouver à vos clients et partenaires que leurs
+            données sont entre de bonnes mains.
+          </p>
+        </div>
       </section>
 
       <!-- 8. APPEL À L'ACTION (CTA) DE FIN D'ARTICLE -->
       <div
         style="
-          max-width: 800px;
-          text-align: center;
+          max-width: 850px;
+          margin: 40px auto 0;
+          background: rgba(0, 180, 216, 0.1);
+          border: 1px solid var(--cyan-tech);
           padding: 40px;
-          background: var(--bg-white);
-          border: 1px solid var(--border-color);
-          border-left: 4px solid var(--cyan-tech);
           border-radius: 12px;
-          margin: 0 auto 50px auto;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+          text-align: center;
+          margin-bottom: 50px;
         "
       >
         <h3

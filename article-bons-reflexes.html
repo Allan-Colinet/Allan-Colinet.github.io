@@ -12,6 +12,33 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.proxysafe.be/article-bons-reflexes.html"
+        },
+        "headline": "Les bons réflexes de sécurité pour une petite structure",
+        "image": "https://www.proxysafe.be/img/article-bons-reflexes-cover.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Allan Colinet",
+          "jobTitle": "Consultant en cybersécurité"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ProxySafe",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.proxysafe.be/logo_proxysafe.png"
+          }
+        },
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23"
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -28,6 +55,7 @@
         </button>
         <nav id="nav-menu">
           <a href="index.html" class="nav-link">Accueil</a>
+          <a href="a-propos.html" class="nav-link">À propos</a>
           <a href="index.html#services" class="nav-link" onclick="toggleMenu()"
             >Services</a
           >
@@ -242,25 +270,25 @@
         </p>
 
         <div class="pros-cons-grid">
-          <div class="box-cons">
-            <h4>Erreurs fréquentes</h4>
-            <ul>
-              <li>Réutiliser les mêmes mots de passe.</li>
-              <li>Penser qu’un antivirus suffit à lui seul.</li>
-              <li>Ne jamais tester les sauvegardes.</li>
-              <li>Laisser des accès inutiles actifs.</li>
-              <li>Répondre trop vite à une demande urgente.</li>
-            </ul>
-          </div>
-
           <div class="box-pros">
-            <h4>Réflexes utiles</h4>
-            <ul>
+            <h4>✓ Réflexes utiles</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
               <li>Prioriser les comptes les plus sensibles.</li>
               <li>Activer la double authentification.</li>
               <li>Tester les sauvegardes régulièrement.</li>
               <li>Limiter les accès au strict nécessaire.</li>
               <li>Vérifier avant de valider.</li>
+            </ul>
+          </div>
+
+          <div class="box-cons">
+            <h4>✗ Erreurs fréquentes</h4>
+            <ul style="margin-left: 20px; font-size: 0.95rem">
+              <li>Réutiliser les mêmes mots de passe.</li>
+              <li>Penser qu’un antivirus suffit à lui seul.</li>
+              <li>Ne jamais tester les sauvegardes.</li>
+              <li>Laisser des accès inutiles actifs.</li>
+              <li>Répondre trop vite à une demande urgente.</li>
             </ul>
           </div>
         </div>
@@ -314,7 +342,34 @@
           Pour une petite structure, une base simple et bien suivie vaut souvent
           beaucoup plus qu’un gros chantier ponctuel lancé trop tard.
         </p>
+        <div class="author-signature">
+          <div class="author-info">
+            <em class="author-name">Article rédigé par Allan Colinet </em><br />
+            <em class="author-role">Consultant en cybersécurité - ProxySafe</em>
+          </div>
+        </div>
 
+        <div
+          style="
+            background: rgba(0, 229, 255, 0.05);
+            padding: 25px;
+            border-left: 4px solid var(--cyan-tech);
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+          "
+        >
+          <h3 style="margin-top: 0; color: var(--cyan-tech)">
+            💡 Le saviez-vous ?
+          </h3>
+          <p>
+            En Belgique, les contrats de cybersécurité pour les professionnels
+            sont <strong>100% déductibles</strong> au titre de frais
+            professionnels. De plus, ProxySafe vous délivre une
+            <strong>Attestation de sécurisation annuelle</strong> à afficher
+            fièrement pour prouver à vos clients et partenaires que leurs
+            données sont entre de bonnes mains.
+          </p>
+        </div>
         <!-- CTA ENCADRÉ -->
         <div
           style="

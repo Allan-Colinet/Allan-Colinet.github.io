@@ -883,3 +883,115 @@ footer a:hover {
     rgba(10, 25, 47, 0) 100%
   );
 }
+.author-signature {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0; /* Une simple ligne grise fine pour séparer le texte */
+  background-color: transparent !important; /* Force la suppression du fond bleu */
+}
+
+.author-name {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.author-role {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666; /* Un gris discret pour le rôle */
+}
+/* =========================================
+   PAGE À PROPOS (Éléments spécifiques)
+   ========================================= */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-photo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  border-radius: 16px;
+  padding: 18px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.about-photo-card img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.about-intro-card {
+  margin-top: 30px;
+  background: rgba(0, 180, 216, 0.08);
+  border-left: 4px solid var(--cyan-tech);
+  padding: 24px;
+  border-radius: 0 10px 10px 0;
+}
+
+.about-highlight {
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 45px;
+}
+
+.about-highlight ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.about-highlight li {
+  margin-bottom: 12px;
+  padding-left: 26px;
+  position: relative;
+}
+
+.about-highlight li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--cyan-tech);
+  font-weight: bold;
+}
+
+.about-cta-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid var(--cyan-tech);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-cta-box p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-card {
+    max-width: 340px;
+  }
+}

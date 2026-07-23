@@ -1,121 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProxySafe | Ajouter le contact</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <meta http-equiv="refresh" content="2; url='/contact.vcf'">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta http-equiv="refresh" content="2; url='/contact.vcf'" />
 
     <style>
-        /* On reprend TES variables exactes */
-        :root {
-            --navy-blue: #0a192f;
-            --navy-light: #112240;
-            --cyan-tech: #00b4d8;
-            --cyan-hover: #0077b6;
-            --bg-light: #f9fafb;
-            --bg-white: #ffffff;
-            --text-main: #333333;
-            --text-muted: #666666;
-            --border-color: #e5e7eb;
-        }
+      /* On reprend TES variables exactes */
+      :root {
+        --navy-blue: #0a192f;
+        --navy-light: #112240;
+        --cyan-tech: #00b4d8;
+        --cyan-hover: #0077b6;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --text-main: #333333;
+        --text-muted: #666666;
+        --border-color: #e5e7eb;
+      }
 
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-main);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        /* Réutilisation de ton système de pattern */
-        .with-pattern {
-            position: relative;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .with-pattern::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("pattern_safe.png");
-            background-attachment: fixed;
-            background-size: cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
+      /* Réutilisation de ton système de pattern */
+      .with-pattern {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .with-pattern::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("pattern_safe.png");
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+      }
 
-        .contact-card {
-            position: relative;
-            z-index: 10;
-            background: var(--bg-white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid var(--cyan-tech);
-            max-width: 450px;
-            width: 90%;
-            text-align: center;
-        }
+      .contact-card {
+        position: relative;
+        z-index: 10;
+        background: var(--bg-white);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-top: 4px solid var(--cyan-tech);
+        max-width: 450px;
+        width: 90%;
+        text-align: center;
+      }
 
-        .logo-small {
-            height: 80px;
-            margin-bottom: 20px;
-        }
+      .logo-small {
+        height: 80px;
+        margin-bottom: 20px;
+      }
 
-        h1 { color: var(--navy-blue); font-size: 1.5rem; margin-bottom: 10px; }
-        p { color: var(--text-muted); margin-bottom: 25px; }
+      h1 {
+        color: var(--navy-blue);
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      p {
+        color: var(--text-muted);
+        margin-bottom: 25px;
+      }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--cyan-tech);
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 180, 216, 0.3);
-        }
-        .btn:hover {
-            background-color: var(--cyan-hover);
-            transform: translateY(-2px);
-        }
+      .btn {
+        display: inline-block;
+        background-color: var(--cyan-tech);
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 180, 216, 0.3);
+      }
+      .btn:hover {
+        background-color: var(--cyan-hover);
+        transform: translateY(-2px);
+      }
 
-        footer {
-            background-color: var(--navy-blue);
-            padding: 20px;
-            text-align: center;
-            color: #a0aec0;
-            font-size: 0.8rem;
-        }
+      footer {
+        background-color: var(--navy-blue);
+        padding: 20px;
+        text-align: center;
+        color: #a0aec0;
+        font-size: 0.8rem;
+      }
     </style>
-</head>
-<body>
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ProxySafe",
+        "image": "https://www.proxysafe.be/logo_proxysafe.png",
+        "url": "https://www.proxysafe.be/",
+        "telephone": "+3260860256",
+        "email": "allan@proxysafe.be",
+        "vatID": "BE1036976322",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rue du Carmel, 1",
+          "addressLocality": "Matagne-la-Petite",
+          "postalCode": "5680",
+          "addressCountry": "BE"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Couvin" },
+          { "@type": "City", "name": "Momignies" },
+          { "@type": "City", "name": "Doische" },
+          { "@type": "City", "name": "Florennes" },
+          { "@type": "City", "name": "Walcourt" },
+          { "@type": "City", "name": "Ham-sur-Heure-Nalinnes" },
+          { "@type": "City", "name": "Chimay" },
+          { "@type": "City", "name": "Philippeville" },
+          { "@type": "City", "name": "Froidchapelle" },
+          { "@type": "City", "name": "Beaumont" },
+          { "@type": "City", "name": "Cerfontaine" },
+          { "@type": "City", "name": "Viroinval" },
+          { "@type": "City", "name": "Rocroi" },
+          { "@type": "City", "name": "Revin" },
+          { "@type": "City", "name": "Fumay" },
+          { "@type": "City", "name": "Haybes" },
+          { "@type": "City", "name": "Vireux-Molhain" },
+          { "@type": "City", "name": "Vireux-Wallerand" },
+          { "@type": "City", "name": "Signy-le-Petit" },
+          { "@type": "City", "name": "Rimogne" },
+          { "@type": "City", "name": "Deville" },
+          { "@type": "City", "name": "Monthermé" },
+          { "@type": "City", "name": "Renwez" },
+          { "@type": "City", "name": "Givet" },
+          { "@type": "City", "name": "Aublain" },
+          { "@type": "City", "name": "Boussu-en-Fagne" },
+          { "@type": "City", "name": "Brûly-de-Pesche" },
+          { "@type": "City", "name": "Brûly-de-Couvin" },
+          { "@type": "City", "name": "Cul-des-Sarts" },
+          { "@type": "City", "name": "Frasnes-lez-Couvin" },
+          { "@type": "City", "name": "Gonrieux" },
+          { "@type": "City", "name": "Mariembourg" },
+          { "@type": "City", "name": "Pesche" },
+          { "@type": "City", "name": "Petigny" },
+          { "@type": "City", "name": "Petite-Chapelle" },
+          { "@type": "City", "name": "Presgaux" },
+          { "@type": "City", "name": "Dailly" },
+          { "@type": "City", "name": "Nismes" },
+          { "@type": "City", "name": "Oignies-en-Thiérache" },
+          { "@type": "City", "name": "Treignes" },
+          { "@type": "City", "name": "Vierves-sur-Viroin" },
+          { "@type": "City", "name": "Gerpinnes" },
+          { "@type": "City", "name": "Mettet" },
+          { "@type": "City", "name": "Fosses-la-Ville" },
+          { "@type": "City", "name": "Sambreville" },
+          { "@type": "City", "name": "Sombreffe" },
+          { "@type": "City", "name": "Jemeppe-sur-Sambre" },
+          { "@type": "City", "name": "Floreffe" },
+          { "@type": "City", "name": "Profondeville" },
+          { "@type": "City", "name": "Yvoir" },
+          { "@type": "City", "name": "Anhée" },
+          { "@type": "City", "name": "Hastière" },
+          { "@type": "City", "name": "Onhaye" },
+          { "@type": "City", "name": "Dinant" },
+          { "@type": "City", "name": "Gedinne" },
+          { "@type": "City", "name": "Bièvre" }
+        ],
+        "description": "Spécialiste en sécurisation informatique et gouvernance (GRC), au service de la tranquillité d'esprit des indépendants, professions libérales et PME locales.",
+        "founder": {
+          "@type": "Person",
+          "name": "Allan Colinet"
+        }
+      }
+    </script>
+  </head>
+  <body>
     <div class="with-pattern">
-        <div class="contact-card">
-            <img src="logo_proxysafe.png" alt="ProxySafe" class="logo-small">
-            <h1>Ajouter Allan Colinet</h1>
-            <p>Le téléchargement de la fiche contact va démarrer automatiquement...</p>
-            
-            <a href="/contact.vcf" class="btn">📩 Enregistrer le contact</a>
-            
-            <div style="margin-top: 30px; font-size: 0.9rem; border-top: 1px solid var(--border-color); padding-top: 20px;">
-                <a href="/" style="color: var(--cyan-tech); text-decoration: none;">← Retour au site proxysafe.be</a>
-            </div>
+      <div class="contact-card">
+        <img src="logo_proxysafe.png" alt="ProxySafe" class="logo-small" />
+        <h1>Ajouter Allan Colinet</h1>
+        <p>
+          Le téléchargement de la fiche contact va démarrer automatiquement...
+        </p>
+
+        <a href="/contact.vcf" class="btn">📩 Enregistrer le contact</a>
+
+        <div
+          style="
+            margin-top: 30px;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+          "
+        >
+          <a href="/" style="color: var(--cyan-tech); text-decoration: none"
+            >← Retour au site proxysafe.be</a
+          >
         </div>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 ProxySafe - Sécurité & GRC de proximité.
-    </footer>
-
-</body>
+    <footer>&copy; 2026 ProxySafe - Sécurité & GRC de proximité.</footer>
+  </body>
 </html>
