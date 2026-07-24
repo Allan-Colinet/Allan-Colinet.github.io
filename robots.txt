@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /template-article.html
+Allow: /
+
+Sitemap: https://www.proxysafe.be/sitemap.xml
