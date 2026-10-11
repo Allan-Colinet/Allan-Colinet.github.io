@@ -3406,8 +3406,3 @@ a.card--dark:hover {
 .service-card--featured .ai-pill {
   color: var(--on-dark);
 }
-.ai-block .ai-note {
-  margin-top: 14px;
-  font-size: 0.88rem;
-  color: var(--cyan-2);
-}
