@@ -3344,3 +3344,65 @@ a.card--dark:hover {
   margin: 10px 0 0;
   color: var(--muted);
 }
+
+/* ---------- v2.3 : bloc IA (Sentinelle) ---------- */
+.ai-block {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 36px;
+  align-items: center;
+  padding: 40px;
+  border-radius: var(--r-lg);
+  background: radial-gradient(600px 300px at 0% 0%, rgba(0, 180, 216, 0.22), transparent 60%),
+    linear-gradient(135deg, var(--dark-2), var(--dark-3));
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  box-shadow: var(--glow);
+  color: var(--on-dark);
+}
+.ai-block h3 {
+  color: #fff;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  margin: 14px 0 10px;
+}
+.ai-block p {
+  color: var(--on-dark-muted);
+  margin: 0;
+}
+.ai-block .check-list {
+  margin: 0;
+  gap: 14px;
+}
+.ai-block .check-list li {
+  color: var(--on-dark);
+}
+.ai-block .check-list strong {
+  color: #fff;
+}
+.ai-block .check-list li::before {
+  background-color: rgba(34, 211, 238, 0.12);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322d3ee' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+.ai-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  color: var(--on-dark);
+  margin: 4px 0 18px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+}
+@media (max-width: 860px) {
+  .ai-block {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 22px;
+  }
+}
+.service-card--featured .ai-pill {
+  color: var(--on-dark);
+}
